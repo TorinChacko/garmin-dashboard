@@ -1,0 +1,49 @@
+name: Backfill Garmin History
+
+# Manual trigger only — you'll likely run this a few times in a row
+# if Garmin rate-limits partway through. It resumes automatically.
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "How many years back to backfill"
+        required: false
+        default: "5"
+      max_days_per_run:
+        description: "Max NEW days to fetch in this run (keeps each run polite to Garmin)"
+        required: false
+        default: "600"
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install garminconnect curl_cffi
+
+      - name: Run backfill
+        env:
+          GARMIN_TOKENS_B64: ${{ secrets.GARMIN_TOKENS_B64 }}
+          BACKFILL_YEARS: ${{ github.event.inputs.years }}
+          MAX_DAYS_PER_RUN: ${{ github.event.inputs.max_days_per_run }}
+          REQUEST_DELAY_SEC: "1.5"
+        run: python scripts/backfill_garmin_data.py
+
+      - name: Commit progress
+        run: |
+          git config user.name "garmin-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/history.json docs/data/history.json
+          git diff --cached --quiet || git commit -m "Backfill Garmin history $(date -u +%F)"
+          git push
