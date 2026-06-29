@@ -50,6 +50,20 @@ def restore_token_from_secret():
         sys.exit(1)
 
 
+def write_step_summary(title, lines):
+    """Writes to the GitHub Actions Step Summary panel, which shows up
+    prominently on the run page (and is what you see first when you click
+    into a failed run from the email notification)."""
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return  # not running in Actions, e.g. local testing
+    with open(summary_path, "a") as f:
+        f.write(f"## {title}\n\n")
+        for line in lines:
+            f.write(f"{line}\n")
+        f.write("\n")
+
+
 def login():
     try:
         garmin = Garmin()
@@ -58,11 +72,29 @@ def login():
         return garmin
     except (GarminConnectAuthenticationError, GarminConnectConnectionError) as e:
         print(f"ERROR: could not log in with saved token: {e}")
-        print("The refresh token has likely expired. Redo login_once.py + pack_token.py locally,")
-        print("then update the GARMIN_TOKENS_B64 secret.")
+        write_step_summary("❌ Garmin token expired", [
+            "Your saved Garmin login token has stopped working — this happens",
+            "every few months and is expected, not a bug.",
+            "",
+            "**To fix it (5 minutes), on your own computer:**",
+            "1. `python login_once.py`",
+            "2. `python pack_token.py`",
+            "3. Copy the contents of `garmin_tokens_b64.txt`",
+            "4. GitHub repo → Settings → Secrets and variables → Actions",
+            "   → edit `GARMIN_TOKENS_B64` → paste the new value → Save",
+            "5. Re-run this workflow from the Actions tab to confirm it works",
+            "",
+            f"_Raw error: {e}_",
+        ])
         sys.exit(1)
     except GarminConnectTooManyRequestsError as e:
         print(f"Rate limited by Garmin: {e}")
+        write_step_summary("⏳ Rate limited by Garmin", [
+            "No action needed — Garmin temporarily rate-limited this run.",
+            "It will self-heal on the next scheduled run.",
+            "",
+            f"_Raw error: {e}_",
+        ])
         sys.exit(1)
 
 
@@ -132,6 +164,10 @@ def main():
 
     save_history(history)
     print(f"Saved {len(history)} total days to {DATA_FILE}")
+    write_step_summary("✅ Garmin sync OK", [
+        f"Fetched the last {backfill_days} days. {len(history)} total days now stored.",
+        f"Most recent date pulled: {today.isoformat()}",
+    ])
 
 
 if __name__ == "__main__":
