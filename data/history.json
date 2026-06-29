@@ -1,4 +1,5994 @@
 {
+  "2024-11-03": {
+    "date": "2024-11-03",
+    "steps": 18320,
+    "calories": 2656.0,
+    "distance_km": 14.64,
+    "resting_hr": 43,
+    "avg_stress": 33,
+    "sleep_seconds": 31980,
+    "body_battery_charged": 112
+  },
+  "2024-11-04": {
+    "date": "2024-11-04",
+    "steps": 7497,
+    "calories": 1998.0,
+    "distance_km": 5.73,
+    "resting_hr": 45,
+    "avg_stress": 28,
+    "sleep_seconds": 27960,
+    "body_battery_charged": 77
+  },
+  "2024-11-05": {
+    "date": "2024-11-05",
+    "steps": 16635,
+    "calories": 2432.0,
+    "distance_km": 13.34,
+    "resting_hr": 44,
+    "avg_stress": 41,
+    "sleep_seconds": 30720,
+    "body_battery_charged": 75
+  },
+  "2024-11-06": {
+    "date": "2024-11-06",
+    "steps": 18115,
+    "calories": 2443.0,
+    "distance_km": 14.5,
+    "resting_hr": 46,
+    "avg_stress": 44,
+    "sleep_seconds": 31260,
+    "body_battery_charged": 91
+  },
+  "2024-11-07": {
+    "date": "2024-11-07",
+    "steps": 9415,
+    "calories": 2450.0,
+    "distance_km": 7.2,
+    "resting_hr": 46,
+    "avg_stress": 46,
+    "sleep_seconds": 33060,
+    "body_battery_charged": 81
+  },
+  "2024-11-08": {
+    "date": "2024-11-08",
+    "steps": 14118,
+    "calories": 2339.0,
+    "distance_km": 11.14,
+    "resting_hr": 46,
+    "avg_stress": 41,
+    "sleep_seconds": 30120,
+    "body_battery_charged": 86
+  },
+  "2024-11-09": {
+    "date": "2024-11-09",
+    "steps": 4658,
+    "calories": 2450.0,
+    "distance_km": 3.56,
+    "resting_hr": 49,
+    "avg_stress": 91,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2024-11-10": {
+    "date": "2024-11-10",
+    "steps": 4853,
+    "calories": 2307.0,
+    "distance_km": 3.74,
+    "resting_hr": 50,
+    "avg_stress": 80,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2024-11-11": {
+    "date": "2024-11-11",
+    "steps": 9198,
+    "calories": 2880.0,
+    "distance_km": 7.79,
+    "resting_hr": 51,
+    "avg_stress": 49,
+    "sleep_seconds": 37140,
+    "body_battery_charged": 72
+  },
+  "2024-11-12": {
+    "date": "2024-11-12",
+    "steps": 8951,
+    "calories": 2068.0,
+    "distance_km": 6.85,
+    "resting_hr": 41,
+    "avg_stress": 40,
+    "sleep_seconds": 32040,
+    "body_battery_charged": 81
+  },
+  "2024-11-13": {
+    "date": "2024-11-13",
+    "steps": 19433,
+    "calories": 2591.0,
+    "distance_km": 15.27,
+    "resting_hr": 48,
+    "avg_stress": 49,
+    "sleep_seconds": 27420,
+    "body_battery_charged": 68
+  },
+  "2024-11-14": {
+    "date": "2024-11-14",
+    "steps": 4510,
+    "calories": 1965.0,
+    "distance_km": 3.45,
+    "resting_hr": 47,
+    "avg_stress": 42,
+    "sleep_seconds": 31860,
+    "body_battery_charged": 76
+  },
+  "2024-11-15": {
+    "date": "2024-11-15",
+    "steps": 8549,
+    "calories": 2117.0,
+    "distance_km": 6.54,
+    "resting_hr": 46,
+    "avg_stress": 51,
+    "sleep_seconds": 28920,
+    "body_battery_charged": 82
+  },
+  "2024-11-16": {
+    "date": "2024-11-16",
+    "steps": 4888,
+    "calories": 2352.0,
+    "distance_km": 3.76,
+    "resting_hr": 47,
+    "avg_stress": 47,
+    "sleep_seconds": 32460,
+    "body_battery_charged": 90
+  },
+  "2024-11-17": {
+    "date": "2024-11-17",
+    "steps": 6911,
+    "calories": 2026.0,
+    "distance_km": 5.28,
+    "resting_hr": 45,
+    "avg_stress": 34,
+    "sleep_seconds": 34440,
+    "body_battery_charged": 93
+  },
+  "2024-11-18": {
+    "date": "2024-11-18",
+    "steps": 15550,
+    "calories": 2503.0,
+    "distance_km": 12.32,
+    "resting_hr": 43,
+    "avg_stress": 41,
+    "sleep_seconds": 27360,
+    "body_battery_charged": 85
+  },
+  "2024-11-19": {
+    "date": "2024-11-19",
+    "steps": 13292,
+    "calories": 2231.0,
+    "distance_km": 10.16,
+    "resting_hr": 44,
+    "avg_stress": 43,
+    "sleep_seconds": 28440,
+    "body_battery_charged": 108
+  },
+  "2024-11-20": {
+    "date": "2024-11-20",
+    "steps": 9593,
+    "calories": 2765.0,
+    "distance_km": 7.33,
+    "resting_hr": 43,
+    "avg_stress": 52,
+    "sleep_seconds": 24900,
+    "body_battery_charged": 77
+  },
+  "2024-11-21": {
+    "date": "2024-11-21",
+    "steps": 4494,
+    "calories": 2257.0,
+    "distance_km": 3.49,
+    "resting_hr": 49,
+    "avg_stress": 53,
+    "sleep_seconds": 42540,
+    "body_battery_charged": 58
+  },
+  "2024-11-22": {
+    "date": "2024-11-22",
+    "steps": 8270,
+    "calories": 2157.0,
+    "distance_km": 6.32,
+    "resting_hr": 47,
+    "avg_stress": 36,
+    "sleep_seconds": 27240,
+    "body_battery_charged": 78
+  },
+  "2024-11-23": {
+    "date": "2024-11-23",
+    "steps": 8919,
+    "calories": 2076.0,
+    "distance_km": 6.83,
+    "resting_hr": 44,
+    "avg_stress": 32,
+    "sleep_seconds": 37560,
+    "body_battery_charged": 90
+  },
+  "2024-11-24": {
+    "date": "2024-11-24",
+    "steps": 19334,
+    "calories": 2435.0,
+    "distance_km": 13.99,
+    "resting_hr": 43,
+    "avg_stress": 45,
+    "sleep_seconds": 20640,
+    "body_battery_charged": 75
+  },
+  "2024-11-25": {
+    "date": "2024-11-25",
+    "steps": 13660,
+    "calories": 2411.0,
+    "distance_km": 12.69,
+    "resting_hr": 45,
+    "avg_stress": 28,
+    "sleep_seconds": 31860,
+    "body_battery_charged": 88
+  },
+  "2024-11-26": {
+    "date": "2024-11-26",
+    "steps": 20242,
+    "calories": 2700.0,
+    "distance_km": 18.08,
+    "resting_hr": 47,
+    "avg_stress": 36,
+    "sleep_seconds": 28980,
+    "body_battery_charged": 85
+  },
+  "2024-11-27": {
+    "date": "2024-11-27",
+    "steps": 11556,
+    "calories": 2226.0,
+    "distance_km": 8.85,
+    "resting_hr": 47,
+    "avg_stress": 49,
+    "sleep_seconds": 28740,
+    "body_battery_charged": 78
+  },
+  "2024-11-28": {
+    "date": "2024-11-28",
+    "steps": 7513,
+    "calories": 2238.0,
+    "distance_km": 6.08,
+    "resting_hr": 43,
+    "avg_stress": 39,
+    "sleep_seconds": 36420,
+    "body_battery_charged": 95
+  },
+  "2024-11-29": {
+    "date": "2024-11-29",
+    "steps": 5701,
+    "calories": 1956.0,
+    "distance_km": 4.37,
+    "resting_hr": 44,
+    "avg_stress": 36,
+    "sleep_seconds": 37200,
+    "body_battery_charged": 88
+  },
+  "2024-11-30": {
+    "date": "2024-11-30",
+    "steps": 12889,
+    "calories": 2261.0,
+    "distance_km": 10.62,
+    "resting_hr": 42,
+    "avg_stress": 24,
+    "sleep_seconds": 33300,
+    "body_battery_charged": 94
+  },
+  "2024-12-01": {
+    "date": "2024-12-01",
+    "steps": 2808,
+    "calories": 1860.0,
+    "distance_km": 2.15,
+    "resting_hr": 49,
+    "avg_stress": 47,
+    "sleep_seconds": null,
+    "body_battery_charged": 2
+  },
+  "2024-12-02": {
+    "date": "2024-12-02",
+    "steps": 17393,
+    "calories": 2374.0,
+    "distance_km": 13.3,
+    "resting_hr": 41,
+    "avg_stress": 40,
+    "sleep_seconds": 32220,
+    "body_battery_charged": 84
+  },
+  "2024-12-03": {
+    "date": "2024-12-03",
+    "steps": 9229,
+    "calories": 2040.0,
+    "distance_km": 7.05,
+    "resting_hr": 46,
+    "avg_stress": 28,
+    "sleep_seconds": 29700,
+    "body_battery_charged": 82
+  },
+  "2024-12-04": {
+    "date": "2024-12-04",
+    "steps": 13392,
+    "calories": 2314.0,
+    "distance_km": 10.29,
+    "resting_hr": 42,
+    "avg_stress": 32,
+    "sleep_seconds": 27600,
+    "body_battery_charged": 84
+  },
+  "2024-12-05": {
+    "date": "2024-12-05",
+    "steps": 5167,
+    "calories": 1924.0,
+    "distance_km": 3.96,
+    "resting_hr": 60,
+    "avg_stress": 45,
+    "sleep_seconds": 39420,
+    "body_battery_charged": 27
+  },
+  "2024-12-06": {
+    "date": "2024-12-06",
+    "steps": 15936,
+    "calories": 2086.0,
+    "distance_km": 12.18,
+    "resting_hr": 42,
+    "avg_stress": 34,
+    "sleep_seconds": 28020,
+    "body_battery_charged": 90
+  },
+  "2024-12-07": {
+    "date": "2024-12-07",
+    "steps": 11012,
+    "calories": 2380.0,
+    "distance_km": 10.28,
+    "resting_hr": 44,
+    "avg_stress": 46,
+    "sleep_seconds": null,
+    "body_battery_charged": 9
+  },
+  "2024-12-08": {
+    "date": "2024-12-08",
+    "steps": 7502,
+    "calories": 2104.0,
+    "distance_km": 5.74,
+    "resting_hr": 46,
+    "avg_stress": 38,
+    "sleep_seconds": 32340,
+    "body_battery_charged": 88
+  },
+  "2024-12-09": {
+    "date": "2024-12-09",
+    "steps": 8261,
+    "calories": 2057.0,
+    "distance_km": 6.33,
+    "resting_hr": 50,
+    "avg_stress": 62,
+    "sleep_seconds": null,
+    "body_battery_charged": 12
+  },
+  "2024-12-10": {
+    "date": "2024-12-10",
+    "steps": 5565,
+    "calories": 1995.0,
+    "distance_km": 4.25,
+    "resting_hr": 44,
+    "avg_stress": 31,
+    "sleep_seconds": 35100,
+    "body_battery_charged": 93
+  },
+  "2024-12-11": {
+    "date": "2024-12-11",
+    "steps": 10989,
+    "calories": 2141.0,
+    "distance_km": 8.67,
+    "resting_hr": 43,
+    "avg_stress": 37,
+    "sleep_seconds": 29220,
+    "body_battery_charged": 68
+  },
+  "2024-12-12": {
+    "date": "2024-12-12",
+    "steps": 11211,
+    "calories": 2233.0,
+    "distance_km": 8.66,
+    "resting_hr": 49,
+    "avg_stress": 60,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2024-12-13": {
+    "date": "2024-12-13",
+    "steps": 8564,
+    "calories": 2068.0,
+    "distance_km": 6.55,
+    "resting_hr": 42,
+    "avg_stress": 30,
+    "sleep_seconds": 33960,
+    "body_battery_charged": 93
+  },
+  "2024-12-14": {
+    "date": "2024-12-14",
+    "steps": 17400,
+    "calories": 2842.0,
+    "distance_km": 18.17,
+    "resting_hr": 49,
+    "avg_stress": 39,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2024-12-15": {
+    "date": "2024-12-15",
+    "steps": null,
+    "calories": 1786.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2024-12-16": {
+    "date": "2024-12-16",
+    "steps": 679,
+    "calories": 1827.0,
+    "distance_km": 0.59,
+    "resting_hr": 49,
+    "avg_stress": 31,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2024-12-17": {
+    "date": "2024-12-17",
+    "steps": 7078,
+    "calories": 1998.0,
+    "distance_km": 5.67,
+    "resting_hr": 43,
+    "avg_stress": 21,
+    "sleep_seconds": 34080,
+    "body_battery_charged": 83
+  },
+  "2024-12-18": {
+    "date": "2024-12-18",
+    "steps": 4804,
+    "calories": 1891.0,
+    "distance_km": 3.69,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 37500,
+    "body_battery_charged": 72
+  },
+  "2024-12-19": {
+    "date": "2024-12-19",
+    "steps": 2573,
+    "calories": 1852.0,
+    "distance_km": 2.0,
+    "resting_hr": 42,
+    "avg_stress": 27,
+    "sleep_seconds": 37200,
+    "body_battery_charged": 74
+  },
+  "2024-12-20": {
+    "date": "2024-12-20",
+    "steps": 1458,
+    "calories": 1815.0,
+    "distance_km": 1.14,
+    "resting_hr": 42,
+    "avg_stress": 23,
+    "sleep_seconds": 29820,
+    "body_battery_charged": 93
+  },
+  "2024-12-21": {
+    "date": "2024-12-21",
+    "steps": 38257,
+    "calories": 3792.0,
+    "distance_km": 29.44,
+    "resting_hr": 40,
+    "avg_stress": 14,
+    "sleep_seconds": 26520,
+    "body_battery_charged": 50
+  },
+  "2024-12-22": {
+    "date": "2024-12-22",
+    "steps": null,
+    "calories": 1894.0,
+    "distance_km": null,
+    "resting_hr": 62,
+    "avg_stress": 50,
+    "sleep_seconds": null,
+    "body_battery_charged": 19
+  },
+  "2024-12-23": {
+    "date": "2024-12-23",
+    "steps": 405,
+    "calories": 1912.0,
+    "distance_km": 0.32,
+    "resting_hr": 46,
+    "avg_stress": 39,
+    "sleep_seconds": null,
+    "body_battery_charged": 11
+  },
+  "2024-12-24": {
+    "date": "2024-12-24",
+    "steps": 7205,
+    "calories": 2280.0,
+    "distance_km": 5.07,
+    "resting_hr": 44,
+    "avg_stress": 35,
+    "sleep_seconds": 18000,
+    "body_battery_charged": 81
+  },
+  "2024-12-25": {
+    "date": "2024-12-25",
+    "steps": 2354,
+    "calories": 1986.0,
+    "distance_km": 1.81,
+    "resting_hr": 42,
+    "avg_stress": 34,
+    "sleep_seconds": 39720,
+    "body_battery_charged": 95
+  },
+  "2024-12-26": {
+    "date": "2024-12-26",
+    "steps": 1161,
+    "calories": 1920.0,
+    "distance_km": 0.89,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 33660,
+    "body_battery_charged": 78
+  },
+  "2024-12-27": {
+    "date": "2024-12-27",
+    "steps": 550,
+    "calories": 1894.0,
+    "distance_km": 0.42,
+    "resting_hr": 43,
+    "avg_stress": 29,
+    "sleep_seconds": 27420,
+    "body_battery_charged": 38
+  },
+  "2024-12-28": {
+    "date": "2024-12-28",
+    "steps": 6304,
+    "calories": 2116.0,
+    "distance_km": 5.43,
+    "resting_hr": 47,
+    "avg_stress": 44,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2024-12-29": {
+    "date": "2024-12-29",
+    "steps": 1120,
+    "calories": 1938.0,
+    "distance_km": 0.88,
+    "resting_hr": 42,
+    "avg_stress": 20,
+    "sleep_seconds": 32220,
+    "body_battery_charged": 67
+  },
+  "2024-12-30": {
+    "date": "2024-12-30",
+    "steps": 2265,
+    "calories": 1979.0,
+    "distance_km": 1.73,
+    "resting_hr": 41,
+    "avg_stress": 30,
+    "sleep_seconds": 29100,
+    "body_battery_charged": 40
+  },
+  "2024-12-31": {
+    "date": "2024-12-31",
+    "steps": 3432,
+    "calories": 2075.0,
+    "distance_km": 2.62,
+    "resting_hr": 41,
+    "avg_stress": 19,
+    "sleep_seconds": 36000,
+    "body_battery_charged": 82
+  },
+  "2025-01-01": {
+    "date": "2025-01-01",
+    "steps": 3337,
+    "calories": 2151.0,
+    "distance_km": 2.55,
+    "resting_hr": 47,
+    "avg_stress": 88,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-01-02": {
+    "date": "2025-01-02",
+    "steps": 254,
+    "calories": 1887.0,
+    "distance_km": 0.19,
+    "resting_hr": 53,
+    "avg_stress": 39,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-01-03": {
+    "date": "2025-01-03",
+    "steps": 1490,
+    "calories": 1965.0,
+    "distance_km": 1.16,
+    "resting_hr": 42,
+    "avg_stress": 35,
+    "sleep_seconds": 36240,
+    "body_battery_charged": 91
+  },
+  "2025-01-04": {
+    "date": "2025-01-04",
+    "steps": 11196,
+    "calories": 2489.0,
+    "distance_km": 9.29,
+    "resting_hr": 43,
+    "avg_stress": 41,
+    "sleep_seconds": 36660,
+    "body_battery_charged": 74
+  },
+  "2025-01-05": {
+    "date": "2025-01-05",
+    "steps": 9981,
+    "calories": 2243.0,
+    "distance_km": 7.63,
+    "resting_hr": 46,
+    "avg_stress": 38,
+    "sleep_seconds": 21360,
+    "body_battery_charged": 56
+  },
+  "2025-01-06": {
+    "date": "2025-01-06",
+    "steps": 17862,
+    "calories": 2552.0,
+    "distance_km": 13.65,
+    "resting_hr": 44,
+    "avg_stress": 42,
+    "sleep_seconds": 29460,
+    "body_battery_charged": 89
+  },
+  "2025-01-07": {
+    "date": "2025-01-07",
+    "steps": 8543,
+    "calories": 2323.0,
+    "distance_km": 6.54,
+    "resting_hr": 47,
+    "avg_stress": 26,
+    "sleep_seconds": 37620,
+    "body_battery_charged": 99
+  },
+  "2025-01-08": {
+    "date": "2025-01-08",
+    "steps": 9750,
+    "calories": 2310.0,
+    "distance_km": 7.45,
+    "resting_hr": 46,
+    "avg_stress": 45,
+    "sleep_seconds": 28440,
+    "body_battery_charged": 69
+  },
+  "2025-01-09": {
+    "date": "2025-01-09",
+    "steps": 9792,
+    "calories": 2291.0,
+    "distance_km": 7.49,
+    "resting_hr": 46,
+    "avg_stress": 46,
+    "sleep_seconds": 32100,
+    "body_battery_charged": 83
+  },
+  "2025-01-10": {
+    "date": "2025-01-10",
+    "steps": 5657,
+    "calories": 2148.0,
+    "distance_km": 4.33,
+    "resting_hr": 49,
+    "avg_stress": 57,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-01-11": {
+    "date": "2025-01-11",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-01-12": {
+    "date": "2025-01-12",
+    "steps": 1777,
+    "calories": 1968.0,
+    "distance_km": 1.37,
+    "resting_hr": 50,
+    "avg_stress": 49,
+    "sleep_seconds": null,
+    "body_battery_charged": 6
+  },
+  "2025-01-13": {
+    "date": "2025-01-13",
+    "steps": 357,
+    "calories": 1901.0,
+    "distance_km": 0.27,
+    "resting_hr": 45,
+    "avg_stress": 13,
+    "sleep_seconds": 23340,
+    "body_battery_charged": 80
+  },
+  "2025-01-14": {
+    "date": "2025-01-14",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": 54,
+    "avg_stress": 39,
+    "sleep_seconds": null,
+    "body_battery_charged": 2
+  },
+  "2025-01-15": {
+    "date": "2025-01-15",
+    "steps": 1598,
+    "calories": 1940.0,
+    "distance_km": 1.22,
+    "resting_hr": 43,
+    "avg_stress": 33,
+    "sleep_seconds": 41580,
+    "body_battery_charged": 70
+  },
+  "2025-01-16": {
+    "date": "2025-01-16",
+    "steps": 311,
+    "calories": 1898.0,
+    "distance_km": 0.24,
+    "resting_hr": 45,
+    "avg_stress": 16,
+    "sleep_seconds": 26820,
+    "body_battery_charged": 58
+  },
+  "2025-01-17": {
+    "date": "2025-01-17",
+    "steps": 305,
+    "calories": 1902.0,
+    "distance_km": 0.23,
+    "resting_hr": 44,
+    "avg_stress": 31,
+    "sleep_seconds": 36960,
+    "body_battery_charged": 49
+  },
+  "2025-01-18": {
+    "date": "2025-01-18",
+    "steps": 629,
+    "calories": 2006.0,
+    "distance_km": 0.48,
+    "resting_hr": 42,
+    "avg_stress": 43,
+    "sleep_seconds": 42540,
+    "body_battery_charged": 43
+  },
+  "2025-01-19": {
+    "date": "2025-01-19",
+    "steps": 9145,
+    "calories": 2250.0,
+    "distance_km": 6.99,
+    "resting_hr": 45,
+    "avg_stress": 43,
+    "sleep_seconds": 31260,
+    "body_battery_charged": 69
+  },
+  "2025-01-20": {
+    "date": "2025-01-20",
+    "steps": 1118,
+    "calories": 1929.0,
+    "distance_km": 0.85,
+    "resting_hr": 46,
+    "avg_stress": 27,
+    "sleep_seconds": 35760,
+    "body_battery_charged": 86
+  },
+  "2025-01-21": {
+    "date": "2025-01-21",
+    "steps": 7075,
+    "calories": 2463.0,
+    "distance_km": 5.65,
+    "resting_hr": 48,
+    "avg_stress": 92,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-01-22": {
+    "date": "2025-01-22",
+    "steps": 12198,
+    "calories": 2628.0,
+    "distance_km": 9.33,
+    "resting_hr": 48,
+    "avg_stress": 79,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-01-23": {
+    "date": "2025-01-23",
+    "steps": 23752,
+    "calories": 4200.0,
+    "distance_km": 21.35,
+    "resting_hr": 48,
+    "avg_stress": 49,
+    "sleep_seconds": 28020,
+    "body_battery_charged": 75
+  },
+  "2025-01-24": {
+    "date": "2025-01-24",
+    "steps": 19878,
+    "calories": 2919.0,
+    "distance_km": 15.2,
+    "resting_hr": 50,
+    "avg_stress": 55,
+    "sleep_seconds": 24420,
+    "body_battery_charged": 18
+  },
+  "2025-01-25": {
+    "date": "2025-01-25",
+    "steps": 14415,
+    "calories": 2496.0,
+    "distance_km": 11.02,
+    "resting_hr": 47,
+    "avg_stress": 47,
+    "sleep_seconds": 31200,
+    "body_battery_charged": 81
+  },
+  "2025-01-26": {
+    "date": "2025-01-26",
+    "steps": 10101,
+    "calories": 2359.0,
+    "distance_km": 7.74,
+    "resting_hr": 59,
+    "avg_stress": 53,
+    "sleep_seconds": 24840,
+    "body_battery_charged": 17
+  },
+  "2025-01-27": {
+    "date": "2025-01-27",
+    "steps": 9755,
+    "calories": 2276.0,
+    "distance_km": 7.46,
+    "resting_hr": 46,
+    "avg_stress": 38,
+    "sleep_seconds": 27240,
+    "body_battery_charged": 99
+  },
+  "2025-01-28": {
+    "date": "2025-01-28",
+    "steps": 13735,
+    "calories": 3540.0,
+    "distance_km": 13.96,
+    "resting_hr": 43,
+    "avg_stress": 39,
+    "sleep_seconds": 38760,
+    "body_battery_charged": 83
+  },
+  "2025-01-29": {
+    "date": "2025-01-29",
+    "steps": 21121,
+    "calories": 3456.0,
+    "distance_km": 19.89,
+    "resting_hr": 50,
+    "avg_stress": 45,
+    "sleep_seconds": 28080,
+    "body_battery_charged": 64
+  },
+  "2025-01-30": {
+    "date": "2025-01-30",
+    "steps": 14936,
+    "calories": 2506.0,
+    "distance_km": 11.42,
+    "resting_hr": 50,
+    "avg_stress": 51,
+    "sleep_seconds": 29040,
+    "body_battery_charged": 72
+  },
+  "2025-01-31": {
+    "date": "2025-01-31",
+    "steps": 13610,
+    "calories": 2909.0,
+    "distance_km": 11.37,
+    "resting_hr": 46,
+    "avg_stress": 43,
+    "sleep_seconds": 25620,
+    "body_battery_charged": 81
+  },
+  "2025-02-01": {
+    "date": "2025-02-01",
+    "steps": 31464,
+    "calories": 4115.0,
+    "distance_km": 29.82,
+    "resting_hr": 53,
+    "avg_stress": 53,
+    "sleep_seconds": 22620,
+    "body_battery_charged": 25
+  },
+  "2025-02-02": {
+    "date": "2025-02-02",
+    "steps": 4537,
+    "calories": 2036.0,
+    "distance_km": 3.47,
+    "resting_hr": 47,
+    "avg_stress": 32,
+    "sleep_seconds": 37620,
+    "body_battery_charged": 95
+  },
+  "2025-02-03": {
+    "date": "2025-02-03",
+    "steps": 10339,
+    "calories": 2353.0,
+    "distance_km": 8.31,
+    "resting_hr": 46,
+    "avg_stress": 33,
+    "sleep_seconds": 31260,
+    "body_battery_charged": 69
+  },
+  "2025-02-04": {
+    "date": "2025-02-04",
+    "steps": 14267,
+    "calories": 3320.0,
+    "distance_km": 13.92,
+    "resting_hr": 46,
+    "avg_stress": 27,
+    "sleep_seconds": 36780,
+    "body_battery_charged": 106
+  },
+  "2025-02-05": {
+    "date": "2025-02-05",
+    "steps": 20864,
+    "calories": 3029.0,
+    "distance_km": 18.7,
+    "resting_hr": 46,
+    "avg_stress": 38,
+    "sleep_seconds": 30300,
+    "body_battery_charged": 77
+  },
+  "2025-02-06": {
+    "date": "2025-02-06",
+    "steps": 10737,
+    "calories": 2272.0,
+    "distance_km": 8.23,
+    "resting_hr": 48,
+    "avg_stress": 41,
+    "sleep_seconds": 30420,
+    "body_battery_charged": 81
+  },
+  "2025-02-07": {
+    "date": "2025-02-07",
+    "steps": 13264,
+    "calories": 2376.0,
+    "distance_km": 10.14,
+    "resting_hr": 44,
+    "avg_stress": 34,
+    "sleep_seconds": 30180,
+    "body_battery_charged": 95
+  },
+  "2025-02-08": {
+    "date": "2025-02-08",
+    "steps": 36193,
+    "calories": 4973.0,
+    "distance_km": 35.46,
+    "resting_hr": 44,
+    "avg_stress": 35,
+    "sleep_seconds": 33420,
+    "body_battery_charged": 80
+  },
+  "2025-02-09": {
+    "date": "2025-02-09",
+    "steps": 10303,
+    "calories": 2304.0,
+    "distance_km": 7.88,
+    "resting_hr": 49,
+    "avg_stress": 50,
+    "sleep_seconds": null,
+    "body_battery_charged": 13
+  },
+  "2025-02-10": {
+    "date": "2025-02-10",
+    "steps": 16790,
+    "calories": 2425.0,
+    "distance_km": 12.83,
+    "resting_hr": 45,
+    "avg_stress": 35,
+    "sleep_seconds": 40800,
+    "body_battery_charged": 82
+  },
+  "2025-02-11": {
+    "date": "2025-02-11",
+    "steps": 18852,
+    "calories": 2931.0,
+    "distance_km": 16.91,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 38220,
+    "body_battery_charged": 90
+  },
+  "2025-02-12": {
+    "date": "2025-02-12",
+    "steps": 17787,
+    "calories": 2750.0,
+    "distance_km": 15.1,
+    "resting_hr": 46,
+    "avg_stress": 36,
+    "sleep_seconds": 29040,
+    "body_battery_charged": 89
+  },
+  "2025-02-13": {
+    "date": "2025-02-13",
+    "steps": 13041,
+    "calories": 2672.0,
+    "distance_km": 9.97,
+    "resting_hr": 45,
+    "avg_stress": 32,
+    "sleep_seconds": 32700,
+    "body_battery_charged": 84
+  },
+  "2025-02-14": {
+    "date": "2025-02-14",
+    "steps": 27084,
+    "calories": 3132.0,
+    "distance_km": 23.1,
+    "resting_hr": 46,
+    "avg_stress": 33,
+    "sleep_seconds": 28080,
+    "body_battery_charged": 80
+  },
+  "2025-02-15": {
+    "date": "2025-02-15",
+    "steps": 28586,
+    "calories": 3719.0,
+    "distance_km": 22.58,
+    "resting_hr": 46,
+    "avg_stress": 33,
+    "sleep_seconds": 36840,
+    "body_battery_charged": 84
+  },
+  "2025-02-16": {
+    "date": "2025-02-16",
+    "steps": 12686,
+    "calories": 2436.0,
+    "distance_km": 10.28,
+    "resting_hr": 50,
+    "avg_stress": 50,
+    "sleep_seconds": 28920,
+    "body_battery_charged": 41
+  },
+  "2025-02-17": {
+    "date": "2025-02-17",
+    "steps": 11385,
+    "calories": 2393.0,
+    "distance_km": 8.72,
+    "resting_hr": 45,
+    "avg_stress": 27,
+    "sleep_seconds": 33480,
+    "body_battery_charged": 98
+  },
+  "2025-02-18": {
+    "date": "2025-02-18",
+    "steps": 18698,
+    "calories": 3221.0,
+    "distance_km": 19.89,
+    "resting_hr": 42,
+    "avg_stress": 26,
+    "sleep_seconds": 39900,
+    "body_battery_charged": 78
+  },
+  "2025-02-19": {
+    "date": "2025-02-19",
+    "steps": 20623,
+    "calories": 2894.0,
+    "distance_km": 18.37,
+    "resting_hr": 44,
+    "avg_stress": 37,
+    "sleep_seconds": 29760,
+    "body_battery_charged": 86
+  },
+  "2025-02-20": {
+    "date": "2025-02-20",
+    "steps": 21982,
+    "calories": 3154.0,
+    "distance_km": 16.83,
+    "resting_hr": 44,
+    "avg_stress": 31,
+    "sleep_seconds": 29820,
+    "body_battery_charged": 86
+  },
+  "2025-02-21": {
+    "date": "2025-02-21",
+    "steps": 13117,
+    "calories": 2363.0,
+    "distance_km": 10.03,
+    "resting_hr": 46,
+    "avg_stress": 29,
+    "sleep_seconds": 25740,
+    "body_battery_charged": 84
+  },
+  "2025-02-22": {
+    "date": "2025-02-22",
+    "steps": 20480,
+    "calories": 3258.0,
+    "distance_km": 15.65,
+    "resting_hr": 42,
+    "avg_stress": 33,
+    "sleep_seconds": 37380,
+    "body_battery_charged": 77
+  },
+  "2025-02-23": {
+    "date": "2025-02-23",
+    "steps": 9928,
+    "calories": 2286.0,
+    "distance_km": 7.59,
+    "resting_hr": 45,
+    "avg_stress": 37,
+    "sleep_seconds": 21600,
+    "body_battery_charged": 41
+  },
+  "2025-02-24": {
+    "date": "2025-02-24",
+    "steps": 13869,
+    "calories": 2526.0,
+    "distance_km": 10.6,
+    "resting_hr": 44,
+    "avg_stress": 37,
+    "sleep_seconds": 33600,
+    "body_battery_charged": 88
+  },
+  "2025-02-25": {
+    "date": "2025-02-25",
+    "steps": 14340,
+    "calories": 2691.0,
+    "distance_km": 11.46,
+    "resting_hr": 43,
+    "avg_stress": 31,
+    "sleep_seconds": 32700,
+    "body_battery_charged": 90
+  },
+  "2025-02-26": {
+    "date": "2025-02-26",
+    "steps": 13244,
+    "calories": 2349.0,
+    "distance_km": 10.35,
+    "resting_hr": 44,
+    "avg_stress": 36,
+    "sleep_seconds": 28260,
+    "body_battery_charged": 90
+  },
+  "2025-02-27": {
+    "date": "2025-02-27",
+    "steps": 18963,
+    "calories": 2743.0,
+    "distance_km": 15.49,
+    "resting_hr": 43,
+    "avg_stress": 36,
+    "sleep_seconds": 33960,
+    "body_battery_charged": 89
+  },
+  "2025-02-28": {
+    "date": "2025-02-28",
+    "steps": 18689,
+    "calories": 2719.0,
+    "distance_km": 15.74,
+    "resting_hr": 45,
+    "avg_stress": 31,
+    "sleep_seconds": 29160,
+    "body_battery_charged": 89
+  },
+  "2025-03-01": {
+    "date": "2025-03-01",
+    "steps": 24735,
+    "calories": 3718.0,
+    "distance_km": 21.26,
+    "resting_hr": 42,
+    "avg_stress": 38,
+    "sleep_seconds": 35580,
+    "body_battery_charged": 71
+  },
+  "2025-03-02": {
+    "date": "2025-03-02",
+    "steps": 18278,
+    "calories": 2650.0,
+    "distance_km": 13.97,
+    "resting_hr": 46,
+    "avg_stress": 32,
+    "sleep_seconds": 16260,
+    "body_battery_charged": 70
+  },
+  "2025-03-03": {
+    "date": "2025-03-03",
+    "steps": 16047,
+    "calories": 2397.0,
+    "distance_km": 12.31,
+    "resting_hr": 43,
+    "avg_stress": 26,
+    "sleep_seconds": 29940,
+    "body_battery_charged": 91
+  },
+  "2025-03-04": {
+    "date": "2025-03-04",
+    "steps": 20160,
+    "calories": 3340.0,
+    "distance_km": 18.42,
+    "resting_hr": 41,
+    "avg_stress": 24,
+    "sleep_seconds": 37860,
+    "body_battery_charged": 82
+  },
+  "2025-03-05": {
+    "date": "2025-03-05",
+    "steps": 22502,
+    "calories": 2900.0,
+    "distance_km": 19.56,
+    "resting_hr": 42,
+    "avg_stress": 30,
+    "sleep_seconds": 30540,
+    "body_battery_charged": 71
+  },
+  "2025-03-06": {
+    "date": "2025-03-06",
+    "steps": 35854,
+    "calories": 3482.0,
+    "distance_km": 29.76,
+    "resting_hr": 41,
+    "avg_stress": 32,
+    "sleep_seconds": 28140,
+    "body_battery_charged": 83
+  },
+  "2025-03-07": {
+    "date": "2025-03-07",
+    "steps": 28297,
+    "calories": 2734.0,
+    "distance_km": 21.64,
+    "resting_hr": 46,
+    "avg_stress": 42,
+    "sleep_seconds": 11820,
+    "body_battery_charged": 48
+  },
+  "2025-03-08": {
+    "date": "2025-03-08",
+    "steps": 35136,
+    "calories": 3298.0,
+    "distance_km": 29.67,
+    "resting_hr": 44,
+    "avg_stress": 23,
+    "sleep_seconds": 35580,
+    "body_battery_charged": 94
+  },
+  "2025-03-09": {
+    "date": "2025-03-09",
+    "steps": 28768,
+    "calories": 3321.0,
+    "distance_km": 27.43,
+    "resting_hr": 46,
+    "avg_stress": 32,
+    "sleep_seconds": 23640,
+    "body_battery_charged": 89
+  },
+  "2025-03-10": {
+    "date": "2025-03-10",
+    "steps": 14656,
+    "calories": 2505.0,
+    "distance_km": 11.2,
+    "resting_hr": 42,
+    "avg_stress": 21,
+    "sleep_seconds": 33480,
+    "body_battery_charged": 76
+  },
+  "2025-03-11": {
+    "date": "2025-03-11",
+    "steps": 23272,
+    "calories": 2897.0,
+    "distance_km": 18.4,
+    "resting_hr": 42,
+    "avg_stress": 32,
+    "sleep_seconds": 36840,
+    "body_battery_charged": 71
+  },
+  "2025-03-12": {
+    "date": "2025-03-12",
+    "steps": 17464,
+    "calories": 3034.0,
+    "distance_km": 13.36,
+    "resting_hr": 47,
+    "avg_stress": 38,
+    "sleep_seconds": 27180,
+    "body_battery_charged": 64
+  },
+  "2025-03-13": {
+    "date": "2025-03-13",
+    "steps": 16275,
+    "calories": 2481.0,
+    "distance_km": 13.63,
+    "resting_hr": 46,
+    "avg_stress": 36,
+    "sleep_seconds": 28740,
+    "body_battery_charged": 98
+  },
+  "2025-03-14": {
+    "date": "2025-03-14",
+    "steps": 26224,
+    "calories": 3057.0,
+    "distance_km": 22.04,
+    "resting_hr": 50,
+    "avg_stress": 42,
+    "sleep_seconds": 30780,
+    "body_battery_charged": 142
+  },
+  "2025-03-15": {
+    "date": "2025-03-15",
+    "steps": 14543,
+    "calories": 2447.0,
+    "distance_km": 11.12,
+    "resting_hr": 45,
+    "avg_stress": 35,
+    "sleep_seconds": 27660,
+    "body_battery_charged": 15
+  },
+  "2025-03-16": {
+    "date": "2025-03-16",
+    "steps": 10303,
+    "calories": 2177.0,
+    "distance_km": 7.89,
+    "resting_hr": 43,
+    "avg_stress": 25,
+    "sleep_seconds": 30000,
+    "body_battery_charged": 90
+  },
+  "2025-03-17": {
+    "date": "2025-03-17",
+    "steps": 23220,
+    "calories": 2952.0,
+    "distance_km": 20.34,
+    "resting_hr": 41,
+    "avg_stress": 32,
+    "sleep_seconds": 37140,
+    "body_battery_charged": 53
+  },
+  "2025-03-18": {
+    "date": "2025-03-18",
+    "steps": 20360,
+    "calories": 2700.0,
+    "distance_km": 18.13,
+    "resting_hr": 43,
+    "avg_stress": 26,
+    "sleep_seconds": 35100,
+    "body_battery_charged": 88
+  },
+  "2025-03-19": {
+    "date": "2025-03-19",
+    "steps": 24352,
+    "calories": 3106.0,
+    "distance_km": 21.81,
+    "resting_hr": 42,
+    "avg_stress": 30,
+    "sleep_seconds": 35640,
+    "body_battery_charged": 79
+  },
+  "2025-03-20": {
+    "date": "2025-03-20",
+    "steps": 27093,
+    "calories": 3054.0,
+    "distance_km": 24.71,
+    "resting_hr": 44,
+    "avg_stress": 31,
+    "sleep_seconds": 28140,
+    "body_battery_charged": 89
+  },
+  "2025-03-21": {
+    "date": "2025-03-21",
+    "steps": 8012,
+    "calories": 2041.0,
+    "distance_km": 6.14,
+    "resting_hr": 41,
+    "avg_stress": 20,
+    "sleep_seconds": 20280,
+    "body_battery_charged": 88
+  },
+  "2025-03-22": {
+    "date": "2025-03-22",
+    "steps": 23888,
+    "calories": 2995.0,
+    "distance_km": 21.65,
+    "resting_hr": 40,
+    "avg_stress": 25,
+    "sleep_seconds": 34620,
+    "body_battery_charged": 73
+  },
+  "2025-03-23": {
+    "date": "2025-03-23",
+    "steps": 13266,
+    "calories": 3026.0,
+    "distance_km": 13.6,
+    "resting_hr": 40,
+    "avg_stress": 25,
+    "sleep_seconds": 42000,
+    "body_battery_charged": 79
+  },
+  "2025-03-24": {
+    "date": "2025-03-24",
+    "steps": 8046,
+    "calories": 2101.0,
+    "distance_km": 6.3,
+    "resting_hr": 40,
+    "avg_stress": 25,
+    "sleep_seconds": 44880,
+    "body_battery_charged": 79
+  },
+  "2025-03-25": {
+    "date": "2025-03-25",
+    "steps": 4728,
+    "calories": 1962.0,
+    "distance_km": 3.94,
+    "resting_hr": 39,
+    "avg_stress": 26,
+    "sleep_seconds": 39180,
+    "body_battery_charged": 77
+  },
+  "2025-03-26": {
+    "date": "2025-03-26",
+    "steps": 8128,
+    "calories": 2611.0,
+    "distance_km": 9.57,
+    "resting_hr": 38,
+    "avg_stress": 19,
+    "sleep_seconds": 38820,
+    "body_battery_charged": 67
+  },
+  "2025-03-27": {
+    "date": "2025-03-27",
+    "steps": 13060,
+    "calories": 3183.0,
+    "distance_km": 14.11,
+    "resting_hr": 39,
+    "avg_stress": 28,
+    "sleep_seconds": 39420,
+    "body_battery_charged": 63
+  },
+  "2025-03-28": {
+    "date": "2025-03-28",
+    "steps": 8954,
+    "calories": 2389.0,
+    "distance_km": 8.58,
+    "resting_hr": 41,
+    "avg_stress": 24,
+    "sleep_seconds": 42420,
+    "body_battery_charged": 93
+  },
+  "2025-03-29": {
+    "date": "2025-03-29",
+    "steps": 8461,
+    "calories": 2290.0,
+    "distance_km": 8.31,
+    "resting_hr": 39,
+    "avg_stress": 25,
+    "sleep_seconds": 41460,
+    "body_battery_charged": 62
+  },
+  "2025-03-30": {
+    "date": "2025-03-30",
+    "steps": 15369,
+    "calories": 2510.0,
+    "distance_km": 14.22,
+    "resting_hr": 41,
+    "avg_stress": 21,
+    "sleep_seconds": 28320,
+    "body_battery_charged": 93
+  },
+  "2025-03-31": {
+    "date": "2025-03-31",
+    "steps": 27412,
+    "calories": 3008.0,
+    "distance_km": 23.32,
+    "resting_hr": 41,
+    "avg_stress": 30,
+    "sleep_seconds": 38580,
+    "body_battery_charged": 59
+  },
+  "2025-04-01": {
+    "date": "2025-04-01",
+    "steps": 30540,
+    "calories": 3459.0,
+    "distance_km": 26.63,
+    "resting_hr": 42,
+    "avg_stress": 37,
+    "sleep_seconds": 35100,
+    "body_battery_charged": 84
+  },
+  "2025-04-02": {
+    "date": "2025-04-02",
+    "steps": 22201,
+    "calories": 3070.0,
+    "distance_km": 21.0,
+    "resting_hr": 43,
+    "avg_stress": 34,
+    "sleep_seconds": 33720,
+    "body_battery_charged": 91
+  },
+  "2025-04-03": {
+    "date": "2025-04-03",
+    "steps": 19687,
+    "calories": 2763.0,
+    "distance_km": 16.99,
+    "resting_hr": 44,
+    "avg_stress": 33,
+    "sleep_seconds": 31620,
+    "body_battery_charged": 79
+  },
+  "2025-04-04": {
+    "date": "2025-04-04",
+    "steps": 9195,
+    "calories": 2074.0,
+    "distance_km": 7.03,
+    "resting_hr": 45,
+    "avg_stress": 31,
+    "sleep_seconds": 720,
+    "body_battery_charged": 26
+  },
+  "2025-04-05": {
+    "date": "2025-04-05",
+    "steps": 20414,
+    "calories": 3320.0,
+    "distance_km": 19.64,
+    "resting_hr": 41,
+    "avg_stress": 32,
+    "sleep_seconds": 32100,
+    "body_battery_charged": 83
+  },
+  "2025-04-06": {
+    "date": "2025-04-06",
+    "steps": 13004,
+    "calories": 2505.0,
+    "distance_km": 9.98,
+    "resting_hr": 46,
+    "avg_stress": 40,
+    "sleep_seconds": 28020,
+    "body_battery_charged": 57
+  },
+  "2025-04-07": {
+    "date": "2025-04-07",
+    "steps": 23821,
+    "calories": 3238.0,
+    "distance_km": 20.96,
+    "resting_hr": 44,
+    "avg_stress": 35,
+    "sleep_seconds": 16800,
+    "body_battery_charged": 37
+  },
+  "2025-04-08": {
+    "date": "2025-04-08",
+    "steps": 26077,
+    "calories": 3367.0,
+    "distance_km": 25.72,
+    "resting_hr": 43,
+    "avg_stress": 36,
+    "sleep_seconds": 35340,
+    "body_battery_charged": 88
+  },
+  "2025-04-09": {
+    "date": "2025-04-09",
+    "steps": 20154,
+    "calories": 2926.0,
+    "distance_km": 18.76,
+    "resting_hr": 44,
+    "avg_stress": 28,
+    "sleep_seconds": 31920,
+    "body_battery_charged": 94
+  },
+  "2025-04-10": {
+    "date": "2025-04-10",
+    "steps": 21231,
+    "calories": 3227.0,
+    "distance_km": 21.28,
+    "resting_hr": 43,
+    "avg_stress": 35,
+    "sleep_seconds": 33000,
+    "body_battery_charged": 71
+  },
+  "2025-04-11": {
+    "date": "2025-04-11",
+    "steps": 32253,
+    "calories": 3173.0,
+    "distance_km": 27.47,
+    "resting_hr": 45,
+    "avg_stress": 38,
+    "sleep_seconds": 32400,
+    "body_battery_charged": 86
+  },
+  "2025-04-12": {
+    "date": "2025-04-12",
+    "steps": 22837,
+    "calories": 2516.0,
+    "distance_km": 17.64,
+    "resting_hr": 46,
+    "avg_stress": 29,
+    "sleep_seconds": 33480,
+    "body_battery_charged": 71
+  },
+  "2025-04-13": {
+    "date": "2025-04-13",
+    "steps": 33117,
+    "calories": 3195.0,
+    "distance_km": 29.92,
+    "resting_hr": 43,
+    "avg_stress": 29,
+    "sleep_seconds": 24360,
+    "body_battery_charged": 88
+  },
+  "2025-04-14": {
+    "date": "2025-04-14",
+    "steps": 21683,
+    "calories": 2883.0,
+    "distance_km": 19.72,
+    "resting_hr": 42,
+    "avg_stress": 26,
+    "sleep_seconds": 34500,
+    "body_battery_charged": 95
+  },
+  "2025-04-15": {
+    "date": "2025-04-15",
+    "steps": 21335,
+    "calories": 3247.0,
+    "distance_km": 20.86,
+    "resting_hr": 44,
+    "avg_stress": 37,
+    "sleep_seconds": 32160,
+    "body_battery_charged": 81
+  },
+  "2025-04-16": {
+    "date": "2025-04-16",
+    "steps": 24269,
+    "calories": 2923.0,
+    "distance_km": 21.36,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 30540,
+    "body_battery_charged": 79
+  },
+  "2025-04-17": {
+    "date": "2025-04-17",
+    "steps": 26768,
+    "calories": 3308.0,
+    "distance_km": 27.34,
+    "resting_hr": 42,
+    "avg_stress": 34,
+    "sleep_seconds": 33360,
+    "body_battery_charged": 72
+  },
+  "2025-04-18": {
+    "date": "2025-04-18",
+    "steps": 28477,
+    "calories": 3454.0,
+    "distance_km": 27.64,
+    "resting_hr": 44,
+    "avg_stress": 34,
+    "sleep_seconds": 31080,
+    "body_battery_charged": 67
+  },
+  "2025-04-19": {
+    "date": "2025-04-19",
+    "steps": 19398,
+    "calories": 2586.0,
+    "distance_km": 15.93,
+    "resting_hr": 42,
+    "avg_stress": 34,
+    "sleep_seconds": 28020,
+    "body_battery_charged": 77
+  },
+  "2025-04-20": {
+    "date": "2025-04-20",
+    "steps": 20564,
+    "calories": 2714.0,
+    "distance_km": 18.22,
+    "resting_hr": 44,
+    "avg_stress": 24,
+    "sleep_seconds": 22080,
+    "body_battery_charged": 67
+  },
+  "2025-04-21": {
+    "date": "2025-04-21",
+    "steps": 12840,
+    "calories": 2394.0,
+    "distance_km": 12.36,
+    "resting_hr": 42,
+    "avg_stress": 18,
+    "sleep_seconds": 29280,
+    "body_battery_charged": 71
+  },
+  "2025-04-22": {
+    "date": "2025-04-22",
+    "steps": 17046,
+    "calories": 3221.0,
+    "distance_km": 19.42,
+    "resting_hr": 47,
+    "avg_stress": 19,
+    "sleep_seconds": null,
+    "body_battery_charged": 12
+  },
+  "2025-04-23": {
+    "date": "2025-04-23",
+    "steps": 24978,
+    "calories": 3255.0,
+    "distance_km": 23.1,
+    "resting_hr": 43,
+    "avg_stress": 29,
+    "sleep_seconds": 22320,
+    "body_battery_charged": 76
+  },
+  "2025-04-24": {
+    "date": "2025-04-24",
+    "steps": 24239,
+    "calories": 2905.0,
+    "distance_km": 22.93,
+    "resting_hr": 46,
+    "avg_stress": 27,
+    "sleep_seconds": 15480,
+    "body_battery_charged": 67
+  },
+  "2025-04-25": {
+    "date": "2025-04-25",
+    "steps": 16344,
+    "calories": 2481.0,
+    "distance_km": 13.84,
+    "resting_hr": 43,
+    "avg_stress": 27,
+    "sleep_seconds": 24960,
+    "body_battery_charged": 99
+  },
+  "2025-04-26": {
+    "date": "2025-04-26",
+    "steps": 28597,
+    "calories": 3288.0,
+    "distance_km": 28.9,
+    "resting_hr": 42,
+    "avg_stress": 26,
+    "sleep_seconds": 31740,
+    "body_battery_charged": 68
+  },
+  "2025-04-27": {
+    "date": "2025-04-27",
+    "steps": 25547,
+    "calories": 2792.0,
+    "distance_km": 21.18,
+    "resting_hr": 43,
+    "avg_stress": 27,
+    "sleep_seconds": 19620,
+    "body_battery_charged": 94
+  },
+  "2025-04-28": {
+    "date": "2025-04-28",
+    "steps": 18930,
+    "calories": 2809.0,
+    "distance_km": 18.05,
+    "resting_hr": 44,
+    "avg_stress": 39,
+    "sleep_seconds": 29400,
+    "body_battery_charged": 70
+  },
+  "2025-04-29": {
+    "date": "2025-04-29",
+    "steps": 19108,
+    "calories": 2883.0,
+    "distance_km": 17.55,
+    "resting_hr": 51,
+    "avg_stress": 36,
+    "sleep_seconds": 30120,
+    "body_battery_charged": 83
+  },
+  "2025-04-30": {
+    "date": "2025-04-30",
+    "steps": 16100,
+    "calories": 2518.0,
+    "distance_km": 12.31,
+    "resting_hr": 45,
+    "avg_stress": 24,
+    "sleep_seconds": 27660,
+    "body_battery_charged": 96
+  },
+  "2025-05-01": {
+    "date": "2025-05-01",
+    "steps": 21210,
+    "calories": 2830.0,
+    "distance_km": 19.92,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 32400,
+    "body_battery_charged": 55
+  },
+  "2025-05-02": {
+    "date": "2025-05-02",
+    "steps": 22528,
+    "calories": 2668.0,
+    "distance_km": 18.72,
+    "resting_hr": 42,
+    "avg_stress": 26,
+    "sleep_seconds": 23700,
+    "body_battery_charged": 100
+  },
+  "2025-05-03": {
+    "date": "2025-05-03",
+    "steps": 20054,
+    "calories": 2708.0,
+    "distance_km": 17.94,
+    "resting_hr": 42,
+    "avg_stress": 30,
+    "sleep_seconds": 29089,
+    "body_battery_charged": 55
+  },
+  "2025-05-04": {
+    "date": "2025-05-04",
+    "steps": 10596,
+    "calories": 2170.0,
+    "distance_km": 8.1,
+    "resting_hr": 43,
+    "avg_stress": 25,
+    "sleep_seconds": 18240,
+    "body_battery_charged": 87
+  },
+  "2025-05-05": {
+    "date": "2025-05-05",
+    "steps": 12295,
+    "calories": 2187.0,
+    "distance_km": 9.4,
+    "resting_hr": 39,
+    "avg_stress": 19,
+    "sleep_seconds": 28020,
+    "body_battery_charged": 76
+  },
+  "2025-05-06": {
+    "date": "2025-05-06",
+    "steps": 20703,
+    "calories": 3219.0,
+    "distance_km": 20.08,
+    "resting_hr": 39,
+    "avg_stress": 27,
+    "sleep_seconds": 25860,
+    "body_battery_charged": 59
+  },
+  "2025-05-07": {
+    "date": "2025-05-07",
+    "steps": 26062,
+    "calories": 2947.0,
+    "distance_km": 23.57,
+    "resting_hr": 41,
+    "avg_stress": 25,
+    "sleep_seconds": 25200,
+    "body_battery_charged": 81
+  },
+  "2025-05-08": {
+    "date": "2025-05-08",
+    "steps": 19122,
+    "calories": 2297.0,
+    "distance_km": 14.62,
+    "resting_hr": 41,
+    "avg_stress": 21,
+    "sleep_seconds": 23400,
+    "body_battery_charged": 88
+  },
+  "2025-05-09": {
+    "date": "2025-05-09",
+    "steps": 13134,
+    "calories": 2281.0,
+    "distance_km": 10.07,
+    "resting_hr": 40,
+    "avg_stress": 30,
+    "sleep_seconds": 29460,
+    "body_battery_charged": 59
+  },
+  "2025-05-10": {
+    "date": "2025-05-10",
+    "steps": 24009,
+    "calories": 3682.0,
+    "distance_km": 22.31,
+    "resting_hr": 45,
+    "avg_stress": 53,
+    "sleep_seconds": 9960,
+    "body_battery_charged": 39
+  },
+  "2025-05-11": {
+    "date": "2025-05-11",
+    "steps": 9785,
+    "calories": 2046.0,
+    "distance_km": 7.49,
+    "resting_hr": 42,
+    "avg_stress": 28,
+    "sleep_seconds": 16185,
+    "body_battery_charged": 71
+  },
+  "2025-05-12": {
+    "date": "2025-05-12",
+    "steps": 8991,
+    "calories": 2120.0,
+    "distance_km": 6.88,
+    "resting_hr": 40,
+    "avg_stress": 21,
+    "sleep_seconds": 24566,
+    "body_battery_charged": 80
+  },
+  "2025-05-13": {
+    "date": "2025-05-13",
+    "steps": 9793,
+    "calories": 2160.0,
+    "distance_km": 7.49,
+    "resting_hr": 41,
+    "avg_stress": 27,
+    "sleep_seconds": 23640,
+    "body_battery_charged": 75
+  },
+  "2025-05-14": {
+    "date": "2025-05-14",
+    "steps": 11755,
+    "calories": 2184.0,
+    "distance_km": 8.99,
+    "resting_hr": 38,
+    "avg_stress": 22,
+    "sleep_seconds": 25367,
+    "body_battery_charged": 92
+  },
+  "2025-05-15": {
+    "date": "2025-05-15",
+    "steps": 14783,
+    "calories": 2361.0,
+    "distance_km": 11.3,
+    "resting_hr": 38,
+    "avg_stress": 31,
+    "sleep_seconds": 25980,
+    "body_battery_charged": 69
+  },
+  "2025-05-16": {
+    "date": "2025-05-16",
+    "steps": 18522,
+    "calories": 2377.0,
+    "distance_km": 14.23,
+    "resting_hr": 40,
+    "avg_stress": 30,
+    "sleep_seconds": 24000,
+    "body_battery_charged": 90
+  },
+  "2025-05-17": {
+    "date": "2025-05-17",
+    "steps": 16936,
+    "calories": 3106.0,
+    "distance_km": 14.31,
+    "resting_hr": 41,
+    "avg_stress": 28,
+    "sleep_seconds": 31002,
+    "body_battery_charged": 74
+  },
+  "2025-05-18": {
+    "date": "2025-05-18",
+    "steps": 25080,
+    "calories": 2936.0,
+    "distance_km": 23.5,
+    "resting_hr": 44,
+    "avg_stress": 42,
+    "sleep_seconds": 15409,
+    "body_battery_charged": 43
+  },
+  "2025-05-19": {
+    "date": "2025-05-19",
+    "steps": 13370,
+    "calories": 2303.0,
+    "distance_km": 10.24,
+    "resting_hr": 43,
+    "avg_stress": 36,
+    "sleep_seconds": 18333,
+    "body_battery_charged": 77
+  },
+  "2025-05-20": {
+    "date": "2025-05-20",
+    "steps": 29476,
+    "calories": 3276.0,
+    "distance_km": 25.98,
+    "resting_hr": 41,
+    "avg_stress": 30,
+    "sleep_seconds": 27540,
+    "body_battery_charged": 92
+  },
+  "2025-05-21": {
+    "date": "2025-05-21",
+    "steps": 27768,
+    "calories": 3101.0,
+    "distance_km": 23.69,
+    "resting_hr": 41,
+    "avg_stress": 24,
+    "sleep_seconds": 29220,
+    "body_battery_charged": 93
+  },
+  "2025-05-22": {
+    "date": "2025-05-22",
+    "steps": 17977,
+    "calories": 2340.0,
+    "distance_km": 13.88,
+    "resting_hr": 41,
+    "avg_stress": 32,
+    "sleep_seconds": 25860,
+    "body_battery_charged": 75
+  },
+  "2025-05-23": {
+    "date": "2025-05-23",
+    "steps": 27404,
+    "calories": 2959.0,
+    "distance_km": 23.69,
+    "resting_hr": 42,
+    "avg_stress": 32,
+    "sleep_seconds": 28500,
+    "body_battery_charged": 80
+  },
+  "2025-05-24": {
+    "date": "2025-05-24",
+    "steps": 29208,
+    "calories": 3252.0,
+    "distance_km": 28.39,
+    "resting_hr": 42,
+    "avg_stress": 34,
+    "sleep_seconds": 25140,
+    "body_battery_charged": 85
+  },
+  "2025-05-25": {
+    "date": "2025-05-25",
+    "steps": 17664,
+    "calories": 2619.0,
+    "distance_km": 18.94,
+    "resting_hr": 41,
+    "avg_stress": 25,
+    "sleep_seconds": 24900,
+    "body_battery_charged": 92
+  },
+  "2025-05-26": {
+    "date": "2025-05-26",
+    "steps": 12359,
+    "calories": 2149.0,
+    "distance_km": 9.45,
+    "resting_hr": 41,
+    "avg_stress": 23,
+    "sleep_seconds": 22980,
+    "body_battery_charged": 99
+  },
+  "2025-05-27": {
+    "date": "2025-05-27",
+    "steps": 19761,
+    "calories": 3091.0,
+    "distance_km": 18.65,
+    "resting_hr": 39,
+    "avg_stress": 29,
+    "sleep_seconds": 33900,
+    "body_battery_charged": 58
+  },
+  "2025-05-28": {
+    "date": "2025-05-28",
+    "steps": 27285,
+    "calories": 3378.0,
+    "distance_km": 26.14,
+    "resting_hr": 41,
+    "avg_stress": 30,
+    "sleep_seconds": 27960,
+    "body_battery_charged": 81
+  },
+  "2025-05-29": {
+    "date": "2025-05-29",
+    "steps": 17319,
+    "calories": 2662.0,
+    "distance_km": 16.02,
+    "resting_hr": 42,
+    "avg_stress": 30,
+    "sleep_seconds": 25060,
+    "body_battery_charged": 86
+  },
+  "2025-05-30": {
+    "date": "2025-05-30",
+    "steps": 28454,
+    "calories": 2785.0,
+    "distance_km": 22.02,
+    "resting_hr": 41,
+    "avg_stress": 35,
+    "sleep_seconds": 23400,
+    "body_battery_charged": 83
+  },
+  "2025-05-31": {
+    "date": "2025-05-31",
+    "steps": 11810,
+    "calories": 2101.0,
+    "distance_km": 9.03,
+    "resting_hr": 49,
+    "avg_stress": 30,
+    "sleep_seconds": 17635,
+    "body_battery_charged": 64
+  },
+  "2025-06-01": {
+    "date": "2025-06-01",
+    "steps": 16056,
+    "calories": 2640.0,
+    "distance_km": 14.88,
+    "resting_hr": 42,
+    "avg_stress": 22,
+    "sleep_seconds": 18381,
+    "body_battery_charged": 71
+  },
+  "2025-06-02": {
+    "date": "2025-06-02",
+    "steps": 10642,
+    "calories": 2655.0,
+    "distance_km": 8.15,
+    "resting_hr": 42,
+    "avg_stress": 41,
+    "sleep_seconds": 25260,
+    "body_battery_charged": 80
+  },
+  "2025-06-03": {
+    "date": "2025-06-03",
+    "steps": 13290,
+    "calories": 2306.0,
+    "distance_km": 10.23,
+    "resting_hr": 47,
+    "avg_stress": 49,
+    "sleep_seconds": 23340,
+    "body_battery_charged": 56
+  },
+  "2025-06-04": {
+    "date": "2025-06-04",
+    "steps": 19380,
+    "calories": 2898.0,
+    "distance_km": 17.33,
+    "resting_hr": 47,
+    "avg_stress": 42,
+    "sleep_seconds": 23340,
+    "body_battery_charged": 66
+  },
+  "2025-06-05": {
+    "date": "2025-06-05",
+    "steps": 23454,
+    "calories": 3554.0,
+    "distance_km": 21.37,
+    "resting_hr": 45,
+    "avg_stress": 35,
+    "sleep_seconds": 23640,
+    "body_battery_charged": 86
+  },
+  "2025-06-06": {
+    "date": "2025-06-06",
+    "steps": 27556,
+    "calories": 3130.0,
+    "distance_km": 23.75,
+    "resting_hr": 48,
+    "avg_stress": 48,
+    "sleep_seconds": 8940,
+    "body_battery_charged": 9
+  },
+  "2025-06-07": {
+    "date": "2025-06-07",
+    "steps": 11043,
+    "calories": 2143.0,
+    "distance_km": 8.44,
+    "resting_hr": 43,
+    "avg_stress": 33,
+    "sleep_seconds": 26820,
+    "body_battery_charged": 88
+  },
+  "2025-06-08": {
+    "date": "2025-06-08",
+    "steps": 13044,
+    "calories": 2387.0,
+    "distance_km": 11.35,
+    "resting_hr": 42,
+    "avg_stress": 31,
+    "sleep_seconds": 31620,
+    "body_battery_charged": 86
+  },
+  "2025-06-09": {
+    "date": "2025-06-09",
+    "steps": 12306,
+    "calories": 2225.0,
+    "distance_km": 9.41,
+    "resting_hr": 45,
+    "avg_stress": 33,
+    "sleep_seconds": 21360,
+    "body_battery_charged": 64
+  },
+  "2025-06-10": {
+    "date": "2025-06-10",
+    "steps": 7121,
+    "calories": 2075.0,
+    "distance_km": 5.44,
+    "resting_hr": 41,
+    "avg_stress": 30,
+    "sleep_seconds": 30897,
+    "body_battery_charged": 85
+  },
+  "2025-06-11": {
+    "date": "2025-06-11",
+    "steps": 13909,
+    "calories": 2374.0,
+    "distance_km": 11.04,
+    "resting_hr": 43,
+    "avg_stress": 41,
+    "sleep_seconds": 22380,
+    "body_battery_charged": 72
+  },
+  "2025-06-12": {
+    "date": "2025-06-12",
+    "steps": 22238,
+    "calories": 2791.0,
+    "distance_km": 17.13,
+    "resting_hr": 48,
+    "avg_stress": 42,
+    "sleep_seconds": 10440,
+    "body_battery_charged": 33
+  },
+  "2025-06-13": {
+    "date": "2025-06-13",
+    "steps": 22792,
+    "calories": 2551.0,
+    "distance_km": 17.45,
+    "resting_hr": 41,
+    "avg_stress": 35,
+    "sleep_seconds": 22800,
+    "body_battery_charged": 83
+  },
+  "2025-06-14": {
+    "date": "2025-06-14",
+    "steps": 3439,
+    "calories": 1922.0,
+    "distance_km": 2.63,
+    "resting_hr": 45,
+    "avg_stress": 29,
+    "sleep_seconds": 25020,
+    "body_battery_charged": 81
+  },
+  "2025-06-15": {
+    "date": "2025-06-15",
+    "steps": 6689,
+    "calories": 2418.0,
+    "distance_km": 7.41,
+    "resting_hr": 39,
+    "avg_stress": 19,
+    "sleep_seconds": 33043,
+    "body_battery_charged": 67
+  },
+  "2025-06-16": {
+    "date": "2025-06-16",
+    "steps": 18701,
+    "calories": 3693.0,
+    "distance_km": 19.61,
+    "resting_hr": 40,
+    "avg_stress": 18,
+    "sleep_seconds": 31560,
+    "body_battery_charged": 72
+  },
+  "2025-06-17": {
+    "date": "2025-06-17",
+    "steps": 3551,
+    "calories": 1963.0,
+    "distance_km": 2.71,
+    "resting_hr": 46,
+    "avg_stress": 40,
+    "sleep_seconds": 28475,
+    "body_battery_charged": 60
+  },
+  "2025-06-18": {
+    "date": "2025-06-18",
+    "steps": 5319,
+    "calories": 2065.0,
+    "distance_km": 4.07,
+    "resting_hr": 43,
+    "avg_stress": 36,
+    "sleep_seconds": 25680,
+    "body_battery_charged": 82
+  },
+  "2025-06-19": {
+    "date": "2025-06-19",
+    "steps": 16913,
+    "calories": 3168.0,
+    "distance_km": 18.6,
+    "resting_hr": 42,
+    "avg_stress": 37,
+    "sleep_seconds": 27231,
+    "body_battery_charged": 84
+  },
+  "2025-06-20": {
+    "date": "2025-06-20",
+    "steps": 4884,
+    "calories": 1987.0,
+    "distance_km": 3.75,
+    "resting_hr": 43,
+    "avg_stress": 25,
+    "sleep_seconds": 28951,
+    "body_battery_charged": 87
+  },
+  "2025-06-21": {
+    "date": "2025-06-21",
+    "steps": 10982,
+    "calories": 2377.0,
+    "distance_km": 8.07,
+    "resting_hr": 42,
+    "avg_stress": 26,
+    "sleep_seconds": 37200,
+    "body_battery_charged": 64
+  },
+  "2025-06-22": {
+    "date": "2025-06-22",
+    "steps": 29989,
+    "calories": 2716.0,
+    "distance_km": 21.54,
+    "resting_hr": 42,
+    "avg_stress": 25,
+    "sleep_seconds": 23580,
+    "body_battery_charged": 68
+  },
+  "2025-06-23": {
+    "date": "2025-06-23",
+    "steps": 4154,
+    "calories": 1997.0,
+    "distance_km": 3.17,
+    "resting_hr": 41,
+    "avg_stress": 26,
+    "sleep_seconds": 26400,
+    "body_battery_charged": 74
+  },
+  "2025-06-24": {
+    "date": "2025-06-24",
+    "steps": 8818,
+    "calories": 2277.0,
+    "distance_km": 6.74,
+    "resting_hr": 40,
+    "avg_stress": 29,
+    "sleep_seconds": 19603,
+    "body_battery_charged": 60
+  },
+  "2025-06-25": {
+    "date": "2025-06-25",
+    "steps": 8324,
+    "calories": 2498.0,
+    "distance_km": 8.77,
+    "resting_hr": 41,
+    "avg_stress": 39,
+    "sleep_seconds": 24900,
+    "body_battery_charged": 84
+  },
+  "2025-06-26": {
+    "date": "2025-06-26",
+    "steps": 12456,
+    "calories": 2667.0,
+    "distance_km": 11.8,
+    "resting_hr": 43,
+    "avg_stress": 35,
+    "sleep_seconds": 26460,
+    "body_battery_charged": 90
+  },
+  "2025-06-27": {
+    "date": "2025-06-27",
+    "steps": 7906,
+    "calories": 2140.0,
+    "distance_km": 6.05,
+    "resting_hr": 44,
+    "avg_stress": 31,
+    "sleep_seconds": 24540,
+    "body_battery_charged": 92
+  },
+  "2025-06-28": {
+    "date": "2025-06-28",
+    "steps": 4805,
+    "calories": 2016.0,
+    "distance_km": 3.67,
+    "resting_hr": 43,
+    "avg_stress": 33,
+    "sleep_seconds": 22080,
+    "body_battery_charged": 61
+  },
+  "2025-06-29": {
+    "date": "2025-06-29",
+    "steps": 22273,
+    "calories": 3630.0,
+    "distance_km": 24.07,
+    "resting_hr": 39,
+    "avg_stress": 37,
+    "sleep_seconds": 25740,
+    "body_battery_charged": 85
+  },
+  "2025-06-30": {
+    "date": "2025-06-30",
+    "steps": 6880,
+    "calories": 2014.0,
+    "distance_km": 5.27,
+    "resting_hr": 44,
+    "avg_stress": 22,
+    "sleep_seconds": 25080,
+    "body_battery_charged": 87
+  },
+  "2025-07-01": {
+    "date": "2025-07-01",
+    "steps": 704,
+    "calories": 1890.0,
+    "distance_km": 0.54,
+    "resting_hr": 40,
+    "avg_stress": 19,
+    "sleep_seconds": 26040,
+    "body_battery_charged": 63
+  },
+  "2025-07-02": {
+    "date": "2025-07-02",
+    "steps": 7765,
+    "calories": 2163.0,
+    "distance_km": 5.94,
+    "resting_hr": 40,
+    "avg_stress": 23,
+    "sleep_seconds": 31320,
+    "body_battery_charged": 76
+  },
+  "2025-07-03": {
+    "date": "2025-07-03",
+    "steps": 23633,
+    "calories": 3323.0,
+    "distance_km": 22.11,
+    "resting_hr": 40,
+    "avg_stress": 26,
+    "sleep_seconds": 24120,
+    "body_battery_charged": 63
+  },
+  "2025-07-04": {
+    "date": "2025-07-04",
+    "steps": 10283,
+    "calories": 2088.0,
+    "distance_km": 7.48,
+    "resting_hr": 43,
+    "avg_stress": 27,
+    "sleep_seconds": 24300,
+    "body_battery_charged": 89
+  },
+  "2025-07-05": {
+    "date": "2025-07-05",
+    "steps": 10995,
+    "calories": 2551.0,
+    "distance_km": 10.61,
+    "resting_hr": 41,
+    "avg_stress": 26,
+    "sleep_seconds": 31980,
+    "body_battery_charged": 68
+  },
+  "2025-07-06": {
+    "date": "2025-07-06",
+    "steps": 19138,
+    "calories": 3309.0,
+    "distance_km": 18.82,
+    "resting_hr": 42,
+    "avg_stress": 28,
+    "sleep_seconds": 25380,
+    "body_battery_charged": 76
+  },
+  "2025-07-07": {
+    "date": "2025-07-07",
+    "steps": 2710,
+    "calories": 1907.0,
+    "distance_km": 2.07,
+    "resting_hr": 41,
+    "avg_stress": 20,
+    "sleep_seconds": 26640,
+    "body_battery_charged": 95
+  },
+  "2025-07-08": {
+    "date": "2025-07-08",
+    "steps": 13706,
+    "calories": 2985.0,
+    "distance_km": 16.16,
+    "resting_hr": 40,
+    "avg_stress": 30,
+    "sleep_seconds": 28860,
+    "body_battery_charged": 47
+  },
+  "2025-07-09": {
+    "date": "2025-07-09",
+    "steps": 9788,
+    "calories": 2479.0,
+    "distance_km": 9.59,
+    "resting_hr": 42,
+    "avg_stress": 27,
+    "sleep_seconds": 29160,
+    "body_battery_charged": 89
+  },
+  "2025-07-10": {
+    "date": "2025-07-10",
+    "steps": 13862,
+    "calories": 2388.0,
+    "distance_km": 10.61,
+    "resting_hr": 40,
+    "avg_stress": 26,
+    "sleep_seconds": 18600,
+    "body_battery_charged": 69
+  },
+  "2025-07-11": {
+    "date": "2025-07-11",
+    "steps": 14810,
+    "calories": 2988.0,
+    "distance_km": 17.27,
+    "resting_hr": 42,
+    "avg_stress": 30,
+    "sleep_seconds": 22740,
+    "body_battery_charged": 69
+  },
+  "2025-07-12": {
+    "date": "2025-07-12",
+    "steps": 8168,
+    "calories": 2332.0,
+    "distance_km": 7.96,
+    "resting_hr": 43,
+    "avg_stress": 26,
+    "sleep_seconds": 29340,
+    "body_battery_charged": 93
+  },
+  "2025-07-13": {
+    "date": "2025-07-13",
+    "steps": 29170,
+    "calories": 3962.0,
+    "distance_km": 30.88,
+    "resting_hr": 42,
+    "avg_stress": 33,
+    "sleep_seconds": 25860,
+    "body_battery_charged": 72
+  },
+  "2025-07-14": {
+    "date": "2025-07-14",
+    "steps": 1417,
+    "calories": 1892.0,
+    "distance_km": 1.08,
+    "resting_hr": 44,
+    "avg_stress": 26,
+    "sleep_seconds": 26340,
+    "body_battery_charged": 87
+  },
+  "2025-07-15": {
+    "date": "2025-07-15",
+    "steps": 11031,
+    "calories": 2511.0,
+    "distance_km": 10.98,
+    "resting_hr": 41,
+    "avg_stress": 22,
+    "sleep_seconds": 31500,
+    "body_battery_charged": 74
+  },
+  "2025-07-16": {
+    "date": "2025-07-16",
+    "steps": 14546,
+    "calories": 2823.0,
+    "distance_km": 15.82,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 29940,
+    "body_battery_charged": 58
+  },
+  "2025-07-17": {
+    "date": "2025-07-17",
+    "steps": 9728,
+    "calories": 2528.0,
+    "distance_km": 9.83,
+    "resting_hr": 43,
+    "avg_stress": 26,
+    "sleep_seconds": 21600,
+    "body_battery_charged": 86
+  },
+  "2025-07-18": {
+    "date": "2025-07-18",
+    "steps": 19109,
+    "calories": 3032.0,
+    "distance_km": 18.93,
+    "resting_hr": 44,
+    "avg_stress": 20,
+    "sleep_seconds": 22518,
+    "body_battery_charged": 73
+  },
+  "2025-07-19": {
+    "date": "2025-07-19",
+    "steps": 10422,
+    "calories": 2483.0,
+    "distance_km": 10.77,
+    "resting_hr": 42,
+    "avg_stress": 20,
+    "sleep_seconds": 13500,
+    "body_battery_charged": 74
+  },
+  "2025-07-20": {
+    "date": "2025-07-20",
+    "steps": 26576,
+    "calories": 3763.0,
+    "distance_km": 29.34,
+    "resting_hr": 47,
+    "avg_stress": 52,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-07-21": {
+    "date": "2025-07-21",
+    "steps": 901,
+    "calories": 1893.0,
+    "distance_km": 0.7,
+    "resting_hr": 47,
+    "avg_stress": 26,
+    "sleep_seconds": null,
+    "body_battery_charged": 5
+  },
+  "2025-07-22": {
+    "date": "2025-07-22",
+    "steps": 16877,
+    "calories": 2826.0,
+    "distance_km": 17.22,
+    "resting_hr": 42,
+    "avg_stress": 25,
+    "sleep_seconds": 25800,
+    "body_battery_charged": 73
+  },
+  "2025-07-23": {
+    "date": "2025-07-23",
+    "steps": 10251,
+    "calories": 2494.0,
+    "distance_km": 10.14,
+    "resting_hr": 40,
+    "avg_stress": 15,
+    "sleep_seconds": 27720,
+    "body_battery_charged": 76
+  },
+  "2025-07-24": {
+    "date": "2025-07-24",
+    "steps": 9022,
+    "calories": 2117.0,
+    "distance_km": 6.9,
+    "resting_hr": 41,
+    "avg_stress": 22,
+    "sleep_seconds": 26940,
+    "body_battery_charged": 68
+  },
+  "2025-07-25": {
+    "date": "2025-07-25",
+    "steps": 9040,
+    "calories": 2432.0,
+    "distance_km": 8.92,
+    "resting_hr": 40,
+    "avg_stress": 30,
+    "sleep_seconds": 30077,
+    "body_battery_charged": 65
+  },
+  "2025-07-26": {
+    "date": "2025-07-26",
+    "steps": 25542,
+    "calories": 3730.0,
+    "distance_km": 28.21,
+    "resting_hr": 41,
+    "avg_stress": 33,
+    "sleep_seconds": 28440,
+    "body_battery_charged": 89
+  },
+  "2025-07-27": {
+    "date": "2025-07-27",
+    "steps": 17350,
+    "calories": 2874.0,
+    "distance_km": 17.78,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 28680,
+    "body_battery_charged": 74
+  },
+  "2025-07-28": {
+    "date": "2025-07-28",
+    "steps": 488,
+    "calories": 1889.0,
+    "distance_km": 0.37,
+    "resting_hr": 43,
+    "avg_stress": 20,
+    "sleep_seconds": 28860,
+    "body_battery_charged": 79
+  },
+  "2025-07-29": {
+    "date": "2025-07-29",
+    "steps": 16961,
+    "calories": 3194.0,
+    "distance_km": 16.82,
+    "resting_hr": 40,
+    "avg_stress": 32,
+    "sleep_seconds": 31860,
+    "body_battery_charged": 57
+  },
+  "2025-07-30": {
+    "date": "2025-07-30",
+    "steps": 9991,
+    "calories": 2539.0,
+    "distance_km": 10.79,
+    "resting_hr": 45,
+    "avg_stress": 39,
+    "sleep_seconds": 27960,
+    "body_battery_charged": 69
+  },
+  "2025-07-31": {
+    "date": "2025-07-31",
+    "steps": 9472,
+    "calories": 2342.0,
+    "distance_km": 7.33,
+    "resting_hr": 45,
+    "avg_stress": 39,
+    "sleep_seconds": 27360,
+    "body_battery_charged": 83
+  },
+  "2025-08-01": {
+    "date": "2025-08-01",
+    "steps": 20901,
+    "calories": 3413.0,
+    "distance_km": 22.23,
+    "resting_hr": 44,
+    "avg_stress": 27,
+    "sleep_seconds": 32640,
+    "body_battery_charged": 85
+  },
+  "2025-08-02": {
+    "date": "2025-08-02",
+    "steps": 9665,
+    "calories": 2462.0,
+    "distance_km": 9.55,
+    "resting_hr": 45,
+    "avg_stress": 34,
+    "sleep_seconds": 31740,
+    "body_battery_charged": 79
+  },
+  "2025-08-03": {
+    "date": "2025-08-03",
+    "steps": 27969,
+    "calories": 3860.0,
+    "distance_km": 31.08,
+    "resting_hr": 44,
+    "avg_stress": 30,
+    "sleep_seconds": 26574,
+    "body_battery_charged": 75
+  },
+  "2025-08-04": {
+    "date": "2025-08-04",
+    "steps": 772,
+    "calories": 1890.0,
+    "distance_km": 0.6,
+    "resting_hr": 46,
+    "avg_stress": 27,
+    "sleep_seconds": 26100,
+    "body_battery_charged": 75
+  },
+  "2025-08-05": {
+    "date": "2025-08-05",
+    "steps": 10405,
+    "calories": 2234.0,
+    "distance_km": 11.01,
+    "resting_hr": 41,
+    "avg_stress": 26,
+    "sleep_seconds": 28645,
+    "body_battery_charged": 70
+  },
+  "2025-08-06": {
+    "date": "2025-08-06",
+    "steps": 9854,
+    "calories": 2565.0,
+    "distance_km": 9.96,
+    "resting_hr": 42,
+    "avg_stress": 38,
+    "sleep_seconds": 29199,
+    "body_battery_charged": 79
+  },
+  "2025-08-07": {
+    "date": "2025-08-07",
+    "steps": 5755,
+    "calories": 1985.0,
+    "distance_km": 4.41,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 22313,
+    "body_battery_charged": 77
+  },
+  "2025-08-08": {
+    "date": "2025-08-08",
+    "steps": 15906,
+    "calories": 3092.0,
+    "distance_km": 17.86,
+    "resting_hr": 44,
+    "avg_stress": 39,
+    "sleep_seconds": 31560,
+    "body_battery_charged": 75
+  },
+  "2025-08-09": {
+    "date": "2025-08-09",
+    "steps": 10006,
+    "calories": 2586.0,
+    "distance_km": 11.32,
+    "resting_hr": 44,
+    "avg_stress": 24,
+    "sleep_seconds": 27180,
+    "body_battery_charged": 83
+  },
+  "2025-08-10": {
+    "date": "2025-08-10",
+    "steps": 31807,
+    "calories": 4624.0,
+    "distance_km": 34.8,
+    "resting_hr": 44,
+    "avg_stress": 35,
+    "sleep_seconds": 31200,
+    "body_battery_charged": 76
+  },
+  "2025-08-11": {
+    "date": "2025-08-11",
+    "steps": 6372,
+    "calories": 2055.0,
+    "distance_km": 4.87,
+    "resting_hr": 47,
+    "avg_stress": 50,
+    "sleep_seconds": null,
+    "body_battery_charged": 3
+  },
+  "2025-08-12": {
+    "date": "2025-08-12",
+    "steps": 10721,
+    "calories": 2228.0,
+    "distance_km": 8.2,
+    "resting_hr": 43,
+    "avg_stress": 24,
+    "sleep_seconds": 29760,
+    "body_battery_charged": 84
+  },
+  "2025-08-13": {
+    "date": "2025-08-13",
+    "steps": 10861,
+    "calories": 2591.0,
+    "distance_km": 12.04,
+    "resting_hr": 40,
+    "avg_stress": 25,
+    "sleep_seconds": 34740,
+    "body_battery_charged": 65
+  },
+  "2025-08-14": {
+    "date": "2025-08-14",
+    "steps": 20009,
+    "calories": 3110.0,
+    "distance_km": 19.97,
+    "resting_hr": 43,
+    "avg_stress": 27,
+    "sleep_seconds": 23640,
+    "body_battery_charged": 77
+  },
+  "2025-08-15": {
+    "date": "2025-08-15",
+    "steps": 22512,
+    "calories": 2898.0,
+    "distance_km": 20.15,
+    "resting_hr": 44,
+    "avg_stress": 30,
+    "sleep_seconds": 30360,
+    "body_battery_charged": 76
+  },
+  "2025-08-16": {
+    "date": "2025-08-16",
+    "steps": 37278,
+    "calories": 3956.0,
+    "distance_km": 38.81,
+    "resting_hr": 45,
+    "avg_stress": 48,
+    "sleep_seconds": 27360,
+    "body_battery_charged": 59
+  },
+  "2025-08-17": {
+    "date": "2025-08-17",
+    "steps": 25993,
+    "calories": 3013.0,
+    "distance_km": 23.9,
+    "resting_hr": 47,
+    "avg_stress": 30,
+    "sleep_seconds": 19020,
+    "body_battery_charged": 56
+  },
+  "2025-08-18": {
+    "date": "2025-08-18",
+    "steps": 3995,
+    "calories": 1996.0,
+    "distance_km": 3.3,
+    "resting_hr": 42,
+    "avg_stress": 27,
+    "sleep_seconds": 32400,
+    "body_battery_charged": 88
+  },
+  "2025-08-19": {
+    "date": "2025-08-19",
+    "steps": 14463,
+    "calories": 2875.0,
+    "distance_km": 15.58,
+    "resting_hr": 41,
+    "avg_stress": 20,
+    "sleep_seconds": 32607,
+    "body_battery_charged": 68
+  },
+  "2025-08-20": {
+    "date": "2025-08-20",
+    "steps": 9790,
+    "calories": 2449.0,
+    "distance_km": 8.86,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 28740,
+    "body_battery_charged": 81
+  },
+  "2025-08-21": {
+    "date": "2025-08-21",
+    "steps": 16670,
+    "calories": 2749.0,
+    "distance_km": 15.9,
+    "resting_hr": 45,
+    "avg_stress": 31,
+    "sleep_seconds": 26280,
+    "body_battery_charged": 61
+  },
+  "2025-08-22": {
+    "date": "2025-08-22",
+    "steps": 17551,
+    "calories": 3019.0,
+    "distance_km": 17.9,
+    "resting_hr": 47,
+    "avg_stress": 43,
+    "sleep_seconds": null,
+    "body_battery_charged": 5
+  },
+  "2025-08-23": {
+    "date": "2025-08-23",
+    "steps": 31715,
+    "calories": 4443.0,
+    "distance_km": 34.44,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 32760,
+    "body_battery_charged": 77
+  },
+  "2025-08-24": {
+    "date": "2025-08-24",
+    "steps": 13728,
+    "calories": 2488.0,
+    "distance_km": 12.63,
+    "resting_hr": 47,
+    "avg_stress": 46,
+    "sleep_seconds": null,
+    "body_battery_charged": 3
+  },
+  "2025-08-25": {
+    "date": "2025-08-25",
+    "steps": 1171,
+    "calories": 1896.0,
+    "distance_km": 0.9,
+    "resting_hr": 42,
+    "avg_stress": 25,
+    "sleep_seconds": 28860,
+    "body_battery_charged": 82
+  },
+  "2025-08-26": {
+    "date": "2025-08-26",
+    "steps": 22106,
+    "calories": 3356.0,
+    "distance_km": 22.3,
+    "resting_hr": 41,
+    "avg_stress": 31,
+    "sleep_seconds": 32760,
+    "body_battery_charged": 63
+  },
+  "2025-08-27": {
+    "date": "2025-08-27",
+    "steps": 5712,
+    "calories": 1978.0,
+    "distance_km": 4.37,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 27180,
+    "body_battery_charged": 70
+  },
+  "2025-08-28": {
+    "date": "2025-08-28",
+    "steps": 6861,
+    "calories": 2046.0,
+    "distance_km": 5.28,
+    "resting_hr": 40,
+    "avg_stress": 29,
+    "sleep_seconds": 31680,
+    "body_battery_charged": 74
+  },
+  "2025-08-29": {
+    "date": "2025-08-29",
+    "steps": 19602,
+    "calories": 3297.0,
+    "distance_km": 21.34,
+    "resting_hr": 41,
+    "avg_stress": 20,
+    "sleep_seconds": 26940,
+    "body_battery_charged": 77
+  },
+  "2025-08-30": {
+    "date": "2025-08-30",
+    "steps": 17733,
+    "calories": 2700.0,
+    "distance_km": 16.37,
+    "resting_hr": 45,
+    "avg_stress": 33,
+    "sleep_seconds": 21660,
+    "body_battery_charged": 66
+  },
+  "2025-08-31": {
+    "date": "2025-08-31",
+    "steps": 28023,
+    "calories": 3836.0,
+    "distance_km": 25.82,
+    "resting_hr": 49,
+    "avg_stress": 43,
+    "sleep_seconds": 25260,
+    "body_battery_charged": 52
+  },
+  "2025-09-01": {
+    "date": "2025-09-01",
+    "steps": 46208,
+    "calories": 4452.0,
+    "distance_km": 37.83,
+    "resting_hr": 47,
+    "avg_stress": 41,
+    "sleep_seconds": 14580,
+    "body_battery_charged": 62
+  },
+  "2025-09-02": {
+    "date": "2025-09-02",
+    "steps": 21302,
+    "calories": 2982.0,
+    "distance_km": 19.07,
+    "resting_hr": 47,
+    "avg_stress": 48,
+    "sleep_seconds": null,
+    "body_battery_charged": 21
+  },
+  "2025-09-03": {
+    "date": "2025-09-03",
+    "steps": 38517,
+    "calories": 4673.0,
+    "distance_km": 39.87,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 32280,
+    "body_battery_charged": 90
+  },
+  "2025-09-04": {
+    "date": "2025-09-04",
+    "steps": 15940,
+    "calories": 2725.0,
+    "distance_km": 15.01,
+    "resting_hr": 45,
+    "avg_stress": 38,
+    "sleep_seconds": 24480,
+    "body_battery_charged": 70
+  },
+  "2025-09-05": {
+    "date": "2025-09-05",
+    "steps": 5384,
+    "calories": 1950.0,
+    "distance_km": 4.12,
+    "resting_hr": 43,
+    "avg_stress": 24,
+    "sleep_seconds": 20760,
+    "body_battery_charged": 91
+  },
+  "2025-09-06": {
+    "date": "2025-09-06",
+    "steps": 16040,
+    "calories": 3153.0,
+    "distance_km": 18.99,
+    "resting_hr": 42,
+    "avg_stress": 33,
+    "sleep_seconds": 27780,
+    "body_battery_charged": 70
+  },
+  "2025-09-07": {
+    "date": "2025-09-07",
+    "steps": 12572,
+    "calories": 2745.0,
+    "distance_km": 13.8,
+    "resting_hr": 43,
+    "avg_stress": 20,
+    "sleep_seconds": 27660,
+    "body_battery_charged": 81
+  },
+  "2025-09-08": {
+    "date": "2025-09-08",
+    "steps": 11985,
+    "calories": 2714.0,
+    "distance_km": 11.87,
+    "resting_hr": 42,
+    "avg_stress": 25,
+    "sleep_seconds": 29460,
+    "body_battery_charged": 40
+  },
+  "2025-09-09": {
+    "date": "2025-09-09",
+    "steps": 36342,
+    "calories": 4632.0,
+    "distance_km": 38.64,
+    "resting_hr": 41,
+    "avg_stress": 34,
+    "sleep_seconds": 29520,
+    "body_battery_charged": 69
+  },
+  "2025-09-10": {
+    "date": "2025-09-10",
+    "steps": 3885,
+    "calories": 1951.0,
+    "distance_km": 2.97,
+    "resting_hr": 46,
+    "avg_stress": 26,
+    "sleep_seconds": 24689,
+    "body_battery_charged": 76
+  },
+  "2025-09-11": {
+    "date": "2025-09-11",
+    "steps": 10704,
+    "calories": 2682.0,
+    "distance_km": 11.47,
+    "resting_hr": 42,
+    "avg_stress": 21,
+    "sleep_seconds": 30180,
+    "body_battery_charged": 73
+  },
+  "2025-09-12": {
+    "date": "2025-09-12",
+    "steps": 26807,
+    "calories": 3802.0,
+    "distance_km": 28.36,
+    "resting_hr": 41,
+    "avg_stress": 24,
+    "sleep_seconds": 33120,
+    "body_battery_charged": 70
+  },
+  "2025-09-13": {
+    "date": "2025-09-13",
+    "steps": 16913,
+    "calories": 3016.0,
+    "distance_km": 17.97,
+    "resting_hr": 43,
+    "avg_stress": 29,
+    "sleep_seconds": 24000,
+    "body_battery_charged": 78
+  },
+  "2025-09-14": {
+    "date": "2025-09-14",
+    "steps": 9783,
+    "calories": 2482.0,
+    "distance_km": 10.04,
+    "resting_hr": 42,
+    "avg_stress": 27,
+    "sleep_seconds": 26040,
+    "body_battery_charged": 77
+  },
+  "2025-09-15": {
+    "date": "2025-09-15",
+    "steps": 21899,
+    "calories": 3388.0,
+    "distance_km": 22.12,
+    "resting_hr": 42,
+    "avg_stress": 22,
+    "sleep_seconds": 30900,
+    "body_battery_charged": 71
+  },
+  "2025-09-16": {
+    "date": "2025-09-16",
+    "steps": 17165,
+    "calories": 3017.0,
+    "distance_km": 18.0,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 28560,
+    "body_battery_charged": 75
+  },
+  "2025-09-17": {
+    "date": "2025-09-17",
+    "steps": 22488,
+    "calories": 2959.0,
+    "distance_km": 21.89,
+    "resting_hr": 43,
+    "avg_stress": 25,
+    "sleep_seconds": 25260,
+    "body_battery_charged": 74
+  },
+  "2025-09-18": {
+    "date": "2025-09-18",
+    "steps": 35394,
+    "calories": 3338.0,
+    "distance_km": 30.53,
+    "resting_hr": 45,
+    "avg_stress": 32,
+    "sleep_seconds": 26400,
+    "body_battery_charged": 76
+  },
+  "2025-09-19": {
+    "date": "2025-09-19",
+    "steps": 37374,
+    "calories": 3603.0,
+    "distance_km": 33.61,
+    "resting_hr": 44,
+    "avg_stress": 38,
+    "sleep_seconds": 22980,
+    "body_battery_charged": 69
+  },
+  "2025-09-20": {
+    "date": "2025-09-20",
+    "steps": 20339,
+    "calories": 2553.0,
+    "distance_km": 15.55,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 23760,
+    "body_battery_charged": 88
+  },
+  "2025-09-21": {
+    "date": "2025-09-21",
+    "steps": 44341,
+    "calories": 4262.0,
+    "distance_km": 44.1,
+    "resting_hr": 41,
+    "avg_stress": 39,
+    "sleep_seconds": 23456,
+    "body_battery_charged": 76
+  },
+  "2025-09-22": {
+    "date": "2025-09-22",
+    "steps": 26975,
+    "calories": 3100.0,
+    "distance_km": 24.84,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 29460,
+    "body_battery_charged": 100
+  },
+  "2025-09-23": {
+    "date": "2025-09-23",
+    "steps": 25196,
+    "calories": 2985.0,
+    "distance_km": 23.43,
+    "resting_hr": 44,
+    "avg_stress": 28,
+    "sleep_seconds": 28560,
+    "body_battery_charged": 83
+  },
+  "2025-09-24": {
+    "date": "2025-09-24",
+    "steps": 22934,
+    "calories": 3271.0,
+    "distance_km": 24.38,
+    "resting_hr": 43,
+    "avg_stress": 31,
+    "sleep_seconds": 28740,
+    "body_battery_charged": 86
+  },
+  "2025-09-25": {
+    "date": "2025-09-25",
+    "steps": 19546,
+    "calories": 2504.0,
+    "distance_km": 14.94,
+    "resting_hr": 44,
+    "avg_stress": 32,
+    "sleep_seconds": 24840,
+    "body_battery_charged": 90
+  },
+  "2025-09-26": {
+    "date": "2025-09-26",
+    "steps": 30784,
+    "calories": 3128.0,
+    "distance_km": 25.41,
+    "resting_hr": 42,
+    "avg_stress": 34,
+    "sleep_seconds": 29760,
+    "body_battery_charged": 71
+  },
+  "2025-09-27": {
+    "date": "2025-09-27",
+    "steps": 33886,
+    "calories": 3531.0,
+    "distance_km": 32.37,
+    "resting_hr": 47,
+    "avg_stress": 42,
+    "sleep_seconds": 13800,
+    "body_battery_charged": 61
+  },
+  "2025-09-28": {
+    "date": "2025-09-28",
+    "steps": 22030,
+    "calories": 2569.0,
+    "distance_km": 18.74,
+    "resting_hr": 47,
+    "avg_stress": 35,
+    "sleep_seconds": 15780,
+    "body_battery_charged": 52
+  },
+  "2025-09-29": {
+    "date": "2025-09-29",
+    "steps": 21752,
+    "calories": 2485.0,
+    "distance_km": 17.89,
+    "resting_hr": 40,
+    "avg_stress": 25,
+    "sleep_seconds": 21587,
+    "body_battery_charged": 93
+  },
+  "2025-09-30": {
+    "date": "2025-09-30",
+    "steps": 8856,
+    "calories": 2203.0,
+    "distance_km": 6.77,
+    "resting_hr": 41,
+    "avg_stress": 42,
+    "sleep_seconds": 23940,
+    "body_battery_charged": 86
+  },
+  "2025-10-01": {
+    "date": "2025-10-01",
+    "steps": 24049,
+    "calories": 3446.0,
+    "distance_km": 21.32,
+    "resting_hr": 43,
+    "avg_stress": 41,
+    "sleep_seconds": 30840,
+    "body_battery_charged": 88
+  },
+  "2025-10-02": {
+    "date": "2025-10-02",
+    "steps": 25993,
+    "calories": 3261.0,
+    "distance_km": 24.02,
+    "resting_hr": 48,
+    "avg_stress": 51,
+    "sleep_seconds": 16116,
+    "body_battery_charged": 61
+  },
+  "2025-10-03": {
+    "date": "2025-10-03",
+    "steps": 15319,
+    "calories": 2312.0,
+    "distance_km": 11.71,
+    "resting_hr": 45,
+    "avg_stress": 35,
+    "sleep_seconds": 26580,
+    "body_battery_charged": 96
+  },
+  "2025-10-04": {
+    "date": "2025-10-04",
+    "steps": 18625,
+    "calories": 2679.0,
+    "distance_km": 16.62,
+    "resting_hr": 42,
+    "avg_stress": 28,
+    "sleep_seconds": 24060,
+    "body_battery_charged": 88
+  },
+  "2025-10-05": {
+    "date": "2025-10-05",
+    "steps": 47948,
+    "calories": 4940.0,
+    "distance_km": 51.46,
+    "resting_hr": 42,
+    "avg_stress": 51,
+    "sleep_seconds": 13920,
+    "body_battery_charged": 50
+  },
+  "2025-10-06": {
+    "date": "2025-10-06",
+    "steps": 15244,
+    "calories": 2254.0,
+    "distance_km": 11.71,
+    "resting_hr": 48,
+    "avg_stress": 36,
+    "sleep_seconds": 27300,
+    "body_battery_charged": 79
+  },
+  "2025-10-07": {
+    "date": "2025-10-07",
+    "steps": 18671,
+    "calories": 2367.0,
+    "distance_km": 14.38,
+    "resting_hr": 44,
+    "avg_stress": 26,
+    "sleep_seconds": 26640,
+    "body_battery_charged": 91
+  },
+  "2025-10-08": {
+    "date": "2025-10-08",
+    "steps": 29767,
+    "calories": 3170.0,
+    "distance_km": 26.42,
+    "resting_hr": 43,
+    "avg_stress": 27,
+    "sleep_seconds": 27000,
+    "body_battery_charged": 82
+  },
+  "2025-10-09": {
+    "date": "2025-10-09",
+    "steps": 22106,
+    "calories": 2788.0,
+    "distance_km": 18.02,
+    "resting_hr": 41,
+    "avg_stress": 33,
+    "sleep_seconds": 24780,
+    "body_battery_charged": 79
+  },
+  "2025-10-10": {
+    "date": "2025-10-10",
+    "steps": 11826,
+    "calories": 2263.0,
+    "distance_km": 9.06,
+    "resting_hr": 46,
+    "avg_stress": 30,
+    "sleep_seconds": 19980,
+    "body_battery_charged": 79
+  },
+  "2025-10-11": {
+    "date": "2025-10-11",
+    "steps": 18935,
+    "calories": 2658.0,
+    "distance_km": 15.19,
+    "resting_hr": 41,
+    "avg_stress": 28,
+    "sleep_seconds": 26460,
+    "body_battery_charged": 73
+  },
+  "2025-10-12": {
+    "date": "2025-10-12",
+    "steps": 20304,
+    "calories": 2592.0,
+    "distance_km": 15.62,
+    "resting_hr": 48,
+    "avg_stress": 50,
+    "sleep_seconds": 19740,
+    "body_battery_charged": 39
+  },
+  "2025-10-13": {
+    "date": "2025-10-13",
+    "steps": 13941,
+    "calories": 2248.0,
+    "distance_km": 10.66,
+    "resting_hr": 42,
+    "avg_stress": 37,
+    "sleep_seconds": 22500,
+    "body_battery_charged": 87
+  },
+  "2025-10-14": {
+    "date": "2025-10-14",
+    "steps": 14200,
+    "calories": 2582.0,
+    "distance_km": 10.93,
+    "resting_hr": 48,
+    "avg_stress": 45,
+    "sleep_seconds": 14700,
+    "body_battery_charged": 52
+  },
+  "2025-10-15": {
+    "date": "2025-10-15",
+    "steps": 24136,
+    "calories": 3147.0,
+    "distance_km": 22.74,
+    "resting_hr": 48,
+    "avg_stress": 42,
+    "sleep_seconds": 29460,
+    "body_battery_charged": 81
+  },
+  "2025-10-16": {
+    "date": "2025-10-16",
+    "steps": 21407,
+    "calories": 3496.0,
+    "distance_km": 20.43,
+    "resting_hr": 47,
+    "avg_stress": 44,
+    "sleep_seconds": 27900,
+    "body_battery_charged": 80
+  },
+  "2025-10-17": {
+    "date": "2025-10-17",
+    "steps": 17042,
+    "calories": 2846.0,
+    "distance_km": 13.39,
+    "resting_hr": 49,
+    "avg_stress": 49,
+    "sleep_seconds": 21540,
+    "body_battery_charged": 26
+  },
+  "2025-10-18": {
+    "date": "2025-10-18",
+    "steps": 24255,
+    "calories": 2591.0,
+    "distance_km": 18.54,
+    "resting_hr": 47,
+    "avg_stress": 39,
+    "sleep_seconds": 28620,
+    "body_battery_charged": 84
+  },
+  "2025-10-19": {
+    "date": "2025-10-19",
+    "steps": 17286,
+    "calories": 2464.0,
+    "distance_km": 13.22,
+    "resting_hr": 45,
+    "avg_stress": 31,
+    "sleep_seconds": 29040,
+    "body_battery_charged": 95
+  },
+  "2025-10-20": {
+    "date": "2025-10-20",
+    "steps": 22757,
+    "calories": 2663.0,
+    "distance_km": 17.4,
+    "resting_hr": 45,
+    "avg_stress": 35,
+    "sleep_seconds": 25080,
+    "body_battery_charged": 77
+  },
+  "2025-10-21": {
+    "date": "2025-10-21",
+    "steps": 22743,
+    "calories": 2824.0,
+    "distance_km": 17.39,
+    "resting_hr": 42,
+    "avg_stress": 36,
+    "sleep_seconds": 19320,
+    "body_battery_charged": 89
+  },
+  "2025-10-22": {
+    "date": "2025-10-22",
+    "steps": 16751,
+    "calories": 2553.0,
+    "distance_km": 13.21,
+    "resting_hr": 44,
+    "avg_stress": 29,
+    "sleep_seconds": 19980,
+    "body_battery_charged": 84
+  },
+  "2025-10-23": {
+    "date": "2025-10-23",
+    "steps": 12776,
+    "calories": 2223.0,
+    "distance_km": 9.77,
+    "resting_hr": 44,
+    "avg_stress": 34,
+    "sleep_seconds": 18540,
+    "body_battery_charged": 93
+  },
+  "2025-10-24": {
+    "date": "2025-10-24",
+    "steps": 21296,
+    "calories": 2635.0,
+    "distance_km": 22.35,
+    "resting_hr": 42,
+    "avg_stress": 33,
+    "sleep_seconds": 24000,
+    "body_battery_charged": 75
+  },
+  "2025-10-25": {
+    "date": "2025-10-25",
+    "steps": 22127,
+    "calories": 3468.0,
+    "distance_km": 22.39,
+    "resting_hr": 42,
+    "avg_stress": 64,
+    "sleep_seconds": null,
+    "body_battery_charged": 8
+  },
+  "2025-10-26": {
+    "date": "2025-10-26",
+    "steps": 14901,
+    "calories": 2292.0,
+    "distance_km": 11.5,
+    "resting_hr": 46,
+    "avg_stress": 26,
+    "sleep_seconds": 20880,
+    "body_battery_charged": 44
+  },
+  "2025-10-27": {
+    "date": "2025-10-27",
+    "steps": 19488,
+    "calories": 2387.0,
+    "distance_km": 15.37,
+    "resting_hr": 41,
+    "avg_stress": 30,
+    "sleep_seconds": 26640,
+    "body_battery_charged": 69
+  },
+  "2025-10-28": {
+    "date": "2025-10-28",
+    "steps": 14148,
+    "calories": 2217.0,
+    "distance_km": 10.88,
+    "resting_hr": 41,
+    "avg_stress": 27,
+    "sleep_seconds": 33157,
+    "body_battery_charged": 78
+  },
+  "2025-10-29": {
+    "date": "2025-10-29",
+    "steps": 27956,
+    "calories": 3020.0,
+    "distance_km": 24.39,
+    "resting_hr": 41,
+    "avg_stress": 29,
+    "sleep_seconds": 24282,
+    "body_battery_charged": 73
+  },
+  "2025-10-30": {
+    "date": "2025-10-30",
+    "steps": 29700,
+    "calories": 3696.0,
+    "distance_km": 27.9,
+    "resting_hr": 43,
+    "avg_stress": 35,
+    "sleep_seconds": 20219,
+    "body_battery_charged": 67
+  },
+  "2025-10-31": {
+    "date": "2025-10-31",
+    "steps": 32837,
+    "calories": 3237.0,
+    "distance_km": 28.12,
+    "resting_hr": 46,
+    "avg_stress": 47,
+    "sleep_seconds": 9720,
+    "body_battery_charged": 24
+  },
+  "2025-11-01": {
+    "date": "2025-11-01",
+    "steps": 6669,
+    "calories": 2238.0,
+    "distance_km": 5.28,
+    "resting_hr": 48,
+    "avg_stress": 39,
+    "sleep_seconds": 22140,
+    "body_battery_charged": 61
+  },
+  "2025-11-02": {
+    "date": "2025-11-02",
+    "steps": 3053,
+    "calories": 1941.0,
+    "distance_km": 2.34,
+    "resting_hr": 47,
+    "avg_stress": 38,
+    "sleep_seconds": 1680,
+    "body_battery_charged": 30
+  },
+  "2025-11-03": {
+    "date": "2025-11-03",
+    "steps": 17282,
+    "calories": 2300.0,
+    "distance_km": 13.23,
+    "resting_hr": 43,
+    "avg_stress": 27,
+    "sleep_seconds": 32460,
+    "body_battery_charged": 93
+  },
+  "2025-11-04": {
+    "date": "2025-11-04",
+    "steps": 16914,
+    "calories": 2097.0,
+    "distance_km": 12.93,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 23100,
+    "body_battery_charged": 79
+  },
+  "2025-11-05": {
+    "date": "2025-11-05",
+    "steps": 13877,
+    "calories": 2044.0,
+    "distance_km": 10.61,
+    "resting_hr": 43,
+    "avg_stress": 28,
+    "sleep_seconds": 9000,
+    "body_battery_charged": 46
+  },
+  "2025-11-06": {
+    "date": "2025-11-06",
+    "steps": 22058,
+    "calories": 2308.0,
+    "distance_km": 16.86,
+    "resting_hr": 40,
+    "avg_stress": 35,
+    "sleep_seconds": 27102,
+    "body_battery_charged": 77
+  },
+  "2025-11-07": {
+    "date": "2025-11-07",
+    "steps": 21160,
+    "calories": 2443.0,
+    "distance_km": 16.21,
+    "resting_hr": 42,
+    "avg_stress": 35,
+    "sleep_seconds": 24240,
+    "body_battery_charged": 90
+  },
+  "2025-11-08": {
+    "date": "2025-11-08",
+    "steps": 15291,
+    "calories": 2242.0,
+    "distance_km": 11.69,
+    "resting_hr": 42,
+    "avg_stress": 27,
+    "sleep_seconds": 25200,
+    "body_battery_charged": 90
+  },
+  "2025-11-09": {
+    "date": "2025-11-09",
+    "steps": 16815,
+    "calories": 2499.0,
+    "distance_km": 12.86,
+    "resting_hr": 43,
+    "avg_stress": 34,
+    "sleep_seconds": 18480,
+    "body_battery_charged": 66
+  },
+  "2025-11-10": {
+    "date": "2025-11-10",
+    "steps": 12307,
+    "calories": 2214.0,
+    "distance_km": 9.46,
+    "resting_hr": 49,
+    "avg_stress": 33,
+    "sleep_seconds": 15540,
+    "body_battery_charged": 57
+  },
+  "2025-11-11": {
+    "date": "2025-11-11",
+    "steps": 12002,
+    "calories": 2213.0,
+    "distance_km": 9.17,
+    "resting_hr": 43,
+    "avg_stress": 36,
+    "sleep_seconds": 16200,
+    "body_battery_charged": 87
+  },
+  "2025-11-12": {
+    "date": "2025-11-12",
+    "steps": 15283,
+    "calories": 2336.0,
+    "distance_km": 11.68,
+    "resting_hr": 47,
+    "avg_stress": 36,
+    "sleep_seconds": 26302,
+    "body_battery_charged": 87
+  },
+  "2025-11-13": {
+    "date": "2025-11-13",
+    "steps": 19698,
+    "calories": 2474.0,
+    "distance_km": 15.08,
+    "resting_hr": 43,
+    "avg_stress": 38,
+    "sleep_seconds": 26220,
+    "body_battery_charged": 78
+  },
+  "2025-11-14": {
+    "date": "2025-11-14",
+    "steps": 11649,
+    "calories": 2570.0,
+    "distance_km": 8.94,
+    "resting_hr": 43,
+    "avg_stress": 45,
+    "sleep_seconds": 30776,
+    "body_battery_charged": 89
+  },
+  "2025-11-15": {
+    "date": "2025-11-15",
+    "steps": 16307,
+    "calories": 3725.0,
+    "distance_km": 12.85,
+    "resting_hr": 48,
+    "avg_stress": 57,
+    "sleep_seconds": 6960,
+    "body_battery_charged": 5
+  },
+  "2025-11-16": {
+    "date": "2025-11-16",
+    "steps": 5319,
+    "calories": 2461.0,
+    "distance_km": 4.07,
+    "resting_hr": 45,
+    "avg_stress": 28,
+    "sleep_seconds": 11160,
+    "body_battery_charged": 70
+  },
+  "2025-11-17": {
+    "date": "2025-11-17",
+    "steps": 9369,
+    "calories": 2164.0,
+    "distance_km": 7.17,
+    "resting_hr": 44,
+    "avg_stress": 21,
+    "sleep_seconds": 31620,
+    "body_battery_charged": 54
+  },
+  "2025-11-18": {
+    "date": "2025-11-18",
+    "steps": 15471,
+    "calories": 2230.0,
+    "distance_km": 11.83,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 16519,
+    "body_battery_charged": 60
+  },
+  "2025-11-19": {
+    "date": "2025-11-19",
+    "steps": 18690,
+    "calories": 2407.0,
+    "distance_km": 14.29,
+    "resting_hr": 43,
+    "avg_stress": 38,
+    "sleep_seconds": 20220,
+    "body_battery_charged": 75
+  },
+  "2025-11-20": {
+    "date": "2025-11-20",
+    "steps": 8785,
+    "calories": 2135.0,
+    "distance_km": 6.71,
+    "resting_hr": 45,
+    "avg_stress": 29,
+    "sleep_seconds": 19260,
+    "body_battery_charged": 84
+  },
+  "2025-11-21": {
+    "date": "2025-11-21",
+    "steps": 22535,
+    "calories": 2957.0,
+    "distance_km": 18.89,
+    "resting_hr": 44,
+    "avg_stress": 36,
+    "sleep_seconds": 19140,
+    "body_battery_charged": 76
+  },
+  "2025-11-22": {
+    "date": "2025-11-22",
+    "steps": 12062,
+    "calories": 2315.0,
+    "distance_km": 9.29,
+    "resting_hr": 52,
+    "avg_stress": 44,
+    "sleep_seconds": 20640,
+    "body_battery_charged": 38
+  },
+  "2025-11-23": {
+    "date": "2025-11-23",
+    "steps": 14942,
+    "calories": 2326.0,
+    "distance_km": 11.42,
+    "resting_hr": 46,
+    "avg_stress": 31,
+    "sleep_seconds": 17460,
+    "body_battery_charged": 106
+  },
+  "2025-11-24": {
+    "date": "2025-11-24",
+    "steps": 18085,
+    "calories": 2379.0,
+    "distance_km": 13.82,
+    "resting_hr": 43,
+    "avg_stress": 43,
+    "sleep_seconds": 23760,
+    "body_battery_charged": 61
+  },
+  "2025-11-25": {
+    "date": "2025-11-25",
+    "steps": 18120,
+    "calories": 2691.0,
+    "distance_km": 15.4,
+    "resting_hr": 48,
+    "avg_stress": 32,
+    "sleep_seconds": 22020,
+    "body_battery_charged": 63
+  },
+  "2025-11-26": {
+    "date": "2025-11-26",
+    "steps": 5792,
+    "calories": 2188.0,
+    "distance_km": 4.43,
+    "resting_hr": 44,
+    "avg_stress": 40,
+    "sleep_seconds": 27701,
+    "body_battery_charged": 93
+  },
+  "2025-11-27": {
+    "date": "2025-11-27",
+    "steps": 8124,
+    "calories": 2847.0,
+    "distance_km": 8.47,
+    "resting_hr": 46,
+    "avg_stress": 41,
+    "sleep_seconds": 31380,
+    "body_battery_charged": 79
+  },
+  "2025-11-28": {
+    "date": "2025-11-28",
+    "steps": 2428,
+    "calories": 2040.0,
+    "distance_km": 1.89,
+    "resting_hr": 47,
+    "avg_stress": 36,
+    "sleep_seconds": 30540,
+    "body_battery_charged": 89
+  },
+  "2025-11-29": {
+    "date": "2025-11-29",
+    "steps": 7526,
+    "calories": 2027.0,
+    "distance_km": 5.76,
+    "resting_hr": 49,
+    "avg_stress": 37,
+    "sleep_seconds": 23040,
+    "body_battery_charged": 53
+  },
+  "2025-11-30": {
+    "date": "2025-11-30",
+    "steps": 12233,
+    "calories": 2310.0,
+    "distance_km": 9.35,
+    "resting_hr": 46,
+    "avg_stress": 36,
+    "sleep_seconds": 33180,
+    "body_battery_charged": 88
+  },
+  "2025-12-01": {
+    "date": "2025-12-01",
+    "steps": 14058,
+    "calories": 2259.0,
+    "distance_km": 10.77,
+    "resting_hr": 45,
+    "avg_stress": 31,
+    "sleep_seconds": 29340,
+    "body_battery_charged": 84
+  },
+  "2025-12-02": {
+    "date": "2025-12-02",
+    "steps": 17153,
+    "calories": 2533.0,
+    "distance_km": 13.12,
+    "resting_hr": 46,
+    "avg_stress": 43,
+    "sleep_seconds": 24720,
+    "body_battery_charged": 66
+  },
+  "2025-12-03": {
+    "date": "2025-12-03",
+    "steps": 15971,
+    "calories": 2367.0,
+    "distance_km": 12.21,
+    "resting_hr": 47,
+    "avg_stress": 38,
+    "sleep_seconds": 27060,
+    "body_battery_charged": 94
+  },
+  "2025-12-04": {
+    "date": "2025-12-04",
+    "steps": 18467,
+    "calories": 2532.0,
+    "distance_km": 14.14,
+    "resting_hr": 46,
+    "avg_stress": 36,
+    "sleep_seconds": 27059,
+    "body_battery_charged": 96
+  },
+  "2025-12-05": {
+    "date": "2025-12-05",
+    "steps": 18691,
+    "calories": 2793.0,
+    "distance_km": 14.32,
+    "resting_hr": 44,
+    "avg_stress": 35,
+    "sleep_seconds": 18960,
+    "body_battery_charged": 69
+  },
+  "2025-12-06": {
+    "date": "2025-12-06",
+    "steps": 9965,
+    "calories": 2300.0,
+    "distance_km": 7.69,
+    "resting_hr": 54,
+    "avg_stress": 44,
+    "sleep_seconds": 20700,
+    "body_battery_charged": 50
+  },
+  "2025-12-07": {
+    "date": "2025-12-07",
+    "steps": 12297,
+    "calories": 2194.0,
+    "distance_km": 9.41,
+    "resting_hr": 47,
+    "avg_stress": 30,
+    "sleep_seconds": 21406,
+    "body_battery_charged": 85
+  },
+  "2025-12-08": {
+    "date": "2025-12-08",
+    "steps": 6511,
+    "calories": 2148.0,
+    "distance_km": 4.98,
+    "resting_hr": 51,
+    "avg_stress": 72,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-12-09": {
+    "date": "2025-12-09",
+    "steps": 8931,
+    "calories": 2132.0,
+    "distance_km": 6.83,
+    "resting_hr": 43,
+    "avg_stress": 35,
+    "sleep_seconds": 20580,
+    "body_battery_charged": 89
+  },
+  "2025-12-10": {
+    "date": "2025-12-10",
+    "steps": 19726,
+    "calories": 2813.0,
+    "distance_km": 15.45,
+    "resting_hr": 48,
+    "avg_stress": 42,
+    "sleep_seconds": 30720,
+    "body_battery_charged": 91
+  },
+  "2025-12-11": {
+    "date": "2025-12-11",
+    "steps": 17972,
+    "calories": 2967.0,
+    "distance_km": 14.09,
+    "resting_hr": 52,
+    "avg_stress": 48,
+    "sleep_seconds": 15660,
+    "body_battery_charged": 40
+  },
+  "2025-12-12": {
+    "date": "2025-12-12",
+    "steps": 16122,
+    "calories": 2332.0,
+    "distance_km": 12.33,
+    "resting_hr": 48,
+    "avg_stress": 34,
+    "sleep_seconds": 28140,
+    "body_battery_charged": 92
+  },
+  "2025-12-13": {
+    "date": "2025-12-13",
+    "steps": 8529,
+    "calories": 2041.0,
+    "distance_km": 6.57,
+    "resting_hr": 46,
+    "avg_stress": 28,
+    "sleep_seconds": 16313,
+    "body_battery_charged": 64
+  },
+  "2025-12-14": {
+    "date": "2025-12-14",
+    "steps": 10603,
+    "calories": 2278.0,
+    "distance_km": 8.11,
+    "resting_hr": 47,
+    "avg_stress": 27,
+    "sleep_seconds": 24720,
+    "body_battery_charged": 86
+  },
+  "2025-12-15": {
+    "date": "2025-12-15",
+    "steps": 13608,
+    "calories": 2725.0,
+    "distance_km": 12.92,
+    "resting_hr": 44,
+    "avg_stress": 14,
+    "sleep_seconds": 32155,
+    "body_battery_charged": 81
+  },
+  "2025-12-16": {
+    "date": "2025-12-16",
+    "steps": 12164,
+    "calories": 2658.0,
+    "distance_km": 11.62,
+    "resting_hr": 52,
+    "avg_stress": 34,
+    "sleep_seconds": null,
+    "body_battery_charged": 1
+  },
+  "2025-12-17": {
+    "date": "2025-12-17",
+    "steps": 1575,
+    "calories": 1918.0,
+    "distance_km": 1.2,
+    "resting_hr": 52,
+    "avg_stress": 51,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-12-18": {
+    "date": "2025-12-18",
+    "steps": 871,
+    "calories": 1895.0,
+    "distance_km": 0.67,
+    "resting_hr": 46,
+    "avg_stress": 23,
+    "sleep_seconds": 28980,
+    "body_battery_charged": 85
+  },
+  "2025-12-19": {
+    "date": "2025-12-19",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": 72,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-12-20": {
+    "date": "2025-12-20",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-12-21": {
+    "date": "2025-12-21",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-12-22": {
+    "date": "2025-12-22",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-12-23": {
+    "date": "2025-12-23",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-12-24": {
+    "date": "2025-12-24",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-12-25": {
+    "date": "2025-12-25",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-12-26": {
+    "date": "2025-12-26",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-12-27": {
+    "date": "2025-12-27",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": null,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": null
+  },
+  "2025-12-28": {
+    "date": "2025-12-28",
+    "steps": null,
+    "calories": 1888.0,
+    "distance_km": null,
+    "resting_hr": 74,
+    "avg_stress": -1,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-12-29": {
+    "date": "2025-12-29",
+    "steps": 2886,
+    "calories": 1970.0,
+    "distance_km": 2.21,
+    "resting_hr": 52,
+    "avg_stress": 42,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2025-12-30": {
+    "date": "2025-12-30",
+    "steps": 7980,
+    "calories": 2206.0,
+    "distance_km": 6.1,
+    "resting_hr": 42,
+    "avg_stress": 23,
+    "sleep_seconds": 32580,
+    "body_battery_charged": 84
+  },
+  "2025-12-31": {
+    "date": "2025-12-31",
+    "steps": 374,
+    "calories": 1895.0,
+    "distance_km": 0.29,
+    "resting_hr": 43,
+    "avg_stress": 20,
+    "sleep_seconds": 30000,
+    "body_battery_charged": 64
+  },
+  "2026-01-01": {
+    "date": "2026-01-01",
+    "steps": 1236,
+    "calories": 1903.0,
+    "distance_km": 0.94,
+    "resting_hr": 50,
+    "avg_stress": 52,
+    "sleep_seconds": null,
+    "body_battery_charged": 0
+  },
+  "2026-01-02": {
+    "date": "2026-01-02",
+    "steps": 8114,
+    "calories": 2617.0,
+    "distance_km": 9.08,
+    "resting_hr": 45,
+    "avg_stress": 24,
+    "sleep_seconds": 28320,
+    "body_battery_charged": 94
+  },
+  "2026-01-03": {
+    "date": "2026-01-03",
+    "steps": 3698,
+    "calories": 2155.0,
+    "distance_km": 2.83,
+    "resting_hr": 46,
+    "avg_stress": 42,
+    "sleep_seconds": 31620,
+    "body_battery_charged": 67
+  },
+  "2026-01-04": {
+    "date": "2026-01-04",
+    "steps": 24024,
+    "calories": 4096.0,
+    "distance_km": 22.68,
+    "resting_hr": 47,
+    "avg_stress": 37,
+    "sleep_seconds": 26280,
+    "body_battery_charged": 72
+  },
+  "2026-01-05": {
+    "date": "2026-01-05",
+    "steps": 26239,
+    "calories": 3174.0,
+    "distance_km": 22.75,
+    "resting_hr": 50,
+    "avg_stress": 40,
+    "sleep_seconds": 15540,
+    "body_battery_charged": 52
+  },
+  "2026-01-06": {
+    "date": "2026-01-06",
+    "steps": 22477,
+    "calories": 3661.0,
+    "distance_km": 21.94,
+    "resting_hr": 47,
+    "avg_stress": 34,
+    "sleep_seconds": 27000,
+    "body_battery_charged": 95
+  },
+  "2026-01-07": {
+    "date": "2026-01-07",
+    "steps": 21095,
+    "calories": 2852.0,
+    "distance_km": 17.64,
+    "resting_hr": 50,
+    "avg_stress": 45,
+    "sleep_seconds": 19560,
+    "body_battery_charged": 50
+  },
+  "2026-01-08": {
+    "date": "2026-01-08",
+    "steps": 37899,
+    "calories": 3925.0,
+    "distance_km": 35.51,
+    "resting_hr": 47,
+    "avg_stress": 36,
+    "sleep_seconds": 26790,
+    "body_battery_charged": 90
+  },
+  "2026-01-09": {
+    "date": "2026-01-09",
+    "steps": 11692,
+    "calories": 3161.0,
+    "distance_km": 8.99,
+    "resting_hr": 52,
+    "avg_stress": 63,
+    "sleep_seconds": 8340,
+    "body_battery_charged": 0
+  },
+  "2026-01-10": {
+    "date": "2026-01-10",
+    "steps": 7589,
+    "calories": 2241.0,
+    "distance_km": 5.8,
+    "resting_hr": 49,
+    "avg_stress": 38,
+    "sleep_seconds": 30524,
+    "body_battery_charged": 67
+  },
+  "2026-01-11": {
+    "date": "2026-01-11",
+    "steps": 11416,
+    "calories": 2875.0,
+    "distance_km": 10.98,
+    "resting_hr": 46,
+    "avg_stress": 23,
+    "sleep_seconds": 25597,
+    "body_battery_charged": 101
+  },
+  "2026-01-12": {
+    "date": "2026-01-12",
+    "steps": 21313,
+    "calories": 2851.0,
+    "distance_km": 18.31,
+    "resting_hr": 44,
+    "avg_stress": 30,
+    "sleep_seconds": 28200,
+    "body_battery_charged": 71
+  },
+  "2026-01-13": {
+    "date": "2026-01-13",
+    "steps": 27297,
+    "calories": 3746.0,
+    "distance_km": 25.35,
+    "resting_hr": 45,
+    "avg_stress": 33,
+    "sleep_seconds": 27629,
+    "body_battery_charged": 79
+  },
+  "2026-01-14": {
+    "date": "2026-01-14",
+    "steps": 20506,
+    "calories": 2617.0,
+    "distance_km": 15.69,
+    "resting_hr": 49,
+    "avg_stress": 41,
+    "sleep_seconds": 24600,
+    "body_battery_charged": 77
+  },
+  "2026-01-15": {
+    "date": "2026-01-15",
+    "steps": 34371,
+    "calories": 4126.0,
+    "distance_km": 31.58,
+    "resting_hr": 48,
+    "avg_stress": 38,
+    "sleep_seconds": 17940,
+    "body_battery_charged": 68
+  },
+  "2026-01-16": {
+    "date": "2026-01-16",
+    "steps": 15103,
+    "calories": 2467.0,
+    "distance_km": 11.59,
+    "resting_hr": 51,
+    "avg_stress": 46,
+    "sleep_seconds": 22380,
+    "body_battery_charged": 34
+  },
+  "2026-01-17": {
+    "date": "2026-01-17",
+    "steps": 25677,
+    "calories": 2901.0,
+    "distance_km": 22.4,
+    "resting_hr": 45,
+    "avg_stress": 32,
+    "sleep_seconds": 23926,
+    "body_battery_charged": 97
+  },
+  "2026-01-18": {
+    "date": "2026-01-18",
+    "steps": 15447,
+    "calories": 2524.0,
+    "distance_km": 12.75,
+    "resting_hr": 45,
+    "avg_stress": 34,
+    "sleep_seconds": 22980,
+    "body_battery_charged": 77
+  },
+  "2026-01-19": {
+    "date": "2026-01-19",
+    "steps": 12566,
+    "calories": 2195.0,
+    "distance_km": 9.61,
+    "resting_hr": 49,
+    "avg_stress": 44,
+    "sleep_seconds": 23204,
+    "body_battery_charged": 47
+  },
+  "2026-01-20": {
+    "date": "2026-01-20",
+    "steps": 29777,
+    "calories": 3571.0,
+    "distance_km": 27.99,
+    "resting_hr": 48,
+    "avg_stress": 34,
+    "sleep_seconds": 20100,
+    "body_battery_charged": 71
+  },
+  "2026-01-21": {
+    "date": "2026-01-21",
+    "steps": 12626,
+    "calories": 2228.0,
+    "distance_km": 9.65,
+    "resting_hr": 47,
+    "avg_stress": 28,
+    "sleep_seconds": 31727,
+    "body_battery_charged": 119
+  },
+  "2026-01-22": {
+    "date": "2026-01-22",
+    "steps": 27283,
+    "calories": 3683.0,
+    "distance_km": 23.49,
+    "resting_hr": 45,
+    "avg_stress": 34,
+    "sleep_seconds": 21834,
+    "body_battery_charged": 67
+  },
+  "2026-01-23": {
+    "date": "2026-01-23",
+    "steps": 16300,
+    "calories": 3096.0,
+    "distance_km": 12.5,
+    "resting_hr": 48,
+    "avg_stress": 39,
+    "sleep_seconds": 24180,
+    "body_battery_charged": 89
+  },
+  "2026-01-24": {
+    "date": "2026-01-24",
+    "steps": 9929,
+    "calories": 2850.0,
+    "distance_km": 7.59,
+    "resting_hr": 51,
+    "avg_stress": 31,
+    "sleep_seconds": 25724,
+    "body_battery_charged": 84
+  },
+  "2026-01-25": {
+    "date": "2026-01-25",
+    "steps": 13487,
+    "calories": 3311.0,
+    "distance_km": 10.72,
+    "resting_hr": 50,
+    "avg_stress": 42,
+    "sleep_seconds": 21600,
+    "body_battery_charged": 57
+  },
+  "2026-01-26": {
+    "date": "2026-01-26",
+    "steps": 17103,
+    "calories": 2981.0,
+    "distance_km": 13.07,
+    "resting_hr": 44,
+    "avg_stress": 32,
+    "sleep_seconds": 31542,
+    "body_battery_charged": 87
+  },
+  "2026-01-27": {
+    "date": "2026-01-27",
+    "steps": 10623,
+    "calories": 2899.0,
+    "distance_km": 8.18,
+    "resting_hr": 45,
+    "avg_stress": 27,
+    "sleep_seconds": 31740,
+    "body_battery_charged": 84
+  },
+  "2026-01-28": {
+    "date": "2026-01-28",
+    "steps": 21662,
+    "calories": 2533.0,
+    "distance_km": 16.56,
+    "resting_hr": 45,
+    "avg_stress": 40,
+    "sleep_seconds": 27681,
+    "body_battery_charged": 77
+  },
+  "2026-01-29": {
+    "date": "2026-01-29",
+    "steps": 12623,
+    "calories": 2442.0,
+    "distance_km": 9.68,
+    "resting_hr": 47,
+    "avg_stress": 31,
+    "sleep_seconds": 22920,
+    "body_battery_charged": 83
+  },
+  "2026-01-30": {
+    "date": "2026-01-30",
+    "steps": 15487,
+    "calories": 2454.0,
+    "distance_km": 12.45,
+    "resting_hr": 44,
+    "avg_stress": 29,
+    "sleep_seconds": 27647,
+    "body_battery_charged": 85
+  },
+  "2026-01-31": {
+    "date": "2026-01-31",
+    "steps": 10385,
+    "calories": 4123.0,
+    "distance_km": 8.71,
+    "resting_hr": 44,
+    "avg_stress": 31,
+    "sleep_seconds": 30000,
+    "body_battery_charged": 80
+  },
+  "2026-02-01": {
+    "date": "2026-02-01",
+    "steps": 11474,
+    "calories": 2450.0,
+    "distance_km": 9.43,
+    "resting_hr": 48,
+    "avg_stress": 31,
+    "sleep_seconds": 15180,
+    "body_battery_charged": 70
+  },
+  "2026-02-02": {
+    "date": "2026-02-02",
+    "steps": 16055,
+    "calories": 2472.0,
+    "distance_km": 12.8,
+    "resting_hr": 42,
+    "avg_stress": 33,
+    "sleep_seconds": 25456,
+    "body_battery_charged": 86
+  },
+  "2026-02-03": {
+    "date": "2026-02-03",
+    "steps": 19420,
+    "calories": 2885.0,
+    "distance_km": 13.93,
+    "resting_hr": 45,
+    "avg_stress": 31,
+    "sleep_seconds": 26007,
+    "body_battery_charged": 83
+  },
+  "2026-02-04": {
+    "date": "2026-02-04",
+    "steps": 13879,
+    "calories": 2573.0,
+    "distance_km": 10.61,
+    "resting_hr": 44,
+    "avg_stress": 32,
+    "sleep_seconds": 30120,
+    "body_battery_charged": 87
+  },
+  "2026-02-05": {
+    "date": "2026-02-05",
+    "steps": 19399,
+    "calories": 2957.0,
+    "distance_km": 17.13,
+    "resting_hr": 45,
+    "avg_stress": 34,
+    "sleep_seconds": 25657,
+    "body_battery_charged": 88
+  },
+  "2026-02-06": {
+    "date": "2026-02-06",
+    "steps": 17838,
+    "calories": 2623.0,
+    "distance_km": 14.66,
+    "resting_hr": 46,
+    "avg_stress": 34,
+    "sleep_seconds": 28920,
+    "body_battery_charged": 81
+  },
+  "2026-02-07": {
+    "date": "2026-02-07",
+    "steps": 14519,
+    "calories": 2886.0,
+    "distance_km": 12.4,
+    "resting_hr": 44,
+    "avg_stress": 32,
+    "sleep_seconds": 28200,
+    "body_battery_charged": 80
+  },
+  "2026-02-08": {
+    "date": "2026-02-08",
+    "steps": 7598,
+    "calories": 2236.0,
+    "distance_km": 5.81,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 29160,
+    "body_battery_charged": 81
+  },
+  "2026-02-09": {
+    "date": "2026-02-09",
+    "steps": 10250,
+    "calories": 2180.0,
+    "distance_km": 7.83,
+    "resting_hr": 43,
+    "avg_stress": 34,
+    "sleep_seconds": 28343,
+    "body_battery_charged": 86
+  },
+  "2026-02-10": {
+    "date": "2026-02-10",
+    "steps": 17454,
+    "calories": 2960.0,
+    "distance_km": 14.4,
+    "resting_hr": 43,
+    "avg_stress": 40,
+    "sleep_seconds": 26700,
+    "body_battery_charged": 72
+  },
+  "2026-02-11": {
+    "date": "2026-02-11",
+    "steps": 16612,
+    "calories": 2770.0,
+    "distance_km": 14.7,
+    "resting_hr": 48,
+    "avg_stress": 39,
+    "sleep_seconds": 28102,
+    "body_battery_charged": 82
+  },
+  "2026-02-12": {
+    "date": "2026-02-12",
+    "steps": 19765,
+    "calories": 2774.0,
+    "distance_km": 16.3,
+    "resting_hr": 46,
+    "avg_stress": 40,
+    "sleep_seconds": 26040,
+    "body_battery_charged": 83
+  },
+  "2026-02-13": {
+    "date": "2026-02-13",
+    "steps": 28688,
+    "calories": 3090.0,
+    "distance_km": 21.98,
+    "resting_hr": 45,
+    "avg_stress": 35,
+    "sleep_seconds": 28800,
+    "body_battery_charged": 90
+  },
+  "2026-02-14": {
+    "date": "2026-02-14",
+    "steps": 21762,
+    "calories": 3509.0,
+    "distance_km": 20.92,
+    "resting_hr": 49,
+    "avg_stress": 45,
+    "sleep_seconds": 14280,
+    "body_battery_charged": 40
+  },
+  "2026-02-15": {
+    "date": "2026-02-15",
+    "steps": 11626,
+    "calories": 2338.0,
+    "distance_km": 9.11,
+    "resting_hr": 46,
+    "avg_stress": 28,
+    "sleep_seconds": 29460,
+    "body_battery_charged": 92
+  },
+  "2026-02-16": {
+    "date": "2026-02-16",
+    "steps": 4447,
+    "calories": 2003.0,
+    "distance_km": 3.42,
+    "resting_hr": 47,
+    "avg_stress": 31,
+    "sleep_seconds": 30360,
+    "body_battery_charged": 85
+  },
+  "2026-02-17": {
+    "date": "2026-02-17",
+    "steps": 18553,
+    "calories": 3305.0,
+    "distance_km": 19.14,
+    "resting_hr": 44,
+    "avg_stress": 30,
+    "sleep_seconds": 24060,
+    "body_battery_charged": 76
+  },
+  "2026-02-18": {
+    "date": "2026-02-18",
+    "steps": 19122,
+    "calories": 2574.0,
+    "distance_km": 14.62,
+    "resting_hr": 45,
+    "avg_stress": 27,
+    "sleep_seconds": 33240,
+    "body_battery_charged": 89
+  },
+  "2026-02-19": {
+    "date": "2026-02-19",
+    "steps": 17487,
+    "calories": 3050.0,
+    "distance_km": 15.27,
+    "resting_hr": 43,
+    "avg_stress": 37,
+    "sleep_seconds": 28617,
+    "body_battery_charged": 72
+  },
+  "2026-02-20": {
+    "date": "2026-02-20",
+    "steps": 11263,
+    "calories": 2282.0,
+    "distance_km": 8.61,
+    "resting_hr": 46,
+    "avg_stress": 30,
+    "sleep_seconds": 23160,
+    "body_battery_charged": 82
+  },
+  "2026-02-21": {
+    "date": "2026-02-21",
+    "steps": 13737,
+    "calories": 3902.0,
+    "distance_km": 12.4,
+    "resting_hr": 45,
+    "avg_stress": 28,
+    "sleep_seconds": 29280,
+    "body_battery_charged": 70
+  },
+  "2026-02-22": {
+    "date": "2026-02-22",
+    "steps": 12853,
+    "calories": 2581.0,
+    "distance_km": 11.1,
+    "resting_hr": 49,
+    "avg_stress": 42,
+    "sleep_seconds": 11100,
+    "body_battery_charged": 27
+  },
+  "2026-02-23": {
+    "date": "2026-02-23",
+    "steps": 13387,
+    "calories": 3352.0,
+    "distance_km": 10.13,
+    "resting_hr": 45,
+    "avg_stress": 37,
+    "sleep_seconds": 32198,
+    "body_battery_charged": 95
+  },
+  "2026-02-24": {
+    "date": "2026-02-24",
+    "steps": 21294,
+    "calories": 2970.0,
+    "distance_km": 18.07,
+    "resting_hr": 49,
+    "avg_stress": 29,
+    "sleep_seconds": 23362,
+    "body_battery_charged": 70
+  },
+  "2026-02-25": {
+    "date": "2026-02-25",
+    "steps": 25253,
+    "calories": 2993.0,
+    "distance_km": 21.82,
+    "resting_hr": 42,
+    "avg_stress": 27,
+    "sleep_seconds": 30060,
+    "body_battery_charged": 86
+  },
+  "2026-02-26": {
+    "date": "2026-02-26",
+    "steps": 16212,
+    "calories": 2796.0,
+    "distance_km": 14.56,
+    "resting_hr": 46,
+    "avg_stress": 31,
+    "sleep_seconds": 27600,
+    "body_battery_charged": 86
+  },
+  "2026-02-27": {
+    "date": "2026-02-27",
+    "steps": 22793,
+    "calories": 2796.0,
+    "distance_km": 18.51,
+    "resting_hr": 44,
+    "avg_stress": 35,
+    "sleep_seconds": 27300,
+    "body_battery_charged": 83
+  },
+  "2026-02-28": {
+    "date": "2026-02-28",
+    "steps": 20300,
+    "calories": 4224.0,
+    "distance_km": 19.66,
+    "resting_hr": 44,
+    "avg_stress": 28,
+    "sleep_seconds": 31680,
+    "body_battery_charged": 83
+  },
+  "2026-03-01": {
+    "date": "2026-03-01",
+    "steps": 10289,
+    "calories": 2268.0,
+    "distance_km": 7.94,
+    "resting_hr": 50,
+    "avg_stress": 30,
+    "sleep_seconds": 22860,
+    "body_battery_charged": 68
+  },
+  "2026-03-02": {
+    "date": "2026-03-02",
+    "steps": 21188,
+    "calories": 2805.0,
+    "distance_km": 18.64,
+    "resting_hr": 45,
+    "avg_stress": 27,
+    "sleep_seconds": 27230,
+    "body_battery_charged": 65
+  },
+  "2026-03-03": {
+    "date": "2026-03-03",
+    "steps": 22381,
+    "calories": 2817.0,
+    "distance_km": 18.95,
+    "resting_hr": 44,
+    "avg_stress": 30,
+    "sleep_seconds": 27120,
+    "body_battery_charged": 77
+  },
+  "2026-03-04": {
+    "date": "2026-03-04",
+    "steps": 14276,
+    "calories": 2619.0,
+    "distance_km": 11.87,
+    "resting_hr": 45,
+    "avg_stress": 32,
+    "sleep_seconds": 26460,
+    "body_battery_charged": 82
+  },
+  "2026-03-05": {
+    "date": "2026-03-05",
+    "steps": 14899,
+    "calories": 2283.0,
+    "distance_km": 11.4,
+    "resting_hr": 48,
+    "avg_stress": 30,
+    "sleep_seconds": 15660,
+    "body_battery_charged": 89
+  },
+  "2026-03-06": {
+    "date": "2026-03-06",
+    "steps": 23194,
+    "calories": 3008.0,
+    "distance_km": 19.99,
+    "resting_hr": 44,
+    "avg_stress": 30,
+    "sleep_seconds": 27360,
+    "body_battery_charged": 87
+  },
+  "2026-03-07": {
+    "date": "2026-03-07",
+    "steps": 28759,
+    "calories": 3805.0,
+    "distance_km": 28.23,
+    "resting_hr": 44,
+    "avg_stress": 41,
+    "sleep_seconds": 31200,
+    "body_battery_charged": 68
+  },
+  "2026-03-08": {
+    "date": "2026-03-08",
+    "steps": 10847,
+    "calories": 2417.0,
+    "distance_km": 8.35,
+    "resting_hr": 47,
+    "avg_stress": 32,
+    "sleep_seconds": 27660,
+    "body_battery_charged": 83
+  },
+  "2026-03-09": {
+    "date": "2026-03-09",
+    "steps": 24736,
+    "calories": 3122.0,
+    "distance_km": 23.11,
+    "resting_hr": 43,
+    "avg_stress": 27,
+    "sleep_seconds": 25301,
+    "body_battery_charged": 96
+  },
+  "2026-03-10": {
+    "date": "2026-03-10",
+    "steps": 21132,
+    "calories": 2559.0,
+    "distance_km": 16.15,
+    "resting_hr": 45,
+    "avg_stress": 29,
+    "sleep_seconds": 19020,
+    "body_battery_charged": 70
+  },
+  "2026-03-11": {
+    "date": "2026-03-11",
+    "steps": 26584,
+    "calories": 3685.0,
+    "distance_km": 24.1,
+    "resting_hr": 45,
+    "avg_stress": 33,
+    "sleep_seconds": 25320,
+    "body_battery_charged": 83
+  },
+  "2026-03-12": {
+    "date": "2026-03-12",
+    "steps": 25206,
+    "calories": 3692.0,
+    "distance_km": 25.83,
+    "resting_hr": 45,
+    "avg_stress": 36,
+    "sleep_seconds": 23940,
+    "body_battery_charged": 85
+  },
+  "2026-03-13": {
+    "date": "2026-03-13",
+    "steps": 18426,
+    "calories": 2584.0,
+    "distance_km": 15.25,
+    "resting_hr": 48,
+    "avg_stress": 33,
+    "sleep_seconds": 25800,
+    "body_battery_charged": 98
+  },
+  "2026-03-14": {
+    "date": "2026-03-14",
+    "steps": 13569,
+    "calories": 2492.0,
+    "distance_km": 12.24,
+    "resting_hr": 42,
+    "avg_stress": 28,
+    "sleep_seconds": 27271,
+    "body_battery_charged": 75
+  },
+  "2026-03-15": {
+    "date": "2026-03-15",
+    "steps": 5569,
+    "calories": 2023.0,
+    "distance_km": 4.3,
+    "resting_hr": 44,
+    "avg_stress": 24,
+    "sleep_seconds": 29340,
+    "body_battery_charged": 80
+  },
+  "2026-03-16": {
+    "date": "2026-03-16",
+    "steps": 9498,
+    "calories": 2161.0,
+    "distance_km": 7.26,
+    "resting_hr": 45,
+    "avg_stress": 34,
+    "sleep_seconds": 23700,
+    "body_battery_charged": 77
+  },
+  "2026-03-17": {
+    "date": "2026-03-17",
+    "steps": 12365,
+    "calories": 2395.0,
+    "distance_km": 9.45,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 19020,
+    "body_battery_charged": 67
+  },
+  "2026-03-18": {
+    "date": "2026-03-18",
+    "steps": 21207,
+    "calories": 3316.0,
+    "distance_km": 18.08,
+    "resting_hr": 43,
+    "avg_stress": 29,
+    "sleep_seconds": 30240,
+    "body_battery_charged": 85
+  },
+  "2026-03-19": {
+    "date": "2026-03-19",
+    "steps": 10460,
+    "calories": 2669.0,
+    "distance_km": 8.58,
+    "resting_hr": 48,
+    "avg_stress": 31,
+    "sleep_seconds": 11160,
+    "body_battery_charged": 68
+  },
+  "2026-03-20": {
+    "date": "2026-03-20",
+    "steps": 20885,
+    "calories": 3665.0,
+    "distance_km": 23.28,
+    "resting_hr": 43,
+    "avg_stress": 20,
+    "sleep_seconds": 24120,
+    "body_battery_charged": 58
+  },
+  "2026-03-21": {
+    "date": "2026-03-21",
+    "steps": 1455,
+    "calories": 1926.0,
+    "distance_km": 1.12,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 26460,
+    "body_battery_charged": 79
+  },
+  "2026-03-22": {
+    "date": "2026-03-22",
+    "steps": 25379,
+    "calories": 3816.0,
+    "distance_km": 26.78,
+    "resting_hr": 41,
+    "avg_stress": 23,
+    "sleep_seconds": 34740,
+    "body_battery_charged": 71
+  },
+  "2026-03-23": {
+    "date": "2026-03-23",
+    "steps": 1216,
+    "calories": 1920.0,
+    "distance_km": 0.93,
+    "resting_hr": 46,
+    "avg_stress": 27,
+    "sleep_seconds": 25786,
+    "body_battery_charged": 86
+  },
+  "2026-03-24": {
+    "date": "2026-03-24",
+    "steps": 7444,
+    "calories": 2605.0,
+    "distance_km": 5.69,
+    "resting_hr": 43,
+    "avg_stress": 25,
+    "sleep_seconds": 24712,
+    "body_battery_charged": 76
+  },
+  "2026-03-25": {
+    "date": "2026-03-25",
+    "steps": 8857,
+    "calories": 2682.0,
+    "distance_km": 9.32,
+    "resting_hr": 42,
+    "avg_stress": 31,
+    "sleep_seconds": 24120,
+    "body_battery_charged": 66
+  },
+  "2026-03-26": {
+    "date": "2026-03-26",
+    "steps": 10591,
+    "calories": 3163.0,
+    "distance_km": 11.72,
+    "resting_hr": 43,
+    "avg_stress": 36,
+    "sleep_seconds": 29160,
+    "body_battery_charged": 82
+  },
+  "2026-03-27": {
+    "date": "2026-03-27",
+    "steps": 2506,
+    "calories": 2165.0,
+    "distance_km": 1.94,
+    "resting_hr": 42,
+    "avg_stress": 25,
+    "sleep_seconds": 29640,
+    "body_battery_charged": 91
+  },
+  "2026-03-28": {
+    "date": "2026-03-28",
+    "steps": 8864,
+    "calories": 2528.0,
+    "distance_km": 8.26,
+    "resting_hr": 41,
+    "avg_stress": 26,
+    "sleep_seconds": 27240,
+    "body_battery_charged": 78
+  },
+  "2026-03-29": {
+    "date": "2026-03-29",
+    "steps": 7381,
+    "calories": 2061.0,
+    "distance_km": 5.64,
+    "resting_hr": 45,
+    "avg_stress": 28,
+    "sleep_seconds": 25740,
+    "body_battery_charged": 63
+  },
+  "2026-03-30": {
+    "date": "2026-03-30",
+    "steps": 22765,
+    "calories": 2925.0,
+    "distance_km": 19.79,
+    "resting_hr": 45,
+    "avg_stress": 42,
+    "sleep_seconds": 22800,
+    "body_battery_charged": 62
+  },
+  "2026-03-31": {
+    "date": "2026-03-31",
+    "steps": 20225,
+    "calories": 3224.0,
+    "distance_km": 19.84,
+    "resting_hr": 47,
+    "avg_stress": 31,
+    "sleep_seconds": 28800,
+    "body_battery_charged": 89
+  },
+  "2026-04-01": {
+    "date": "2026-04-01",
+    "steps": 19930,
+    "calories": 2835.0,
+    "distance_km": 17.0,
+    "resting_hr": 45,
+    "avg_stress": 33,
+    "sleep_seconds": 25660,
+    "body_battery_charged": 83
+  },
+  "2026-04-02": {
+    "date": "2026-04-02",
+    "steps": 12991,
+    "calories": 2325.0,
+    "distance_km": 10.08,
+    "resting_hr": 47,
+    "avg_stress": 36,
+    "sleep_seconds": 28320,
+    "body_battery_charged": 86
+  },
+  "2026-04-03": {
+    "date": "2026-04-03",
+    "steps": 20659,
+    "calories": 3528.0,
+    "distance_km": 18.22,
+    "resting_hr": 44,
+    "avg_stress": 33,
+    "sleep_seconds": 29340,
+    "body_battery_charged": 82
+  },
+  "2026-04-04": {
+    "date": "2026-04-04",
+    "steps": 5869,
+    "calories": 2093.0,
+    "distance_km": 4.49,
+    "resting_hr": 53,
+    "avg_stress": 48,
+    "sleep_seconds": 12420,
+    "body_battery_charged": 26
+  },
+  "2026-04-05": {
+    "date": "2026-04-05",
+    "steps": 4673,
+    "calories": 1995.0,
+    "distance_km": 3.58,
+    "resting_hr": 45,
+    "avg_stress": 25,
+    "sleep_seconds": 30931,
+    "body_battery_charged": 94
+  },
+  "2026-04-06": {
+    "date": "2026-04-06",
+    "steps": 13786,
+    "calories": 2710.0,
+    "distance_km": 10.54,
+    "resting_hr": 42,
+    "avg_stress": 25,
+    "sleep_seconds": 25080,
+    "body_battery_charged": 96
+  },
+  "2026-04-07": {
+    "date": "2026-04-07",
+    "steps": 22482,
+    "calories": 2944.0,
+    "distance_km": 18.2,
+    "resting_hr": 44,
+    "avg_stress": 38,
+    "sleep_seconds": 28260,
+    "body_battery_charged": 78
+  },
+  "2026-04-08": {
+    "date": "2026-04-08",
+    "steps": 28989,
+    "calories": 3402.0,
+    "distance_km": 25.92,
+    "resting_hr": 46,
+    "avg_stress": 38,
+    "sleep_seconds": 26640,
+    "body_battery_charged": 84
+  },
+  "2026-04-09": {
+    "date": "2026-04-09",
+    "steps": 11562,
+    "calories": 3621.0,
+    "distance_km": 8.95,
+    "resting_hr": 47,
+    "avg_stress": 26,
+    "sleep_seconds": 31680,
+    "body_battery_charged": 87
+  },
+  "2026-04-10": {
+    "date": "2026-04-10",
+    "steps": 21885,
+    "calories": 3131.0,
+    "distance_km": 19.57,
+    "resting_hr": 48,
+    "avg_stress": 34,
+    "sleep_seconds": 22500,
+    "body_battery_charged": 71
+  },
+  "2026-04-11": {
+    "date": "2026-04-11",
+    "steps": 11932,
+    "calories": 2249.0,
+    "distance_km": 9.12,
+    "resting_hr": 44,
+    "avg_stress": 33,
+    "sleep_seconds": 25347,
+    "body_battery_charged": 84
+  },
+  "2026-04-12": {
+    "date": "2026-04-12",
+    "steps": 26044,
+    "calories": 3474.0,
+    "distance_km": 27.11,
+    "resting_hr": 44,
+    "avg_stress": 38,
+    "sleep_seconds": 25800,
+    "body_battery_charged": 80
+  },
+  "2026-04-13": {
+    "date": "2026-04-13",
+    "steps": 21400,
+    "calories": 2590.0,
+    "distance_km": 17.28,
+    "resting_hr": 48,
+    "avg_stress": 30,
+    "sleep_seconds": 23340,
+    "body_battery_charged": 74
+  },
+  "2026-04-14": {
+    "date": "2026-04-14",
+    "steps": 24036,
+    "calories": 2952.0,
+    "distance_km": 20.38,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 33000,
+    "body_battery_charged": 87
+  },
+  "2026-04-15": {
+    "date": "2026-04-15",
+    "steps": 10971,
+    "calories": 2668.0,
+    "distance_km": 8.39,
+    "resting_hr": 43,
+    "avg_stress": 27,
+    "sleep_seconds": 32580,
+    "body_battery_charged": 82
+  },
+  "2026-04-16": {
+    "date": "2026-04-16",
+    "steps": 23958,
+    "calories": 3524.0,
+    "distance_km": 24.13,
+    "resting_hr": 45,
+    "avg_stress": 37,
+    "sleep_seconds": 29040,
+    "body_battery_charged": 73
+  },
+  "2026-04-17": {
+    "date": "2026-04-17",
+    "steps": 12022,
+    "calories": 3434.0,
+    "distance_km": 9.19,
+    "resting_hr": 44,
+    "avg_stress": 29,
+    "sleep_seconds": 32400,
+    "body_battery_charged": 87
+  },
+  "2026-04-18": {
+    "date": "2026-04-18",
+    "steps": 4976,
+    "calories": 2008.0,
+    "distance_km": 3.81,
+    "resting_hr": 45,
+    "avg_stress": 25,
+    "sleep_seconds": 29040,
+    "body_battery_charged": 83
+  },
+  "2026-04-19": {
+    "date": "2026-04-19",
+    "steps": 41678,
+    "calories": 4826.0,
+    "distance_km": 44.1,
+    "resting_hr": 43,
+    "avg_stress": 34,
+    "sleep_seconds": 28380,
+    "body_battery_charged": 64
+  },
+  "2026-04-20": {
+    "date": "2026-04-20",
+    "steps": 9482,
+    "calories": 2124.0,
+    "distance_km": 7.25,
+    "resting_hr": 45,
+    "avg_stress": 27,
+    "sleep_seconds": 23400,
+    "body_battery_charged": 93
+  },
+  "2026-04-21": {
+    "date": "2026-04-21",
+    "steps": 17398,
+    "calories": 3128.0,
+    "distance_km": 18.06,
+    "resting_hr": 42,
+    "avg_stress": 30,
+    "sleep_seconds": 26640,
+    "body_battery_charged": 72
+  },
+  "2026-04-22": {
+    "date": "2026-04-22",
+    "steps": 18702,
+    "calories": 2558.0,
+    "distance_km": 15.24,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 25620,
+    "body_battery_charged": 95
+  },
+  "2026-04-23": {
+    "date": "2026-04-23",
+    "steps": 28036,
+    "calories": 3774.0,
+    "distance_km": 28.96,
+    "resting_hr": 42,
+    "avg_stress": 28,
+    "sleep_seconds": 21141,
+    "body_battery_charged": 65
+  },
+  "2026-04-24": {
+    "date": "2026-04-24",
+    "steps": 11110,
+    "calories": 2594.0,
+    "distance_km": 8.49,
+    "resting_hr": 43,
+    "avg_stress": 29,
+    "sleep_seconds": 33060,
+    "body_battery_charged": 91
+  },
+  "2026-04-25": {
+    "date": "2026-04-25",
+    "steps": 10644,
+    "calories": 2243.0,
+    "distance_km": 9.08,
+    "resting_hr": 43,
+    "avg_stress": 22,
+    "sleep_seconds": 29580,
+    "body_battery_charged": 75
+  },
+  "2026-04-26": {
+    "date": "2026-04-26",
+    "steps": 3344,
+    "calories": 1960.0,
+    "distance_km": 2.56,
+    "resting_hr": 42,
+    "avg_stress": 20,
+    "sleep_seconds": 22800,
+    "body_battery_charged": 71
+  },
+  "2026-04-27": {
+    "date": "2026-04-27",
+    "steps": 23661,
+    "calories": 3065.0,
+    "distance_km": 22.14,
+    "resting_hr": 40,
+    "avg_stress": 29,
+    "sleep_seconds": 31973,
+    "body_battery_charged": 62
+  },
+  "2026-04-28": {
+    "date": "2026-04-28",
+    "steps": 15736,
+    "calories": 2545.0,
+    "distance_km": 13.6,
+    "resting_hr": 45,
+    "avg_stress": 33,
+    "sleep_seconds": 26400,
+    "body_battery_charged": 79
+  },
+  "2026-04-29": {
+    "date": "2026-04-29",
+    "steps": 23026,
+    "calories": 3734.0,
+    "distance_km": 23.57,
+    "resting_hr": 44,
+    "avg_stress": 34,
+    "sleep_seconds": 22620,
+    "body_battery_charged": 78
+  },
+  "2026-04-30": {
+    "date": "2026-04-30",
+    "steps": 8063,
+    "calories": 2098.0,
+    "distance_km": 6.17,
+    "resting_hr": 45,
+    "avg_stress": 34,
+    "sleep_seconds": 28140,
+    "body_battery_charged": 87
+  },
+  "2026-05-01": {
+    "date": "2026-05-01",
+    "steps": 16913,
+    "calories": 2624.0,
+    "distance_km": 14.96,
+    "resting_hr": 44,
+    "avg_stress": 31,
+    "sleep_seconds": 29848,
+    "body_battery_charged": 83
+  },
+  "2026-05-02": {
+    "date": "2026-05-02",
+    "steps": 4343,
+    "calories": 1966.0,
+    "distance_km": 3.36,
+    "resting_hr": 45,
+    "avg_stress": 29,
+    "sleep_seconds": 22980,
+    "body_battery_charged": 83
+  },
+  "2026-05-03": {
+    "date": "2026-05-03",
+    "steps": 29266,
+    "calories": 4129.0,
+    "distance_km": 32.67,
+    "resting_hr": 42,
+    "avg_stress": 37,
+    "sleep_seconds": 25860,
+    "body_battery_charged": 83
+  },
+  "2026-05-04": {
+    "date": "2026-05-04",
+    "steps": 15611,
+    "calories": 2463.0,
+    "distance_km": 13.82,
+    "resting_hr": 44,
+    "avg_stress": 28,
+    "sleep_seconds": 27635,
+    "body_battery_charged": 83
+  },
+  "2026-05-05": {
+    "date": "2026-05-05",
+    "steps": 23939,
+    "calories": 3390.0,
+    "distance_km": 24.61,
+    "resting_hr": 42,
+    "avg_stress": 23,
+    "sleep_seconds": 29280,
+    "body_battery_charged": 83
+  },
+  "2026-05-06": {
+    "date": "2026-05-06",
+    "steps": 19439,
+    "calories": 2625.0,
+    "distance_km": 16.68,
+    "resting_hr": 45,
+    "avg_stress": 33,
+    "sleep_seconds": 28260,
+    "body_battery_charged": 80
+  },
+  "2026-05-07": {
+    "date": "2026-05-07",
+    "steps": 25134,
+    "calories": 2923.0,
+    "distance_km": 22.25,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 30360,
+    "body_battery_charged": 83
+  },
+  "2026-05-08": {
+    "date": "2026-05-08",
+    "steps": 17179,
+    "calories": 2592.0,
+    "distance_km": 15.18,
+    "resting_hr": 43,
+    "avg_stress": 32,
+    "sleep_seconds": 29460,
+    "body_battery_charged": 77
+  },
+  "2026-05-09": {
+    "date": "2026-05-09",
+    "steps": 9969,
+    "calories": 2152.0,
+    "distance_km": 7.62,
+    "resting_hr": 45,
+    "avg_stress": 31,
+    "sleep_seconds": 28080,
+    "body_battery_charged": 81
+  },
+  "2026-05-10": {
+    "date": "2026-05-10",
+    "steps": 29477,
+    "calories": 3692.0,
+    "distance_km": 30.2,
+    "resting_hr": 44,
+    "avg_stress": 36,
+    "sleep_seconds": 24120,
+    "body_battery_charged": 83
+  },
+  "2026-05-11": {
+    "date": "2026-05-11",
+    "steps": 18702,
+    "calories": 2588.0,
+    "distance_km": 16.07,
+    "resting_hr": 47,
+    "avg_stress": 33,
+    "sleep_seconds": 21840,
+    "body_battery_charged": 75
+  },
+  "2026-05-12": {
+    "date": "2026-05-12",
+    "steps": 26383,
+    "calories": 3203.0,
+    "distance_km": 27.29,
+    "resting_hr": 45,
+    "avg_stress": 29,
+    "sleep_seconds": 26460,
+    "body_battery_charged": 100
+  },
+  "2026-05-13": {
+    "date": "2026-05-13",
+    "steps": 22848,
+    "calories": 2946.0,
+    "distance_km": 21.42,
+    "resting_hr": 44,
+    "avg_stress": 32,
+    "sleep_seconds": 24960,
+    "body_battery_charged": 84
+  },
+  "2026-05-14": {
+    "date": "2026-05-14",
+    "steps": 22786,
+    "calories": 2798.0,
+    "distance_km": 19.21,
+    "resting_hr": 45,
+    "avg_stress": 28,
+    "sleep_seconds": 30180,
+    "body_battery_charged": 84
+  },
+  "2026-05-15": {
+    "date": "2026-05-15",
+    "steps": 8139,
+    "calories": 2082.0,
+    "distance_km": 6.36,
+    "resting_hr": 43,
+    "avg_stress": 32,
+    "sleep_seconds": 28500,
+    "body_battery_charged": 73
+  },
+  "2026-05-16": {
+    "date": "2026-05-16",
+    "steps": 42798,
+    "calories": 5091.0,
+    "distance_km": 40.97,
+    "resting_hr": 45,
+    "avg_stress": 53,
+    "sleep_seconds": 16673,
+    "body_battery_charged": 64
+  },
+  "2026-05-17": {
+    "date": "2026-05-17",
+    "steps": 6735,
+    "calories": 2236.0,
+    "distance_km": 5.17,
+    "resting_hr": 44,
+    "avg_stress": 25,
+    "sleep_seconds": 11580,
+    "body_battery_charged": 93
+  },
+  "2026-05-18": {
+    "date": "2026-05-18",
+    "steps": 20319,
+    "calories": 2518.0,
+    "distance_km": 17.98,
+    "resting_hr": 41,
+    "avg_stress": 22,
+    "sleep_seconds": 21284,
+    "body_battery_charged": 59
+  },
+  "2026-05-19": {
+    "date": "2026-05-19",
+    "steps": 32481,
+    "calories": 3467.0,
+    "distance_km": 32.98,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 28200,
+    "body_battery_charged": 76
+  },
+  "2026-05-20": {
+    "date": "2026-05-20",
+    "steps": 17794,
+    "calories": 2809.0,
+    "distance_km": 16.38,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 26700,
+    "body_battery_charged": 80
+  },
+  "2026-05-21": {
+    "date": "2026-05-21",
+    "steps": 20760,
+    "calories": 3143.0,
+    "distance_km": 22.6,
+    "resting_hr": 43,
+    "avg_stress": 33,
+    "sleep_seconds": 30840,
+    "body_battery_charged": 82
+  },
+  "2026-05-22": {
+    "date": "2026-05-22",
+    "steps": 21809,
+    "calories": 2836.0,
+    "distance_km": 20.09,
+    "resting_hr": 45,
+    "avg_stress": 30,
+    "sleep_seconds": 27900,
+    "body_battery_charged": 89
+  },
+  "2026-05-23": {
+    "date": "2026-05-23",
+    "steps": 7191,
+    "calories": 2061.0,
+    "distance_km": 5.81,
+    "resting_hr": 44,
+    "avg_stress": 29,
+    "sleep_seconds": 30000,
+    "body_battery_charged": 77
+  },
+  "2026-05-24": {
+    "date": "2026-05-24",
+    "steps": 25168,
+    "calories": 3374.0,
+    "distance_km": 26.26,
+    "resting_hr": 40,
+    "avg_stress": 26,
+    "sleep_seconds": 21780,
+    "body_battery_charged": 93
+  },
+  "2026-05-25": {
+    "date": "2026-05-25",
+    "steps": 19851,
+    "calories": 2971.0,
+    "distance_km": 20.9,
+    "resting_hr": 46,
+    "avg_stress": 27,
+    "sleep_seconds": 18780,
+    "body_battery_charged": 61
+  },
+  "2026-05-26": {
+    "date": "2026-05-26",
+    "steps": 21333,
+    "calories": 2900.0,
+    "distance_km": 20.09,
+    "resting_hr": 41,
+    "avg_stress": 30,
+    "sleep_seconds": 28440,
+    "body_battery_charged": 82
+  },
+  "2026-05-27": {
+    "date": "2026-05-27",
+    "steps": 21821,
+    "calories": 3066.0,
+    "distance_km": 21.64,
+    "resting_hr": 43,
+    "avg_stress": 26,
+    "sleep_seconds": 29580,
+    "body_battery_charged": 84
+  },
+  "2026-05-28": {
+    "date": "2026-05-28",
+    "steps": 27040,
+    "calories": 3129.0,
+    "distance_km": 25.6,
+    "resting_hr": 42,
+    "avg_stress": 28,
+    "sleep_seconds": 33660,
+    "body_battery_charged": 77
+  },
+  "2026-05-29": {
+    "date": "2026-05-29",
+    "steps": 14584,
+    "calories": 2930.0,
+    "distance_km": 11.42,
+    "resting_hr": 41,
+    "avg_stress": 24,
+    "sleep_seconds": 29400,
+    "body_battery_charged": 78
+  },
+  "2026-05-30": {
+    "date": "2026-05-30",
+    "steps": 28791,
+    "calories": 3511.0,
+    "distance_km": 28.16,
+    "resting_hr": 41,
+    "avg_stress": 30,
+    "sleep_seconds": 26520,
+    "body_battery_charged": 78
+  },
+  "2026-05-31": {
+    "date": "2026-05-31",
+    "steps": 18136,
+    "calories": 2832.0,
+    "distance_km": 19.01,
+    "resting_hr": 43,
+    "avg_stress": 23,
+    "sleep_seconds": 22920,
+    "body_battery_charged": 77
+  },
+  "2026-06-01": {
+    "date": "2026-06-01",
+    "steps": 22207,
+    "calories": 2837.0,
+    "distance_km": 20.94,
+    "resting_hr": 42,
+    "avg_stress": 23,
+    "sleep_seconds": 31680,
+    "body_battery_charged": 68
+  },
+  "2026-06-02": {
+    "date": "2026-06-02",
+    "steps": 27751,
+    "calories": 3437.0,
+    "distance_km": 27.81,
+    "resting_hr": 42,
+    "avg_stress": 27,
+    "sleep_seconds": 27000,
+    "body_battery_charged": 74
+  },
+  "2026-06-03": {
+    "date": "2026-06-03",
+    "steps": 24423,
+    "calories": 3182.0,
+    "distance_km": 23.76,
+    "resting_hr": 43,
+    "avg_stress": 25,
+    "sleep_seconds": 34140,
+    "body_battery_charged": 83
+  },
+  "2026-06-04": {
+    "date": "2026-06-04",
+    "steps": 25627,
+    "calories": 3185.0,
+    "distance_km": 25.63,
+    "resting_hr": 41,
+    "avg_stress": 28,
+    "sleep_seconds": 28560,
+    "body_battery_charged": 78
+  },
+  "2026-06-05": {
+    "date": "2026-06-05",
+    "steps": 15354,
+    "calories": 2660.0,
+    "distance_km": 12.63,
+    "resting_hr": 44,
+    "avg_stress": 34,
+    "sleep_seconds": 25560,
+    "body_battery_charged": 75
+  },
+  "2026-06-06": {
+    "date": "2026-06-06",
+    "steps": 29343,
+    "calories": 3540.0,
+    "distance_km": 29.35,
+    "resting_hr": 45,
+    "avg_stress": 35,
+    "sleep_seconds": 24840,
+    "body_battery_charged": 78
+  },
+  "2026-06-07": {
+    "date": "2026-06-07",
+    "steps": 25245,
+    "calories": 3144.0,
+    "distance_km": 24.1,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 23460,
+    "body_battery_charged": 86
+  },
+  "2026-06-08": {
+    "date": "2026-06-08",
+    "steps": 24213,
+    "calories": 3301.0,
+    "distance_km": 25.53,
+    "resting_hr": 44,
+    "avg_stress": 31,
+    "sleep_seconds": 27180,
+    "body_battery_charged": 86
+  },
+  "2026-06-09": {
+    "date": "2026-06-09",
+    "steps": 27178,
+    "calories": 3337.0,
+    "distance_km": 26.86,
+    "resting_hr": 44,
+    "avg_stress": 32,
+    "sleep_seconds": 32340,
+    "body_battery_charged": 88
+  },
+  "2026-06-10": {
+    "date": "2026-06-10",
+    "steps": 24378,
+    "calories": 3124.0,
+    "distance_km": 23.6,
+    "resting_hr": 43,
+    "avg_stress": 32,
+    "sleep_seconds": 28740,
+    "body_battery_charged": 87
+  },
+  "2026-06-11": {
+    "date": "2026-06-11",
+    "steps": 28420,
+    "calories": 3180.0,
+    "distance_km": 27.03,
+    "resting_hr": 43,
+    "avg_stress": 32,
+    "sleep_seconds": 14915,
+    "body_battery_charged": 54
+  },
+  "2026-06-12": {
+    "date": "2026-06-12",
+    "steps": 31058,
+    "calories": 3032.0,
+    "distance_km": 27.51,
+    "resting_hr": 43,
+    "avg_stress": 24,
+    "sleep_seconds": 25009,
+    "body_battery_charged": 90
+  },
+  "2026-06-13": {
+    "date": "2026-06-13",
+    "steps": 21102,
+    "calories": 2922.0,
+    "distance_km": 19.69,
+    "resting_hr": 43,
+    "avg_stress": 33,
+    "sleep_seconds": 16977,
+    "body_battery_charged": 69
+  },
+  "2026-06-14": {
+    "date": "2026-06-14",
+    "steps": 13023,
+    "calories": 2700.0,
+    "distance_km": 14.03,
+    "resting_hr": 41,
+    "avg_stress": 27,
+    "sleep_seconds": 33660,
+    "body_battery_charged": 85
+  },
+  "2026-06-15": {
+    "date": "2026-06-15",
+    "steps": 10193,
+    "calories": 2483.0,
+    "distance_km": 9.8,
+    "resting_hr": 42,
+    "avg_stress": 22,
+    "sleep_seconds": 30282,
+    "body_battery_charged": 79
+  },
+  "2026-06-16": {
+    "date": "2026-06-16",
+    "steps": 20792,
+    "calories": 3453.0,
+    "distance_km": 23.67,
+    "resting_hr": 42,
+    "avg_stress": 29,
+    "sleep_seconds": 30360,
+    "body_battery_charged": 69
+  },
+  "2026-06-17": {
+    "date": "2026-06-17",
+    "steps": 14366,
+    "calories": 2557.0,
+    "distance_km": 15.19,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 33300,
+    "body_battery_charged": 77
+  },
+  "2026-06-18": {
+    "date": "2026-06-18",
+    "steps": 17751,
+    "calories": 2964.0,
+    "distance_km": 18.18,
+    "resting_hr": 43,
+    "avg_stress": 30,
+    "sleep_seconds": 30120,
+    "body_battery_charged": 79
+  },
+  "2026-06-19": {
+    "date": "2026-06-19",
+    "steps": 13852,
+    "calories": 2749.0,
+    "distance_km": 14.96,
+    "resting_hr": 43,
+    "avg_stress": 34,
+    "sleep_seconds": 31320,
+    "body_battery_charged": 77
+  },
+  "2026-06-20": {
+    "date": "2026-06-20",
+    "steps": 9252,
+    "calories": 2113.0,
+    "distance_km": 7.07,
+    "resting_hr": 43,
+    "avg_stress": 26,
+    "sleep_seconds": 23987,
+    "body_battery_charged": 98
+  },
+  "2026-06-21": {
+    "date": "2026-06-21",
+    "steps": 30638,
+    "calories": 4377.0,
+    "distance_km": 29.89,
+    "resting_hr": 44,
+    "avg_stress": 38,
+    "sleep_seconds": 28500,
+    "body_battery_charged": 73
+  },
+  "2026-06-22": {
+    "date": "2026-06-22",
+    "steps": 24652,
+    "calories": 3843.0,
+    "distance_km": 24.96,
+    "resting_hr": 47,
+    "avg_stress": 30,
+    "sleep_seconds": 32220,
+    "body_battery_charged": 88
+  },
+  "2026-06-23": {
+    "date": "2026-06-23",
+    "steps": 28010,
+    "calories": 3313.0,
+    "distance_km": 24.19,
+    "resting_hr": 46,
+    "avg_stress": 34,
+    "sleep_seconds": 23220,
+    "body_battery_charged": 72
+  },
+  "2026-06-24": {
+    "date": "2026-06-24",
+    "steps": 21612,
+    "calories": 3178.0,
+    "distance_km": 21.26,
+    "resting_hr": 41,
+    "avg_stress": 35,
+    "sleep_seconds": 28200,
+    "body_battery_charged": 75
+  },
   "2026-06-25": {
     "date": "2026-06-25",
     "steps": 16181,
