@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+
+# NEVER commit these — local-only auth artifacts
+garmin_tokens/
+garmin_tokens_b64.txt
+.garminconnect/

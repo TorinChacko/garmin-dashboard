@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Field Log — Garmin Dashboard</title>
+<style>
+  :root{
+    --bg: #0b0f0d;
+    --panel: #111613;
+    --line: #232b26;
+    --ink: #e9efe7;
+    --ink-dim: #8fa093;
+    --accent: #b6ff5c;
+    --accent-dim: #6b8a3f;
+    --red: #ff6a4d;
+    --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
+    --display: "Bebas Neue", "Archivo Black", system-ui, sans-serif;
+    --body: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);}
+
+  body{
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.035) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 80px;}
+
+  header{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);
+    padding-bottom:18px;margin-bottom:28px;flex-wrap:wrap;gap:12px;
+  }
+  .brand{font-family:var(--display);font-size:42px;letter-spacing:0.5px;line-height:1;color:var(--accent);}
+  .brand small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--ink-dim);text-transform:uppercase;margin-top:6px;}
+  .status{font-family:var(--mono);font-size:12px;color:var(--ink-dim);text-align:right;}
+  .status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:6px;box-shadow:0 0 8px var(--accent);}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
+  @media (max-width:760px){.grid{grid-template-columns:repeat(2,1fr);}}
+
+  .stat{
+    background:var(--panel);border:1px solid var(--line);border-radius:4px;
+    padding:16px 16px 14px;position:relative;overflow:hidden;
+  }
+  .stat::before{
+    content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent-dim);
+  }
+  .stat .label{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-dim);}
+  .stat .value{font-family:var(--display);font-size:34px;margin-top:6px;line-height:1;}
+  .stat .value span{font-size:16px;color:var(--ink-dim);font-family:var(--mono);margin-left:4px;}
+  .stat .delta{font-family:var(--mono);font-size:11px;margin-top:6px;}
+  .delta.up{color:var(--accent);}
+  .delta.down{color:var(--red);}
+
+  .panel{
+    background:var(--panel);border:1px solid var(--line);border-radius:4px;
+    padding:20px;margin-bottom:20px;
+  }
+  .panel h2{
+    font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--ink-dim);margin:0 0 16px;display:flex;justify-content:space-between;
+  }
+  .panel h2 .range{color:var(--accent-dim);}
+
+  svg{width:100%;display:block;overflow:visible;}
+  .gridline{stroke:var(--line);stroke-width:1;}
+  .series-line{fill:none;stroke:var(--accent);stroke-width:2;}
+  .series-area{fill:url(#fadeGrad);opacity:0.5;}
+  .axis-label{font-family:var(--mono);font-size:9px;fill:var(--ink-dim);}
+  .pt{fill:var(--accent);}
+  .pt-empty{fill:transparent;}
+
+  .row2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
+  @media (max-width:760px){.row2{grid-template-columns:1fr;}}
+
+  table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px;}
+  th{text-align:left;color:var(--ink-dim);font-weight:400;letter-spacing:1px;text-transform:uppercase;font-size:10px;padding:6px 8px;border-bottom:1px solid var(--line);}
+  td{padding:7px 8px;border-bottom:1px solid var(--line);}
+  tr:last-child td{border-bottom:none;}
+
+  .empty{
+    text-align:center;padding:60px 20px;color:var(--ink-dim);font-family:var(--mono);font-size:13px;
+    border:1px dashed var(--line);border-radius:4px;
+  }
+  .empty strong{color:var(--accent);display:block;font-family:var(--display);font-size:20px;margin-bottom:8px;letter-spacing:1px;}
+
+  footer{font-family:var(--mono);font-size:10px;color:var(--ink-dim);text-align:center;margin-top:40px;letter-spacing:1px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">FIELD LOG<small>garmin connect / personal telemetry</small></div>
+    <div class="status" id="statusLine"><span class="dot"></span>loading…</div>
+  </header>
+
+  <div id="content">
+    <div class="empty">
+      <strong>NO DATA YET</strong>
+      Waiting on the first run of the Fetch Garmin Data action.<br/>
+      Trigger it manually from the repo's Actions tab, or wait for the daily schedule.
+    </div>
+  </div>
+
+  <footer>DATA REFRESHES DAILY VIA GITHUB ACTIONS — SOURCE: data/history.json</footer>
+</div>
+
+<script>
+async function main(){
+  const statusEl = document.getElementById('statusLine');
+  const contentEl = document.getElementById('content');
+
+  let raw;
+  try {
+    const res = await fetch('./data/history.json', {cache: "no-store"});
+    raw = await res.json();
+  } catch (e) {
+    statusEl.innerHTML = '<span class="dot" style="background:#ff6a4d;box-shadow:0 0 8px #ff6a4d"></span>failed to load data';
+    return;
+  }
+
+  const days = Object.keys(raw).sort();
+  if (days.length === 0) {
+    statusEl.innerHTML = '<span class="dot"></span>no data yet';
+    return;
+  }
+
+  const rows = days.map(d => raw[d]);
+  const last = rows[rows.length - 1];
+  const prev = rows.length > 1 ? rows[rows.length - 2] : null;
+
+  statusEl.innerHTML = `<span class="dot"></span>last synced ${last.date}`;
+
+  const fmt = (v, unit='') => (v === null || v === undefined) ? '—' : `${Math.round(v).toLocaleString()}${unit ? ` <span>${unit}</span>` : ''}`;
+  const delta = (a,b) => {
+    if (a===null||a===undefined||b===null||b===undefined) return '';
+    const d = a-b;
+    if (d===0) return '';
+    const cls = d>0 ? 'up':'down';
+    const sign = d>0 ? '+':'';
+    return `<div class="delta ${cls}">${sign}${Math.round(d).toLocaleString()} vs prior day</div>`;
+  };
+
+  function sparkline(values, opts={}){
+    const w = 1000, h = opts.h || 140, pad = 24;
+    const nums = values.map(v => v===null||v===undefined ? null : v);
+    const valid = nums.filter(v => v!==null);
+    if (valid.length === 0) return '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no data</div>';
+    const max = Math.max(...valid) * 1.1 || 1;
+    const min = 0;
+    const stepX = (w - pad*2) / Math.max(nums.length - 1, 1);
+
+    const points = nums.map((v,i) => {
+      const x = pad + i*stepX;
+      if (v===null) return null;
+      const y = h - pad - ((v-min)/(max-min||1)) * (h - pad*2);
+      return [x,y];
+    });
+
+    const validPoints = points.filter(p=>p!==null);
+    const pathD = validPoints.map((p,i) => (i===0?'M':'L') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+    const areaD = pathD + ` L ${validPoints[validPoints.length-1][0].toFixed(1)} ${h-pad} L ${validPoints[0][0].toFixed(1)} ${h-pad} Z`;
+
+    const gridLines = [0,0.25,0.5,0.75,1].map(f => {
+      const y = pad + f*(h-pad*2);
+      return `<line class="gridline" x1="${pad}" y1="${y}" x2="${w-pad}" y2="${y}" />`;
+    }).join('');
+
+    const dots = points.map((p,i) => p ? `<circle class="pt" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3"/>` : '').join('');
+
+    return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="fadeGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#b6ff5c" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#b6ff5c" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      ${gridLines}
+      <path class="series-area" d="${areaD}" />
+      <path class="series-line" d="${pathD}" />
+      ${dots}
+    </svg>`;
+  }
+
+  // last 30 days for charts
+  const windowRows = rows.slice(-30);
+  const labelStart = windowRows[0]?.date || '';
+  const labelEnd = windowRows[windowRows.length-1]?.date || '';
+
+  contentEl.innerHTML = `
+    <div class="grid">
+      <div class="stat">
+        <div class="label">Steps — today</div>
+        <div class="value">${fmt(last.steps)}</div>
+        ${prev ? delta(last.steps, prev.steps) : ''}
+      </div>
+      <div class="stat">
+        <div class="label">Resting HR</div>
+        <div class="value">${fmt(last.resting_hr, 'bpm')}</div>
+        ${prev ? delta(last.resting_hr, prev.resting_hr) : ''}
+      </div>
+      <div class="stat">
+        <div class="label">Sleep</div>
+        <div class="value">${last.sleep_seconds ? (last.sleep_seconds/3600).toFixed(1) : '—'}<span>hrs</span></div>
+        ${prev && prev.sleep_seconds ? delta(last.sleep_seconds/3600, prev.sleep_seconds/3600) : ''}
+      </div>
+      <div class="stat">
+        <div class="label">Avg Stress</div>
+        <div class="value">${fmt(last.avg_stress)}</div>
+        ${prev ? delta(last.avg_stress, prev.avg_stress) : ''}
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="panel">
+        <h2>Daily Steps <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        ${sparkline(windowRows.map(r => r.steps))}
+      </div>
+      <div class="panel">
+        <h2>Resting Heart Rate <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        ${sparkline(windowRows.map(r => r.resting_hr), {h:140})}
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="panel">
+        <h2>Sleep (hrs) <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        ${sparkline(windowRows.map(r => r.sleep_seconds ? r.sleep_seconds/3600 : null))}
+      </div>
+      <div class="panel">
+        <h2>Recent Days</h2>
+        <table>
+          <thead><tr><th>Date</th><th>Steps</th><th>RHR</th></tr></thead>
+          <tbody>
+            ${rows.slice(-8).reverse().map(r => `
+              <tr>
+                <td>${r.date}</td>
+                <td>${r.steps ?? '—'}</td>
+                <td>${r.resting_hr ?? '—'}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+main();
+</script>
+</body>
+</html>

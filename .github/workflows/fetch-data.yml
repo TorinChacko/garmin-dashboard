@@ -1,0 +1,38 @@
+name: Fetch Garmin Data
+
+on:
+  schedule:
+    # Runs daily at 07:00 UTC. Adjust as you like: https://crontab.guru
+    - cron: "0 7 * * *"
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write   # needed so the workflow can commit data/history.json back
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install garminconnect curl_cffi
+
+      - name: Fetch latest stats
+        env:
+          GARMIN_TOKENS_B64: ${{ secrets.GARMIN_TOKENS_B64 }}
+        run: python scripts/fetch_garmin_data.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "garmin-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/history.json docs/data/history.json
+          git diff --cached --quiet || git commit -m "Update Garmin data $(date -u +%F)"
+          git push
