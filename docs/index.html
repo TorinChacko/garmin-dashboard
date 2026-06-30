@@ -7,8 +7,10 @@
 <style>
 :root{
   --bg:#0b0f0d;--panel:#111613;--line:#232b26;
-  --ink:#e9efe7;--ink-dim:#8fa093;
-  --accent:#b6ff5c;--accent-dim:#6b8a3f;--red:#ff6a4d;
+  --ink:#e9efe7;
+  --accent:#b6ff5c;--red:#ff6a4d;
+  --accent-dim: color-mix(in srgb, var(--accent) 55%, black 45%);
+  --ink-dim: color-mix(in srgb, var(--ink) 55%, var(--bg) 45%);
   --z1:#4fc3f7;--z2:#b6ff5c;--z3:#ffb347;--z4:#ff6a4d;--z5:#cc44ff;
   --mono:"JetBrains Mono","SF Mono",ui-monospace,Menlo,monospace;
   --display:"Bebas Neue","Archivo Black",system-ui,sans-serif;
@@ -24,7 +26,7 @@ body{background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.035) 
 header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:0;flex-wrap:wrap;gap:12px;}
 .brand{font-family:var(--display);font-size:38px;letter-spacing:0.5px;line-height:1;color:var(--accent);}
 .brand small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:2.5px;color:var(--ink-dim);text-transform:uppercase;margin-top:5px;}
-.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;position:relative;}
 .status{font-family:var(--mono);font-size:12px;color:var(--ink-dim);}
 .status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:6px;box-shadow:0 0 8px var(--accent);}
 
@@ -35,6 +37,16 @@ header{display:flex;justify-content:space-between;align-items:flex-end;border-bo
 .maxhr-wrap{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;color:var(--ink-dim);}
 .maxhr-wrap input{width:52px;background:var(--panel);border:1px solid var(--line);color:var(--ink);font-family:var(--mono);font-size:12px;padding:4px 6px;border-radius:3px;text-align:center;}
 .maxhr-wrap input:focus{outline:none;border-color:var(--accent-dim);}
+
+/* THEME PANEL */
+.theme-panel{display:none;position:absolute;top:100%;right:0;margin-top:8px;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px;z-index:20;min-width:220px;box-shadow:0 8px 24px rgba(0,0,0,0.4);}
+.theme-panel.open{display:block;}
+.theme-panel h3{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-dim);margin:0 0 10px;}
+.theme-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;}
+.theme-row label{font-family:var(--mono);font-size:11px;color:var(--ink-dim);}
+.theme-row input[type="color"]{width:32px;height:24px;padding:0;border:1px solid var(--line);border-radius:3px;background:none;cursor:pointer;}
+.theme-actions{display:flex;gap:8px;margin-top:10px;}
+.theme-actions .btn{flex:1;padding:5px 8px;font-size:10px;}
 
 /* TABS */
 .tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:28px;margin-top:20px;}
@@ -119,6 +131,19 @@ footer{font-family:var(--mono);font-size:10px;color:var(--ink-dim);text-align:ce
       <div class="maxhr-wrap">
         MAX HR <input type="number" id="maxHrInput" value="201" min="150" max="220" onchange="render()"/> bpm
       </div>
+      <button class="btn" id="btnTheme" onclick="toggleThemePanel()">THEME</button>
+    </div>
+    <div class="theme-panel" id="themePanel">
+      <h3>Color Scheme</h3>
+      <div class="theme-row"><label for="theme_bg">Background</label><input type="color" id="theme_bg" oninput="onThemeInputChange()"/></div>
+      <div class="theme-row"><label for="theme_panel">Panel</label><input type="color" id="theme_panel" oninput="onThemeInputChange()"/></div>
+      <div class="theme-row"><label for="theme_ink">Text</label><input type="color" id="theme_ink" oninput="onThemeInputChange()"/></div>
+      <div class="theme-row"><label for="theme_accent">Accent</label><input type="color" id="theme_accent" oninput="onThemeInputChange()"/></div>
+      <div class="theme-row"><label for="theme_red">Alert</label><input type="color" id="theme_red" oninput="onThemeInputChange()"/></div>
+      <div class="theme-actions">
+        <button class="btn" onclick="resetTheme()">Reset</button>
+        <button class="btn" onclick="toggleThemePanel()">Done</button>
+      </div>
     </div>
   </div>
 </header>
@@ -155,6 +180,56 @@ function switchTab(name){
     el.classList.toggle('active', el.id==='tab-'+name);
   });
 }
+
+// ── theme customization ──────────────────────────────────────
+const THEME_KEY='fieldlog-theme-v1';
+const THEME_VARS=['--bg','--panel','--ink','--accent','--red'];
+const DEFAULT_THEME={'--bg':'#0b0f0d','--panel':'#111613','--ink':'#e9efe7','--accent':'#b6ff5c','--red':'#ff6a4d'};
+
+function varInputId(v){ return 'theme_'+v.replace('--',''); }
+
+function applyTheme(theme){
+  for(const k of THEME_VARS){
+    const val = theme[k] || DEFAULT_THEME[k];
+    document.documentElement.style.setProperty(k, val);
+    const el = document.getElementById(varInputId(k));
+    if(el) el.value = val;
+  }
+}
+
+function loadTheme(){
+  let saved = {};
+  try{ saved = JSON.parse(localStorage.getItem(THEME_KEY) || '{}'); }
+  catch(e){ saved = {}; }
+  applyTheme({...DEFAULT_THEME, ...saved});
+}
+
+function onThemeInputChange(){
+  const theme = {};
+  for(const k of THEME_VARS){
+    const el = document.getElementById(varInputId(k));
+    if(el) theme[k] = el.value;
+  }
+  applyTheme(theme);
+  try{ localStorage.setItem(THEME_KEY, JSON.stringify(theme)); }catch(e){}
+}
+
+function resetTheme(){
+  try{ localStorage.removeItem(THEME_KEY); }catch(e){}
+  applyTheme(DEFAULT_THEME);
+}
+
+function toggleThemePanel(){
+  document.getElementById('themePanel').classList.toggle('open');
+}
+
+document.addEventListener('click', (e)=>{
+  const panel = document.getElementById('themePanel');
+  const btn = document.getElementById('btnTheme');
+  if(panel.classList.contains('open') && !panel.contains(e.target) && e.target!==btn){
+    panel.classList.remove('open');
+  }
+});
 
 // ── unit helpers ──────────────────────────────────────────────
 function distVal(km){ return globalUnit==='mi' ? km*0.621371 : km; }
@@ -312,13 +387,18 @@ function weeklyRunningStats(activities,maxHr){
     .map(([,w])=>({...w,avgPace:w.paces.length?w.paces.reduce((s,p)=>s+p,0)/w.paces.length:null}));
 }
 
-function weeklyMileageAgg(rows){
+// Weekly mileage from logged RUNNING ACTIVITIES only (not Garmin's
+// daily-summary distance, which includes incidental walking/steps).
+function weeklyRunningMileageAgg(activities){
   const weeks={};
-  for(const r of rows){
-    if(r.distance_km==null)continue;
-    const{key,label,monday}=isoWeekInfo(r.date);
+  for(const a of activities){
+    if(!a.type||!a.type.toLowerCase().includes('run'))continue;
+    if(!a.start_local)continue;
+    if(a.distance_km==null)continue;
+    const dt=a.start_local.split('T')[0].split(' ')[0];
+    const{key,label,monday}=isoWeekInfo(dt);
     if(!weeks[key])weeks[key]={label,monday,total:0};
-    weeks[key].total+=r.distance_km;
+    weeks[key].total+=a.distance_km;
   }
   return Object.entries(weeks).sort((a,b)=>a[1].monday-b[1].monday).map(([,w])=>w);
 }
@@ -425,7 +505,7 @@ function render(){
 
   const rhrValues=win30.map(r=>r.resting_hr);
   const rhrRolling=rollingAvg(win30,'resting_hr',7);
-  const wkMileage=weeklyMileageAgg(rows).slice(-16);
+  const wkMileage=weeklyRunningMileageAgg(activities).slice(-16);
   const wkRunning=weeklyRunningStats(activities,maxHr).slice(0,12);
   const vo2Rows=rows.filter(r=>r.vo2max_running!=null);
   const latestVo2=vo2Rows.length?vo2Rows[vo2Rows.length-1]:null;
@@ -740,9 +820,9 @@ function render(){
     </div>
 
     <div class="panel">
-      <h2>Best Weeks by Distance <span class="range">all time</span></h2>
+      <h2>Best Weeks by Distance <span class="range">all time, running only</span></h2>
       ${(()=>{
-        const sorted=[...weeklyMileageAgg(rows)].sort((a,b)=>b.total-a.total).slice(0,10);
+        const sorted=[...weeklyRunningMileageAgg(activities)].sort((a,b)=>b.total-a.total).slice(0,10);
         return sorted.length?`<table>
           <thead><tr><th>Week of</th><th>Distance</th></tr></thead>
           <tbody>${sorted.map(w=>`<tr><td>${w.label}</td><td>${distFmt(w.total)}</td></tr>`).join('')}</tbody>
@@ -762,6 +842,7 @@ function render(){
 
 // ── boot ─────────────────────────────────────────────────────
 async function main(){
+  loadTheme();
   const statusEl=document.getElementById('statusLine');
   let raw,actRaw;
   try{
