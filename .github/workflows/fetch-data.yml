@@ -33,6 +33,6 @@ jobs:
         run: |
           git config user.name "garmin-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/history.json docs/data/history.json
+          git add data/history.json docs/data/history.json data/activities.json docs/data/activities.json
           git diff --cached --quiet || git commit -m "Update Garmin data $(date -u +%F)"
           git push
