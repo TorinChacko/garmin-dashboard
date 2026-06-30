@@ -18217,7 +18217,10 @@
     "resting_hr": 42,
     "avg_stress": 25,
     "sleep_seconds": 23820,
-    "body_battery_charged": 73
+    "body_battery_charged": 73,
+    "vo2max_running": 62.0,
+    "vo2max_cycling": null,
+    "training_readiness": null
   },
   "2026-06-27": {
     "date": "2026-06-27",
@@ -18227,7 +18230,10 @@
     "resting_hr": 41,
     "avg_stress": 26,
     "sleep_seconds": 24120,
-    "body_battery_charged": 69
+    "body_battery_charged": 69,
+    "vo2max_running": 62.0,
+    "vo2max_cycling": null,
+    "training_readiness": null
   },
   "2026-06-28": {
     "date": "2026-06-28",
@@ -18237,7 +18243,10 @@
     "resting_hr": 42,
     "avg_stress": 25,
     "sleep_seconds": 24240,
-    "body_battery_charged": 85
+    "body_battery_charged": 85,
+    "vo2max_running": null,
+    "vo2max_cycling": null,
+    "training_readiness": null
   },
   "2026-06-29": {
     "date": "2026-06-29",
@@ -18247,16 +18256,22 @@
     "resting_hr": 39,
     "avg_stress": 36,
     "sleep_seconds": 30000,
-    "body_battery_charged": 67
+    "body_battery_charged": 67,
+    "vo2max_running": 62.0,
+    "vo2max_cycling": null,
+    "training_readiness": null
   },
   "2026-06-30": {
     "date": "2026-06-30",
-    "steps": 90,
-    "calories": 229.0,
-    "distance_km": 0.07,
-    "resting_hr": 45,
-    "avg_stress": 29,
-    "sleep_seconds": null,
-    "body_battery_charged": 7
+    "steps": 305,
+    "calories": 1119.0,
+    "distance_km": 0.23,
+    "resting_hr": 43,
+    "avg_stress": 16,
+    "sleep_seconds": 26700,
+    "body_battery_charged": 84,
+    "vo2max_running": null,
+    "vo2max_cycling": null,
+    "training_readiness": null
   }
 }
