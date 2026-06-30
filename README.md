@@ -70,14 +70,6 @@ it manually the first time. After that it runs automatically every day at
 07:00 UTC (edit the `cron` line in `.github/workflows/fetch-data.yml` to
 change the time).
 
-## What gets pulled
-
-Per day: steps, calories, distance, resting heart rate, average stress,
-sleep duration, body battery charged. Add more by editing `fetch_day()` in
-`scripts/fetch_garmin_data.py` — the wrapper exposes 130+ methods (see the
-[library's demo.py](https://github.com/cyberjunky/python-garminconnect/blob/master/demo.py)
-for the full list, e.g. `get_body_composition`, `get_training_readiness`,
-`get_activities`).
 
 ## When the token expires
 
