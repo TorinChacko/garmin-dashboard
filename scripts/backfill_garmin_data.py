@@ -96,8 +96,8 @@ def fetch_day(garmin, day_iso):
     vo2max_cycling = None
     if isinstance(max_metrics, list):
         for entry in max_metrics:
-            generic = entry.get("generic", {}) if isinstance(entry, dict) else {}
-            cycling = entry.get("cycling", {}) if isinstance(entry, dict) else {}
+            generic = (entry.get("generic") or {}) if isinstance(entry, dict) else {}
+            cycling = (entry.get("cycling") or {}) if isinstance(entry, dict) else {}
             if generic.get("vo2MaxValue"):
                 vo2max_running = generic.get("vo2MaxValue")
             if cycling.get("vo2MaxValue"):
