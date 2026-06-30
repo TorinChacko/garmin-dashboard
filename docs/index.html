@@ -1,498 +1,499 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Field Log — Garmin Dashboard</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Torin Chacko — Field Log</title>
 <style>
-  :root{
-    --bg: #0b0f0d;
-    --panel: #111613;
-    --line: #232b26;
-    --ink: #e9efe7;
-    --ink-dim: #8fa093;
-    --accent: #b6ff5c;
-    --accent-dim: #6b8a3f;
-    --red: #ff6a4d;
-    --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
-    --display: "Bebas Neue", "Archivo Black", system-ui, sans-serif;
-    --body: "Inter", system-ui, -apple-system, sans-serif;
-  }
+:root{
+  --bg:#0b0f0d;--panel:#111613;--line:#232b26;
+  --ink:#e9efe7;--ink-dim:#8fa093;
+  --accent:#b6ff5c;--accent-dim:#6b8a3f;--red:#ff6a4d;
+  --z1:#4fc3f7;--z2:#b6ff5c;--z3:#ffb347;--z4:#ff6a4d;--z5:#cc44ff;
+  --mono:"JetBrains Mono","SF Mono",ui-monospace,Menlo,monospace;
+  --display:"Bebas Neue","Archivo Black",system-ui,sans-serif;
+  --body:"Inter",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);}
+body{background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,0.035) 1px,transparent 0);background-size:22px 22px;}
 
-  *{box-sizing:border-box;}
-  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 20px 80px;}
 
-  body{
-    background-image:
-      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.035) 1px, transparent 0);
-    background-size: 22px 22px;
-  }
+/* HEADER */
+header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:0;flex-wrap:wrap;gap:12px;}
+.brand{font-family:var(--display);font-size:38px;letter-spacing:0.5px;line-height:1;color:var(--accent);}
+.brand small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:2.5px;color:var(--ink-dim);text-transform:uppercase;margin-top:5px;}
+.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.status{font-family:var(--mono);font-size:12px;color:var(--ink-dim);}
+.status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:6px;box-shadow:0 0 8px var(--accent);}
 
-  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 80px;}
+/* CONTROLS ROW */
+.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:3px;cursor:pointer;border:1px solid var(--accent-dim);background:transparent;color:var(--ink-dim);transition:all .15s;}
+.btn:hover,.btn.active{background:var(--accent);color:#0b0f0d;border-color:var(--accent);}
+.maxhr-wrap{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;color:var(--ink-dim);}
+.maxhr-wrap input{width:52px;background:var(--panel);border:1px solid var(--line);color:var(--ink);font-family:var(--mono);font-size:12px;padding:4px 6px;border-radius:3px;text-align:center;}
+.maxhr-wrap input:focus{outline:none;border-color:var(--accent-dim);}
 
-  header{
-    display:flex;justify-content:space-between;align-items:flex-end;
-    border-bottom:1px solid var(--line);
-    padding-bottom:18px;margin-bottom:28px;flex-wrap:wrap;gap:12px;
-  }
-  .brand{font-family:var(--display);font-size:42px;letter-spacing:0.5px;line-height:1;color:var(--accent);}
-  .brand small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--ink-dim);text-transform:uppercase;margin-top:6px;}
-  .status{font-family:var(--mono);font-size:12px;color:var(--ink-dim);text-align:right;}
-  .status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:6px;box-shadow:0 0 8px var(--accent);}
+/* TABS */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:28px;margin-top:20px;}
+.tab{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:12px 22px;cursor:pointer;color:var(--ink-dim);border-bottom:2px solid transparent;transition:all .15s;}
+.tab:hover{color:var(--ink);}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);}
 
-  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
-  @media (max-width:760px){.grid{grid-template-columns:repeat(2,1fr);}}
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;}
+@media(max-width:760px){.grid,.grid-3{grid-template-columns:repeat(2,1fr);}}
 
-  .stat{
-    background:var(--panel);border:1px solid var(--line);border-radius:4px;
-    padding:16px 16px 14px;position:relative;overflow:hidden;
-  }
-  .stat::before{
-    content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent-dim);
-  }
-  .stat .label{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-dim);}
-  .stat .value{font-family:var(--display);font-size:34px;margin-top:6px;line-height:1;}
-  .stat .value span{font-size:16px;color:var(--ink-dim);font-family:var(--mono);margin-left:4px;}
-  .stat .delta{font-family:var(--mono);font-size:11px;margin-top:6px;}
-  .delta.up{color:var(--accent);}
-  .delta.down{color:var(--red);}
+/* STAT CARDS */
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:16px 16px 14px;position:relative;overflow:hidden;}
+.stat::before{content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent-dim);}
+.stat.risk-high::before{background:var(--red);}
+.stat.risk-caution::before{background:#ffb347;}
+.stat.risk-ok::before{background:var(--accent);}
+.stat .label{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-dim);}
+.stat .value{font-family:var(--display);font-size:34px;margin-top:6px;line-height:1;}
+.stat .value span{font-size:16px;color:var(--ink-dim);font-family:var(--mono);margin-left:4px;}
+.stat .delta{font-family:var(--mono);font-size:11px;margin-top:6px;}
+.delta.up{color:var(--accent);}.delta.down{color:var(--red);}
 
-  .panel{
-    background:var(--panel);border:1px solid var(--line);border-radius:4px;
-    padding:20px;margin-bottom:20px;
-  }
-  .panel h2{
-    font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;
-    color:var(--ink-dim);margin:0 0 16px;display:flex;justify-content:space-between;
-  }
-  .panel h2 .range{color:var(--accent-dim);}
+/* PANELS */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:22px;margin-bottom:20px;}
+.panel h2{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-dim);margin:0 0 18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;}
+.panel h2 .range{color:var(--accent-dim);}
+.row2{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;}
+.row2e{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:760px){.row2,.row2e{grid-template-columns:1fr;}}
 
-  svg{width:100%;display:block;overflow:visible;}
-  .gridline{stroke:var(--line);stroke-width:1;}
-  .series-line{fill:none;stroke:var(--accent);stroke-width:2;}
-  .series-area{fill:url(#fadeGrad);opacity:0.5;}
-  .axis-label{font-family:var(--mono);font-size:9px;fill:var(--ink-dim);}
-  .pt{fill:var(--accent);}
-  .pt-empty{fill:transparent;}
-  .bar{fill:var(--accent-dim);}
-  .bar:hover{fill:var(--accent);}
-  .bar-label{font-family:var(--mono);font-size:10px;fill:var(--ink-dim);text-anchor:middle;}
-  .bar-value{font-family:var(--mono);font-size:10px;fill:var(--ink);text-anchor:middle;}
+/* SVG / CHARTS */
+svg{width:100%;display:block;overflow:visible;}
+.gridline{stroke:var(--line);stroke-width:1;}
+.series-line{fill:none;stroke:var(--accent);stroke-width:2.5;}
+.series-area{fill:url(#fadeGrad);opacity:0.45;}
+.pt{fill:var(--accent);}
+.bar{fill:var(--accent-dim);transition:fill .1s;}
+.bar:hover{fill:var(--accent);}
+.bar-label{font-family:var(--mono);font-size:10px;fill:var(--ink-dim);text-anchor:middle;}
+.bar-value{font-family:var(--mono);font-size:10px;fill:var(--ink);text-anchor:middle;}
 
-  .tag{
-    display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:1px;
-    text-transform:uppercase;padding:2px 6px;border-radius:3px;
-    background:rgba(182,255,92,0.12);color:var(--accent);border:1px solid var(--accent-dim);
-  }
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px;}
+th{text-align:left;color:var(--ink-dim);font-weight:400;letter-spacing:1px;text-transform:uppercase;font-size:10px;padding:6px 8px;border-bottom:1px solid var(--line);}
+td{padding:8px 8px;border-bottom:1px solid var(--line);}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:rgba(255,255,255,0.02);}
 
-  .row2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
-  @media (max-width:760px){.row2{grid-template-columns:1fr;}}
+/* TAG */
+.tag{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:rgba(182,255,92,0.12);color:var(--accent);border:1px solid var(--accent-dim);}
 
-  table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px;}
-  th{text-align:left;color:var(--ink-dim);font-weight:400;letter-spacing:1px;text-transform:uppercase;font-size:10px;padding:6px 8px;border-bottom:1px solid var(--line);}
-  td{padding:7px 8px;border-bottom:1px solid var(--line);}
-  tr:last-child td{border-bottom:none;}
+/* RISK */
+.risk-badge{font-family:var(--mono);font-size:13px;font-weight:700;padding:3px 10px;border-radius:3px;display:inline-block;margin-top:4px;}
+.risk-badge.ok{background:rgba(182,255,92,0.15);color:var(--accent);}
+.risk-badge.caution{background:rgba(255,179,71,0.15);color:#ffb347;}
+.risk-badge.high{background:rgba(255,106,77,0.15);color:var(--red);}
 
-  .empty{
-    text-align:center;padding:60px 20px;color:var(--ink-dim);font-family:var(--mono);font-size:13px;
-    border:1px dashed var(--line);border-radius:4px;
-  }
-  .empty strong{color:var(--accent);display:block;font-family:var(--display);font-size:20px;margin-bottom:8px;letter-spacing:1px;}
+/* ZONE LEGEND */
+.zone-legend{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:10px;}
+.zone-legend span{display:flex;align-items:center;gap:5px;}
+.zone-dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
 
-  footer{font-family:var(--mono);font-size:10px;color:var(--ink-dim);text-align:center;margin-top:40px;letter-spacing:1px;}
+.no-data{color:var(--ink-dim);font-family:var(--mono);font-size:12px;padding:20px 0;}
+.empty{text-align:center;padding:60px 20px;color:var(--ink-dim);font-family:var(--mono);font-size:13px;border:1px dashed var(--line);border-radius:4px;}
+.empty strong{color:var(--accent);display:block;font-family:var(--display);font-size:20px;margin-bottom:8px;letter-spacing:1px;}
+footer{font-family:var(--mono);font-size:10px;color:var(--ink-dim);text-align:center;margin-top:40px;letter-spacing:1px;}
+.tab-content{display:none;}.tab-content.active{display:block;}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <div class="brand">FIELD LOG<small>garmin connect / personal telemetry</small></div>
+<header>
+  <div class="brand">TORIN CHACKO<small>field log / garmin telemetry</small></div>
+  <div class="header-right">
     <div class="status" id="statusLine"><span class="dot"></span>loading…</div>
-  </header>
-
-  <div id="content">
-    <div class="empty">
-      <strong>NO DATA YET</strong>
-      Waiting on the first run of the Fetch Garmin Data action.<br/>
-      Trigger it manually from the repo's Actions tab, or wait for the daily schedule.
+    <div class="controls">
+      <button class="btn active" id="btnKm" onclick="setUnit('km')">KM</button>
+      <button class="btn" id="btnMi" onclick="setUnit('mi')">MI</button>
+      <div class="maxhr-wrap">
+        MAX HR <input type="number" id="maxHrInput" value="201" min="150" max="220" onchange="render()"/> bpm
+      </div>
     </div>
   </div>
+</header>
 
-  <footer>DATA REFRESHES DAILY VIA GITHUB ACTIONS — SOURCE: data/history.json</footer>
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('overview')">Overview</div>
+  <div class="tab" onclick="switchTab('training')">Training</div>
+  <div class="tab" onclick="switchTab('health')">Health</div>
+  <div class="tab" onclick="switchTab('records')">Records</div>
+</div>
+
+<div id="content">
+  <div class="empty"><strong>LOADING</strong>Fetching your data…</div>
+</div>
+
+<footer>TORIN CHACKO · FIELD LOG · REFRESHES DAILY VIA GITHUB ACTIONS</footer>
 </div>
 
 <script>
-async function main(){
-  const statusEl = document.getElementById('statusLine');
-  const contentEl = document.getElementById('content');
+let globalRows = [], globalActivities = [], globalUnit = 'km';
 
-  let raw, activitiesRaw;
-  try {
-    const [histRes, actRes] = await Promise.all([
-      fetch('./data/history.json', {cache: "no-store"}),
-      fetch('./data/activities.json', {cache: "no-store"}).catch(() => null),
-    ]);
-    raw = await histRes.json();
-    activitiesRaw = actRes ? await actRes.json().catch(() => ({})) : {};
-  } catch (e) {
-    statusEl.innerHTML = '<span class="dot" style="background:#ff6a4d;box-shadow:0 0 8px #ff6a4d"></span>failed to load data';
-    return;
-  }
+function setUnit(u){
+  globalUnit = u;
+  document.getElementById('btnKm').classList.toggle('active', u==='km');
+  document.getElementById('btnMi').classList.toggle('active', u==='mi');
+  render();
+}
 
-  const days = Object.keys(raw).sort();
-  if (days.length === 0) {
-    statusEl.innerHTML = '<span class="dot"></span>no data yet';
-    return;
-  }
+function switchTab(name){
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    t.classList.toggle('active', ['overview','training','health','records'][i]===name);
+  });
+  document.querySelectorAll('.tab-content').forEach(el => {
+    el.classList.toggle('active', el.id==='tab-'+name);
+  });
+}
 
-  const rows = days.map(d => raw[d]);
-  const last = rows[rows.length - 1];
-  const prev = rows.length > 1 ? rows[rows.length - 2] : null;
+// ── unit helpers ──────────────────────────────────────────────
+function distVal(km){ return globalUnit==='mi' ? km*0.621371 : km; }
+function distLabel(){ return globalUnit==='mi' ? 'mi' : 'km'; }
+function distFmt(km, dec=1){
+  if(km===null||km===undefined) return '—';
+  return distVal(km).toFixed(dec)+' '+distLabel();
+}
 
-  statusEl.innerHTML = `<span class="dot"></span>last synced ${last.date}`;
+// ── chart helpers ─────────────────────────────────────────────
+const GRAD = `<defs><linearGradient id="fadeGrad" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#b6ff5c" stop-opacity="0.35"/>
+  <stop offset="100%" stop-color="#b6ff5c" stop-opacity="0"/>
+</linearGradient></defs>`;
 
-  const fmt = (v, unit='') => (v === null || v === undefined) ? '—' : `${Math.round(v).toLocaleString()}${unit ? ` <span>${unit}</span>` : ''}`;
-  const delta = (a,b) => {
-    if (a===null||a===undefined||b===null||b===undefined) return '';
-    const d = a-b;
-    if (d===0) return '';
-    const cls = d>0 ? 'up':'down';
-    const sign = d>0 ? '+':'';
-    return `<div class="delta ${cls}">${sign}${Math.round(d).toLocaleString()} vs prior day</div>`;
-  };
+function sparkline(values, opts={}){
+  const w=1000, h=opts.h||180, pad=28;
+  const nums=values.map(v=>v===null||v===undefined?null:+v);
+  const valid=nums.filter(v=>v!==null);
+  if(!valid.length) return '<div class="no-data">no data yet</div>';
+  const max=Math.max(...valid)*1.1||1, min=0;
+  const stepX=(w-pad*2)/Math.max(nums.length-1,1);
+  const pts=nums.map((v,i)=>{
+    if(v===null)return null;
+    return [pad+i*stepX, h-pad-((v-min)/(max-min||1))*(h-pad*2)];
+  });
+  const vp=pts.filter(Boolean);
+  const pathD=vp.map((p,i)=>(i===0?'M':'L')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+  const areaD=pathD+` L ${vp[vp.length-1][0].toFixed(1)} ${h-pad} L ${vp[0][0].toFixed(1)} ${h-pad} Z`;
+  const grid=[0,.25,.5,.75,1].map(f=>`<line class="gridline" x1="${pad}" y1="${(pad+f*(h-pad*2)).toFixed(1)}" x2="${w-pad}" y2="${(pad+f*(h-pad*2)).toFixed(1)}"/>`).join('');
+  const dots=pts.map(p=>p?`<circle class="pt" r="3.5" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}"/>`:'').join('');
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">${GRAD}${grid}<path class="series-area" d="${areaD}"/><path class="series-line" d="${pathD}"/>${dots}</svg>`;
+}
 
-  function sparkline(values, opts={}){
-    const w = 1000, h = opts.h || 140, pad = 24;
-    const nums = values.map(v => v===null||v===undefined ? null : v);
-    const valid = nums.filter(v => v!==null);
-    if (valid.length === 0) return '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no data</div>';
-    const max = Math.max(...valid) * 1.1 || 1;
-    const min = 0;
-    const stepX = (w - pad*2) / Math.max(nums.length - 1, 1);
+function sparklineDual(v1,v2,opts={}){
+  const w=1000,h=opts.h||180,pad=28;
+  const all=[...v1,...v2].filter(v=>v!==null&&v!==undefined);
+  if(!all.length) return '<div class="no-data">no data yet</div>';
+  const max=Math.max(...all)*1.1||1, min=Math.min(...all)*0.92;
+  const stepX=(w-pad*2)/Math.max(v1.length-1,1);
+  function pts(vals){return vals.map((v,i)=>v===null||v===undefined?null:[pad+i*stepX,h-pad-((v-min)/(max-min||1))*(h-pad*2)]);}
+  function path(ps){const vp=ps.filter(Boolean);return vp.map((p,i)=>(i===0?'M':'L')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');}
+  const grid=[0,.25,.5,.75,1].map(f=>`<line class="gridline" x1="${pad}" y1="${(pad+f*(h-pad*2)).toFixed(1)}" x2="${w-pad}" y2="${(pad+f*(h-pad*2)).toFixed(1)}"/>`).join('');
+  const p1=pts(v1),p2=pts(v2);
+  const d1=pts(v1).map(p=>p?`<circle fill="var(--accent)" r="3" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}"/>`:'').join('');
+  const d2=pts(v2).map(p=>p?`<circle fill="var(--red)" r="3" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}"/>`:'').join('');
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">${grid}
+    <path fill="none" stroke="var(--accent)" stroke-width="2.5" d="${path(p1)}"/>
+    <path fill="none" stroke="var(--red)" stroke-width="1.5" stroke-dasharray="6 3" d="${path(p2)}"/>
+    ${d1}${d2}</svg>
+  <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:8px;">
+    <span style="color:var(--accent)">●</span> ${opts.l1||'A'} &nbsp;
+    <span style="color:var(--red)">- -</span> ${opts.l2||'B'}
+  </div>`;
+}
 
-    const points = nums.map((v,i) => {
-      const x = pad + i*stepX;
-      if (v===null) return null;
-      const y = h - pad - ((v-min)/(max-min||1)) * (h - pad*2);
-      return [x,y];
+function barChart(labels, values, opts={}){
+  const w=1000,h=opts.h||200,pad=32;
+  const valid=values.filter(v=>v!==null&&v!==undefined);
+  if(!valid.length) return '<div class="no-data">no data yet</div>';
+  const max=Math.max(...valid)*1.15||1;
+  const slot=(w-pad*2)/values.length;
+  const barW=Math.min(slot*0.6,52);
+  const grid=[0,.25,.5,.75,1].map(f=>`<line class="gridline" x1="${pad}" y1="${(pad+f*(h-pad*2-20)).toFixed(1)}" x2="${w-pad}" y2="${(pad+f*(h-pad*2-20)).toFixed(1)}"/>`).join('');
+  const bars=values.map((v,i)=>{
+    const cx=pad+slot*i+slot/2;
+    if(v===null||v===undefined)return'';
+    const bh=(v/max)*(h-pad*2-20);
+    const y=(h-pad-20)-bh;
+    return `<rect class="bar" x="${(cx-barW/2).toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${bh.toFixed(1)}" rx="2"/>
+      <text class="bar-value" x="${cx.toFixed(1)}" y="${(y-5).toFixed(1)}">${v.toFixed(1)}</text>
+      <text class="bar-label" x="${cx.toFixed(1)}" y="${h-pad+12}">${labels[i]}</text>`;
+  }).join('');
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">${grid}${bars}</svg>`;
+}
+
+function stackedBarChart(labels, series, colors, opts={}){
+  // series: array of {name, values[]}
+  const w=1000,h=opts.h||200,pad=32;
+  const totals=labels.map((_,i)=>series.reduce((s,sr)=>s+(sr.values[i]||0),0));
+  const max=Math.max(...totals)*1.15||1;
+  const slot=(w-pad*2)/labels.length;
+  const barW=Math.min(slot*0.6,52);
+  const grid=[0,.25,.5,.75,1].map(f=>`<line class="gridline" x1="${pad}" y1="${(pad+f*(h-pad*2-20)).toFixed(1)}" x2="${w-pad}" y2="${(pad+f*(h-pad*2-20)).toFixed(1)}"/>`).join('');
+  const bars=labels.map((_,i)=>{
+    const cx=pad+slot*i+slot/2;
+    let y=h-pad-20; let out='';
+    series.forEach((sr,si)=>{
+      const v=sr.values[i]||0;
+      if(!v)return;
+      const bh=(v/max)*(h-pad*2-20);
+      y-=bh;
+      out+=`<rect fill="${colors[si]}" opacity="0.85" x="${(cx-barW/2).toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${bh.toFixed(1)}" rx="1"/>`;
     });
+    return out+`<text class="bar-label" x="${cx.toFixed(1)}" y="${h-pad+12}">${labels[i]}</text>`;
+  }).join('');
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">${grid}${bars}</svg>`;
+}
 
-    const validPoints = points.filter(p=>p!==null);
-    const pathD = validPoints.map((p,i) => (i===0?'M':'L') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
-    const areaD = pathD + ` L ${validPoints[validPoints.length-1][0].toFixed(1)} ${h-pad} L ${validPoints[0][0].toFixed(1)} ${h-pad} Z`;
+// ── data helpers ──────────────────────────────────────────────
+function isoWeekInfo(dateStr){
+  const d=new Date(dateStr+'T00:00:00');
+  const dayNr=(d.getDay()+6)%7;
+  const t=new Date(d);t.setDate(d.getDate()-dayNr+3);
+  const ft=t.valueOf();t.setMonth(0,1);
+  if(t.getDay()!==4)t.setMonth(0,1+((4-t.getDay())+7)%7);
+  const wk=1+Math.round((ft-t.valueOf())/(7*24*3600*1000));
+  const mon=new Date(d);mon.setDate(d.getDate()-dayNr);
+  return{key:`${d.getFullYear()}-W${String(wk).padStart(2,'0')}`,label:mon.toLocaleDateString('en-US',{month:'short',day:'numeric'}),monday:mon};
+}
 
-    const gridLines = [0,0.25,0.5,0.75,1].map(f => {
-      const y = pad + f*(h-pad*2);
-      return `<line class="gridline" x1="${pad}" y1="${y}" x2="${w-pad}" y2="${y}" />`;
-    }).join('');
+function rollingAvg(arr,field,w){
+  return arr.map((r,i)=>{
+    const sl=arr.slice(Math.max(0,i-w+1),i+1).map(x=>x[field]).filter(v=>v!=null);
+    return sl.length?sl.reduce((s,v)=>s+v,0)/sl.length:null;
+  });
+}
 
-    const dots = points.map((p,i) => p ? `<circle class="pt" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3"/>` : '').join('');
+function computeACWR(rows){
+  return rows.slice(27).map((_,idx)=>{
+    const i=idx+27;
+    const a7=rows.slice(i-6,i+1).map(r=>r.distance_km||0);
+    const c28=rows.slice(i-27,i+1).map(r=>r.distance_km||0);
+    const aAvg=a7.reduce((s,v)=>s+v,0)/7;
+    const cAvg=c28.reduce((s,v)=>s+v,0)/28;
+    return{date:rows[i].date,ratio:cAvg>0?Math.round(aAvg/cAvg*100)/100:null};
+  });
+}
 
-    return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="fadeGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#b6ff5c" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#b6ff5c" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      ${gridLines}
-      <path class="series-area" d="${areaD}" />
-      <path class="series-line" d="${pathD}" />
-      ${dots}
-    </svg>`;
-  }
+function hrZone(hr,maxHr){
+  const pct=hr/maxHr;
+  if(pct<0.6)return 0;if(pct<0.7)return 1;if(pct<0.8)return 2;if(pct<0.9)return 3;return 4;
+}
 
-  function barChart(labels, values, opts={}){
-    const w = 1000, h = opts.h || 160, pad = 28;
-    const valid = values.filter(v => v !== null && v !== undefined);
-    if (valid.length === 0) return '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no data</div>';
-    const max = Math.max(...valid) * 1.15 || 1;
-    const n = values.length;
-    const slot = (w - pad*2) / n;
-    const barW = Math.min(slot * 0.55, 46);
-
-    const gridLines = [0,0.25,0.5,0.75,1].map(f => {
-      const y = pad + f*(h - pad*2 - 18);
-      return `<line class="gridline" x1="${pad}" y1="${y}" x2="${w-pad}" y2="${y}" />`;
-    }).join('');
-
-    const bars = values.map((v,i) => {
-      const cx = pad + slot*i + slot/2;
-      if (v === null || v === undefined) return '';
-      const barH = (v/max) * (h - pad*2 - 18);
-      const y = (h - pad - 18) - barH;
-      return `
-        <rect class="bar" x="${(cx-barW/2).toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${barH.toFixed(1)}" rx="2"/>
-        <text class="bar-value" x="${cx.toFixed(1)}" y="${(y-6).toFixed(1)}">${v.toFixed(1)}</text>
-        <text class="bar-label" x="${cx.toFixed(1)}" y="${h-pad+10}">${labels[i]}</text>
-      `;
-    }).join('');
-
-    return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
-      ${gridLines}
-      ${bars}
-    </svg>`;
-  }
-
-  // ISO week key, e.g. "2026-W26", and a friendly short label like "Jun 22"
-  function isoWeekInfo(dateStr){
-    const d = new Date(dateStr + 'T00:00:00');
-    const target = new Date(d.valueOf());
-    const dayNr = (d.getDay() + 6) % 7;
-    target.setDate(target.getDate() - dayNr + 3);
-    const firstThursday = target.valueOf();
-    target.setMonth(0,1);
-    if (target.getDay() !== 4) {
-      target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+function weeklyRunningStats(activities,maxHr){
+  const weeks={};
+  for(const a of activities){
+    if(!a.type||!a.type.toLowerCase().includes('run'))continue;
+    if(!a.start_local)continue;
+    const dt=a.start_local.split('T')[0].split(' ')[0];
+    const{key,label,monday}=isoWeekInfo(dt);
+    if(!weeks[key])weeks[key]={label,monday,dist:0,longest:0,elev:0,maxHr:null,paces:[],count:0,zoneMins:[0,0,0,0,0]};
+    const w=weeks[key];
+    if(a.distance_km){w.dist+=a.distance_km;w.longest=Math.max(w.longest,a.distance_km);}
+    if(a.max_hr)w.maxHr=w.maxHr===null?a.max_hr:Math.max(w.maxHr,a.max_hr);
+    if(a.pace_min_per_km)w.paces.push(a.pace_min_per_km);
+    if(a.elevation_gain_m)w.elev+=a.elevation_gain_m;
+    if(a.avg_hr&&a.duration_seconds){
+      const z=hrZone(a.avg_hr,maxHr);
+      w.zoneMins[z]+=Math.round(a.duration_seconds/60);
     }
-    const weekNum = 1 + Math.round((firstThursday - target.valueOf()) / (7*24*3600*1000));
-
-    // Monday of this ISO week, for a friendly label
-    const monday = new Date(d.valueOf());
-    monday.setDate(d.getDate() - dayNr);
-    const label = monday.toLocaleDateString('en-US', {month:'short', day:'numeric'});
-
-    return { key: `${d.getFullYear()}-W${String(weekNum).padStart(2,'0')}`, label, monday };
+    w.count++;
   }
+  return Object.entries(weeks).sort((a,b)=>b[1].monday-a[1].monday)
+    .map(([,w])=>({...w,avgPace:w.paces.length?w.paces.reduce((s,p)=>s+p,0)/w.paces.length:null}));
+}
 
-  function aggregateWeeklyMileage(rows){
-    const weeks = {};
-    for (const r of rows) {
-      if (r.distance_km === null || r.distance_km === undefined) continue;
-      const { key, label, monday } = isoWeekInfo(r.date);
-      if (!weeks[key]) weeks[key] = { label, monday, total: 0 };
-      weeks[key].total += r.distance_km;
+function weeklyMileageAgg(rows){
+  const weeks={};
+  for(const r of rows){
+    if(r.distance_km==null)continue;
+    const{key,label,monday}=isoWeekInfo(r.date);
+    if(!weeks[key])weeks[key]={label,monday,total:0};
+    weeks[key].total+=r.distance_km;
+  }
+  return Object.entries(weeks).sort((a,b)=>a[1].monday-b[1].monday).map(([,w])=>w);
+}
+
+function monthlyStats(rows){
+  const months={};
+  for(const r of rows){
+    const m=r.date.slice(0,7);
+    if(!months[m])months[m]={month:m,dist:0,steps:0,rhrSum:0,rhrCount:0,days:0};
+    const mo=months[m];
+    if(r.distance_km)mo.dist+=r.distance_km;
+    if(r.steps)mo.steps+=r.steps;
+    if(r.resting_hr){mo.rhrSum+=r.resting_hr;mo.rhrCount++;}
+    mo.days++;
+  }
+  return Object.values(months).sort((a,b)=>b.month.localeCompare(a.month));
+}
+
+function paceHrSeries(activities){
+  return activities
+    .filter(a=>a.type&&a.type.toLowerCase().includes('run')&&a.avg_hr&&a.pace_min_per_km&&a.distance_km>1)
+    .slice(0,60).reverse();
+}
+
+function formatPace(m){if(!m)return'—';const mn=Math.floor(m);return`${mn}:${String(Math.round((m-mn)*60)).padStart(2,'0')}/${distLabel()}`;}
+function formatDur(s){if(!s)return'—';const h=Math.floor(s/3600),m=Math.round((s%3600)/60);return h?`${h}h ${m}m`:`${m}m`;}
+function fmt(v,unit=''){return(v===null||v===undefined)?'—':`${Math.round(v).toLocaleString()}${unit?` <span>${unit}</span>`:''}`;}
+function fmtDelta(a,b){
+  if(a==null||b==null)return'';
+  const d=a-b;if(!d)return'';
+  return`<div class="delta ${d>0?'up':'down'}">${d>0?'+':''}${Math.round(d).toLocaleString()} vs prior day</div>`;
+}
+
+// personal records
+function computePRs(activities){
+  const runs=activities.filter(a=>a.type&&a.type.toLowerCase().includes('run')&&a.distance_km>0);
+  const prs={longest:null,fastest5k:null,fastest10k:null,fastestHalf:null,fastestMarathon:null};
+  for(const a of runs){
+    const d=a.distance_km,p=a.pace_min_per_km,dur=a.duration_seconds;
+    if(!prs.longest||d>prs.longest.dist)prs.longest={dist:d,date:a.start_local?.slice(0,10),name:a.name};
+    if(d>=4.8&&d<=5.2&&(!prs.fastest5k||p<prs.fastest5k.pace))prs.fastest5k={pace:p,dur,date:a.start_local?.slice(0,10)};
+    if(d>=9.5&&d<=10.5&&(!prs.fastest10k||p<prs.fastest10k.pace))prs.fastest10k={pace:p,dur,date:a.start_local?.slice(0,10)};
+    if(d>=20.5&&d<=22.5&&(!prs.fastestHalf||p<prs.fastestHalf.pace))prs.fastestHalf={pace:p,dur,date:a.start_local?.slice(0,10)};
+    if(d>=41&&d<=43&&(!prs.fastestMarathon||p<prs.fastestMarathon.pace))prs.fastestMarathon={pace:p,dur,date:a.start_local?.slice(0,10)};
+  }
+  return prs;
+}
+
+// injury risk score 0-100
+function injuryRisk(acwrData,rows){
+  const latest=acwrData.length?acwrData[acwrData.length-1]:null;
+  const acwr=latest?.ratio??null;
+  // RHR deviation: compare last 3 days vs 14-day avg
+  const rhrRows=rows.filter(r=>r.resting_hr!=null);
+  let rhrDev=0;
+  if(rhrRows.length>=5){
+    const recent=rhrRows.slice(-3).map(r=>r.resting_hr);
+    const base=rhrRows.slice(-14,-3).map(r=>r.resting_hr);
+    if(base.length){
+      const baseAvg=base.reduce((s,v)=>s+v,0)/base.length;
+      const recentAvg=recent.reduce((s,v)=>s+v,0)/recent.length;
+      rhrDev=recentAvg-baseAvg;
     }
-    return Object.entries(weeks)
-      .sort((a,b) => a[1].monday - b[1].monday)
-      .map(([key, w]) => ({ key, label: w.label, total: w.total }));
+  }
+  // Body battery: low avg = poor recovery
+  const bbRows=rows.filter(r=>r.body_battery_charged!=null).slice(-7);
+  const bbAvg=bbRows.length?bbRows.reduce((s,r)=>s+r.body_battery_charged,0)/bbRows.length:null;
+
+  let score=0,reasons=[];
+  if(acwr!==null){
+    if(acwr>1.5){score+=40;reasons.push(`High training load (ACWR ${acwr})`)}
+    else if(acwr>1.3){score+=20;reasons.push(`Elevated training load (ACWR ${acwr})`)}
+    else if(acwr<0.6){score+=10;reasons.push('Significant deload — watch for re-injury on ramp-up')}
+  }
+  if(rhrDev>4){score+=30;reasons.push(`RHR elevated +${rhrDev.toFixed(1)} bpm vs 14-day avg`)}
+  else if(rhrDev>2){score+=15;reasons.push(`RHR slightly elevated +${rhrDev.toFixed(1)} bpm`)}
+  if(bbAvg!==null&&bbAvg<40){score+=20;reasons.push(`Low body battery avg (${bbAvg.toFixed(0)})`)}
+  else if(bbAvg!==null&&bbAvg<55){score+=10;reasons.push(`Moderate body battery avg (${bbAvg.toFixed(0)})`)}
+
+  const level=score>=50?'high':score>=25?'caution':'ok';
+  const label=score>=50?'HIGH RISK':score>=25?'CAUTION':'LOW RISK';
+  return{score:Math.min(score,100),level,label,reasons};
+}
+
+// ── main render ───────────────────────────────────────────────
+function render(){
+  const rows=globalRows;
+  const activities=globalActivities;
+  const maxHr=parseInt(document.getElementById('maxHrInput').value)||201;
+  const u=globalUnit;
+  if(!rows.length)return;
+
+  const last=rows[rows.length-1];
+  const prev=rows.length>1?rows[rows.length-2]:null;
+  const win30=rows.slice(-30);
+  const labelStart=win30[0]?.date||'';
+  const labelEnd=win30[win30.length-1]?.date||'';
+
+  const acwrData=computeACWR(rows);
+  const latestACWR=acwrData.length?acwrData[acwrData.length-1].ratio:null;
+  const acwrWin=acwrData.slice(-30);
+  const acwrStatus=latestACWR===null?'—':latestACWR>1.5?'⚠ HIGH RISK':latestACWR>1.3?'△ CAUTION':latestACWR>=0.8?'✓ OPTIMAL':'↓ UNDERLOAD';
+  const acwrColor=latestACWR===null?'var(--ink-dim)':latestACWR>1.5?'var(--red)':latestACWR>1.3?'#ffb347':'var(--accent)';
+
+  const rhrValues=win30.map(r=>r.resting_hr);
+  const rhrRolling=rollingAvg(win30,'resting_hr',7);
+  const wkMileage=weeklyMileageAgg(rows).slice(-16);
+  const wkRunning=weeklyRunningStats(activities,maxHr).slice(0,12);
+  const vo2Rows=rows.filter(r=>r.vo2max_running!=null);
+  const latestVo2=vo2Rows.length?vo2Rows[vo2Rows.length-1]:null;
+  const phData=paceHrSeries(activities);
+  const monthly=monthlyStats(rows);
+  const prs=computePRs(activities);
+  const risk=injuryRisk(acwrData,rows);
+
+  // zone stacked bar — last 8 weeks
+  const zoneWeeks=wkRunning.slice(0,8).reverse();
+  const zoneLabels=zoneWeeks.map(w=>w.label);
+  const zoneSeries=[
+    {name:'Z1',values:zoneWeeks.map(w=>w.zoneMins[0])},
+    {name:'Z2',values:zoneWeeks.map(w=>w.zoneMins[1])},
+    {name:'Z3',values:zoneWeeks.map(w=>w.zoneMins[2])},
+    {name:'Z4',values:zoneWeeks.map(w=>w.zoneMins[3])},
+    {name:'Z5',values:zoneWeeks.map(w=>w.zoneMins[4])},
+  ];
+  const zoneColors=['var(--z1)','var(--z2)','var(--z3)','var(--z4)','var(--z5)'];
+
+  // pace adjusted for unit
+  function paceDisplay(minPerKm){
+    if(!minPerKm)return'—';
+    const v=u==='mi'?minPerKm*1.60934:minPerKm;
+    const mn=Math.floor(v);return`${mn}:${String(Math.round((v-mn)*60)).padStart(2,'0')}/${u==='mi'?'mi':'km'}`;
   }
 
-  function aggregateWeeklyRunning(activities){
-    const weeks = {};
-    for (const a of activities) {
-      if (!a.start_local || !a.type) continue;
-      if (!a.type.toLowerCase().includes('run')) continue;
-      const dateOnly = a.start_local.split(' ')[0].split('T')[0];
-      const { key, label, monday } = isoWeekInfo(dateOnly);
-      if (!weeks[key]) weeks[key] = { label, monday, distance: 0, maxHr: null, paces: [], count: 0 };
-      const w = weeks[key];
-      if (a.distance_km) w.distance += a.distance_km;
-      if (a.max_hr) w.maxHr = w.maxHr === null ? a.max_hr : Math.max(w.maxHr, a.max_hr);
-      if (a.pace_min_per_km) w.paces.push(a.pace_min_per_km);
-      w.count += 1;
-    }
-    return Object.entries(weeks)
-      .sort((a,b) => b[1].monday - a[1].monday)
-      .map(([key, w]) => ({
-        key, label: w.label, count: w.count,
-        distance: w.distance,
-        maxHr: w.maxHr,
-        avgPace: w.paces.length ? w.paces.reduce((s,p)=>s+p,0)/w.paces.length : null,
-      }));
-  }
-
-  function formatPace(minPerKm){
-    if (!minPerKm) return '—';
-    const min = Math.floor(minPerKm);
-    const sec = Math.round((minPerKm - min) * 60);
-    return `${min}:${String(sec).padStart(2,'0')}/km`;
-  }
-
-  function formatDuration(seconds){
-    if (!seconds) return '—';
-    const h = Math.floor(seconds/3600);
-    const m = Math.round((seconds%3600)/60);
-    return h > 0 ? `${h}h ${m}m` : `${m}m`;
-  }
-
-
-  // last 30 days for charts
-  const windowRows = rows.slice(-30);
-  const labelStart = windowRows[0]?.date || '';
-  const labelEnd = windowRows[windowRows.length-1]?.date || '';
-
-  // activities: object keyed by activity_id -> array, newest first
-  const activities = Object.values(activitiesRaw || {}).sort((a,b) =>
-    (b.start_local || '').localeCompare(a.start_local || ''));
-
-  const weeklyMileage = aggregateWeeklyMileage(rows).slice(-12); // last 12 weeks
-  const weeklyRunning = aggregateWeeklyRunning(activities).slice(0, 8); // most recent 8 weeks
-
-  // VO2 max / training readiness — use whichever rows have values
-  const vo2Rows = rows.filter(r => r.vo2max_running !== null && r.vo2max_running !== undefined);
-  const readinessRows = windowRows.filter(r => r.training_readiness !== null && r.training_readiness !== undefined);
-  const latestVo2 = vo2Rows.length ? vo2Rows[vo2Rows.length-1] : null;
-
-  // --- Acute:Chronic Workload Ratio (ACWR) ---
-  // Uses daily distance as a proxy for training load.
-  // Acute = 7-day avg, Chronic = 28-day avg. Ratio >1.5 = overreach risk.
-  function computeACWR(rows) {
-    const results = [];
-    for (let i = 27; i < rows.length; i++) {
-      const acute7 = rows.slice(i-6, i+1).map(r => r.distance_km || 0);
-      const chronic28 = rows.slice(i-27, i+1).map(r => r.distance_km || 0);
-      const acuteAvg = acute7.reduce((s,v)=>s+v,0) / 7;
-      const chronicAvg = chronic28.reduce((s,v)=>s+v,0) / 28;
-      const ratio = chronicAvg > 0 ? acuteAvg / chronicAvg : null;
-      results.push({ date: rows[i].date, ratio: ratio ? Math.round(ratio * 100) / 100 : null });
-    }
-    return results;
-  }
-  const acwrData = computeACWR(rows);
-  const acwrWindow = acwrData.slice(-30);
-  const latestACWR = acwrData.length ? acwrData[acwrData.length-1].ratio : null;
-  const acwrStatus = latestACWR === null ? '—'
-    : latestACWR > 1.5 ? '⚠ HIGH RISK'
-    : latestACWR > 1.3 ? '△ CAUTION'
-    : latestACWR >= 0.8 ? '✓ OPTIMAL'
-    : '↓ UNDERLOAD';
-  const acwrColor = latestACWR === null ? 'var(--ink-dim)'
-    : latestACWR > 1.5 ? 'var(--red)'
-    : latestACWR > 1.3 ? '#ffb347'
-    : 'var(--accent)';
-
-  // --- RHR 7-day rolling average ---
-  function rollingAvg(rows, field, window) {
-    return rows.map((r, i) => {
-      const slice = rows.slice(Math.max(0, i-window+1), i+1).map(x => x[field]).filter(v => v !== null && v !== undefined);
-      return slice.length ? slice.reduce((s,v)=>s+v,0)/slice.length : null;
-    });
-  }
-  const rhrValues = windowRows.map(r => r.resting_hr);
-  const rhrRolling = rollingAvg(windowRows, 'resting_hr', 7);
-
-  // --- Pace vs HR Efficiency (runs only, over time) ---
-  function paceHrEfficiency(activities) {
-    return activities
-      .filter(a => a.type && a.type.toLowerCase().includes('run') && a.avg_hr && a.pace_min_per_km && a.distance_km > 1)
-      .slice(0, 60)
-      .reverse()
-      .map(a => ({
-        date: (a.start_local || '').split('T')[0].split(' ')[0],
-        pace: a.pace_min_per_km,
-        hr: a.avg_hr,
-        // Efficiency index: lower pace (faster) at lower HR = higher score
-        // Normalised as (1/pace) / hr * 1000 for readability
-        efficiency: Math.round((1 / a.pace_min_per_km) / a.avg_hr * 10000) / 10,
-      }));
-  }
-  const paceHrData = paceHrEfficiency(activities);
-
-  // --- Longest run + elevation per week ---
-  function aggregateWeeklyRunningFull(activities) {
-    const weeks = {};
-    for (const a of activities) {
-      if (!a.start_local || !a.type) continue;
-      if (!a.type.toLowerCase().includes('run')) continue;
-      const dateOnly = a.start_local.split(' ')[0].split('T')[0];
-      const { key, label, monday } = isoWeekInfo(dateOnly);
-      if (!weeks[key]) weeks[key] = { label, monday, distance: 0, maxHr: null, paces: [], count: 0, longestRun: 0, elevationGain: 0 };
-      const w = weeks[key];
-      if (a.distance_km) { w.distance += a.distance_km; w.longestRun = Math.max(w.longestRun, a.distance_km); }
-      if (a.max_hr) w.maxHr = w.maxHr === null ? a.max_hr : Math.max(w.maxHr, a.max_hr);
-      if (a.pace_min_per_km) w.paces.push(a.pace_min_per_km);
-      if (a.elevation_gain_m) w.elevationGain += a.elevation_gain_m;
-      w.count += 1;
-    }
-    return Object.entries(weeks)
-      .sort((a,b) => b[1].monday - a[1].monday)
-      .map(([key, w]) => ({
-        key, label: w.label, count: w.count,
-        distance: w.distance,
-        longestRun: w.longestRun,
-        elevationGain: w.elevationGain,
-        maxHr: w.maxHr,
-        avgPace: w.paces.length ? w.paces.reduce((s,p)=>s+p,0)/w.paces.length : null,
-      }));
-  }
-  const weeklyRunningFull = aggregateWeeklyRunningFull(activities).slice(0, 12);
-
-  // dual-line sparkline (two series, second dashed)
-  function sparklineDual(values1, values2, opts={}) {
-    const w = 1000, h = opts.h || 140, pad = 24;
-    const allValid = [...values1, ...values2].filter(v => v !== null && v !== undefined);
-    if (allValid.length === 0) return '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no data</div>';
-    const max = Math.max(...allValid) * 1.1 || 1;
-    const min = Math.min(...allValid) * 0.9;
-    const stepX = (w - pad*2) / Math.max(values1.length - 1, 1);
-
-    function toPoints(vals) {
-      return vals.map((v,i) => {
-        if (v === null || v === undefined) return null;
-        const x = pad + i * stepX;
-        const y = h - pad - ((v - min) / (max - min || 1)) * (h - pad*2);
-        return [x, y];
-      });
-    }
-    function toPath(points) {
-      const valid = points.filter(p=>p);
-      if (!valid.length) return '';
-      return valid.map((p,i) => (i===0?'M':'L') + p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
-    }
-
-    const pts1 = toPoints(values1);
-    const pts2 = toPoints(values2);
-    const gridLines = [0,0.25,0.5,0.75,1].map(f => {
-      const y = pad + f*(h-pad*2);
-      return `<line class="gridline" x1="${pad}" y1="${y}" x2="${w-pad}" y2="${y}" />`;
-    }).join('');
-    const dots1 = pts1.map(p => p ? `<circle fill="var(--accent)" r="3" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}"/>` : '').join('');
-    const dots2 = pts2.map(p => p ? `<circle fill="#ff6a4d" r="3" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}"/>` : '').join('');
-
-    return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="fadeGrad2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#b6ff5c" stop-opacity="0.15"/>
-          <stop offset="100%" stop-color="#b6ff5c" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      ${gridLines}
-      <path fill="none" stroke="var(--accent)" stroke-width="2" d="${toPath(pts1)}" />
-      <path fill="none" stroke="#ff6a4d" stroke-width="1.5" stroke-dasharray="6 3" d="${toPath(pts2)}" />
-      ${dots1}${dots2}
-    </svg>
-    <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:8px;">
-      <span style="color:var(--accent)">●</span> ${opts.label1 || 'series 1'} &nbsp;
-      <span style="color:#ff6a4d">- -</span> ${opts.label2 || 'series 2'}
-    </div>`;
-  }
-
-  contentEl.innerHTML = `
+  document.getElementById('content').innerHTML = `
+  <div id="tab-overview" class="tab-content active">
     <div class="grid">
       <div class="stat">
         <div class="label">Steps — today</div>
         <div class="value">${fmt(last.steps)}</div>
-        ${prev ? delta(last.steps, prev.steps) : ''}
+        ${fmtDelta(last.steps,prev?.steps)}
+      </div>
+      <div class="stat">
+        <div class="label">Distance — today</div>
+        <div class="value" style="font-size:28px">${last.distance_km!=null?distFmt(last.distance_km):'—'}</div>
+        ${prev?.distance_km!=null?fmtDelta(distVal(last.distance_km),distVal(prev.distance_km)):''}
       </div>
       <div class="stat">
         <div class="label">Resting HR</div>
-        <div class="value">${fmt(last.resting_hr, 'bpm')}</div>
-        ${prev ? delta(last.resting_hr, prev.resting_hr) : ''}
+        <div class="value">${fmt(last.resting_hr,'bpm')}</div>
+        ${fmtDelta(last.resting_hr,prev?.resting_hr)}
       </div>
       <div class="stat">
         <div class="label">Sleep</div>
-        <div class="value">${last.sleep_seconds ? (last.sleep_seconds/3600).toFixed(1) : '—'}<span>hrs</span></div>
-        ${prev && prev.sleep_seconds ? delta(last.sleep_seconds/3600, prev.sleep_seconds/3600) : ''}
+        <div class="value">${last.sleep_seconds?(last.sleep_seconds/3600).toFixed(1):'—'}<span>hrs</span></div>
+        ${prev?.sleep_seconds?fmtDelta(last.sleep_seconds/3600,prev.sleep_seconds/3600):''}
       </div>
       <div class="stat">
         <div class="label">Avg Stress</div>
         <div class="value">${fmt(last.avg_stress)}</div>
-        ${prev ? delta(last.avg_stress, prev.avg_stress) : ''}
+        ${fmtDelta(last.avg_stress,prev?.avg_stress)}
       </div>
       <div class="stat">
-        <div class="label">VO2 Max (running)</div>
-        <div class="value">${latestVo2 ? fmt(latestVo2.vo2max_running) : '—'}</div>
-        ${latestVo2 ? `<div class="delta">as of ${latestVo2.date}</div>` : ''}
+        <div class="label">Body Battery</div>
+        <div class="value">${fmt(last.body_battery_charged)}</div>
+        ${fmtDelta(last.body_battery_charged,prev?.body_battery_charged)}
+      </div>
+      <div class="stat ${risk.level==='high'?'risk-high':risk.level==='caution'?'risk-caution':'risk-ok'}">
+        <div class="label">Injury Risk</div>
+        <div class="value" style="font-size:24px"><span class="risk-badge ${risk.level}">${risk.label}</span></div>
+        <div class="delta" style="color:var(--ink-dim);font-size:10px;margin-top:6px">${risk.reasons[0]||'All indicators nominal'}</div>
       </div>
       <div class="stat">
-        <div class="label">Training Readiness</div>
-        <div class="value">${fmt(last.training_readiness)}</div>
-        ${prev ? delta(last.training_readiness, prev.training_readiness) : ''}
-      </div>
-      <div class="stat">
-        <div class="label">Load Ratio (ACWR)</div>
-        <div class="value" style="font-size:28px;color:${acwrColor}">${latestACWR ?? '—'}</div>
+        <div class="label">ACWR</div>
+        <div class="value" style="color:${acwrColor}">${latestACWR??'—'}</div>
         <div class="delta" style="color:${acwrColor}">${acwrStatus}</div>
       </div>
     </div>
@@ -500,163 +501,287 @@ async function main(){
     <div class="row2">
       <div class="panel">
         <h2>Daily Steps <span class="range">${labelStart} → ${labelEnd}</span></h2>
-        ${sparkline(windowRows.map(r => r.steps))}
-      </div>
-      <div class="panel">
-        <h2>Resting HR + 7-day avg <span class="range">${labelStart} → ${labelEnd}</span></h2>
-        ${sparklineDual(rhrValues, rhrRolling, {h:140, label1:'daily RHR', label2:'7-day avg'})}
-      </div>
-    </div>
-
-    <div class="row2">
-      <div class="panel">
-        <h2>Sleep (hrs) <span class="range">${labelStart} → ${labelEnd}</span></h2>
-        ${sparkline(windowRows.map(r => r.sleep_seconds ? r.sleep_seconds/3600 : null))}
+        ${sparkline(win30.map(r=>r.steps))}
       </div>
       <div class="panel">
         <h2>Recent Days</h2>
         <table>
-          <thead><tr><th>Date</th><th>Steps</th><th>RHR</th></tr></thead>
-          <tbody>
-            ${rows.slice(-8).reverse().map(r => `
-              <tr>
-                <td>${r.date}</td>
-                <td>${r.steps ?? '—'}</td>
-                <td>${r.resting_hr ?? '—'}</td>
-              </tr>
-            `).join('')}
+          <thead><tr><th>Date</th><th>Steps</th><th>Dist</th><th>RHR</th><th>Sleep</th></tr></thead>
+          <tbody>${rows.slice(-10).reverse().map(r=>`
+            <tr>
+              <td>${r.date}</td><td>${r.steps?.toLocaleString()??'—'}</td>
+              <td>${r.distance_km!=null?distFmt(r.distance_km):'—'}</td>
+              <td>${r.resting_hr??'—'}</td>
+              <td>${r.sleep_seconds?(r.sleep_seconds/3600).toFixed(1)+'h':'—'}</td>
+            </tr>`).join('')}
           </tbody>
         </table>
       </div>
-    </div>
-
-    <div class="panel">
-      <h2>Weekly Mileage (km) <span class="range">last ${weeklyMileage.length} weeks</span></h2>
-      ${weeklyMileage.length
-        ? barChart(weeklyMileage.map(w => w.label), weeklyMileage.map(w => w.total), {h:200})
-        : '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no distance data yet</div>'}
-    </div>
-
-    <div class="row2">
-      <div class="panel">
-        <h2>Acute:Chronic Load Ratio <span class="range">last 30 days</span></h2>
-        ${acwrWindow.length ? (() => {
-          const ratios = acwrWindow.map(d => d.ratio);
-          // draw ACWR sparkline with colour zones
-          const w = 1000, h = 160, pad = 24;
-          const valid = ratios.filter(v => v !== null);
-          if (!valid.length) return '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">need 28 days of data</div>';
-          const max = Math.max(2.0, ...valid) * 1.05;
-          const min = 0;
-          const stepX = (w - pad*2) / Math.max(ratios.length-1, 1);
-          const points = ratios.map((v,i) => {
-            if (v===null) return null;
-            const x = pad + i*stepX;
-            const y = h - pad - ((v-min)/(max-min)) * (h-pad*2);
-            return [x,y,v];
-          }).filter(Boolean);
-          const pathD = points.map((p,i)=>(i===0?'M':'L')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
-          // zone lines
-          const yOptLow  = h - pad - (0.8/max)*(h-pad*2);
-          const yOptHigh = h - pad - (1.3/max)*(h-pad*2);
-          const yRisk    = h - pad - (1.5/max)*(h-pad*2);
-          const dots = points.map(p => {
-            const c = p[2]>1.5?'#ff6a4d':p[2]>1.3?'#ffb347':'var(--accent)';
-            return `<circle fill="${c}" r="4" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}"/>`;
-          }).join('');
-          return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
-            <line stroke="rgba(182,255,92,0.2)" stroke-width="1" stroke-dasharray="4 3" x1="${pad}" y1="${yOptLow.toFixed(1)}" x2="${w-pad}" y2="${yOptLow.toFixed(1)}"/>
-            <line stroke="rgba(255,179,71,0.3)" stroke-width="1" stroke-dasharray="4 3" x1="${pad}" y1="${yOptHigh.toFixed(1)}" x2="${w-pad}" y2="${yOptHigh.toFixed(1)}"/>
-            <line stroke="rgba(255,106,77,0.4)" stroke-width="1" stroke-dasharray="4 3" x1="${pad}" y1="${yRisk.toFixed(1)}" x2="${w-pad}" y2="${yRisk.toFixed(1)}"/>
-            <path fill="none" stroke="var(--accent)" stroke-width="2" d="${pathD}"/>
-            ${dots}
-            <text fill="rgba(182,255,92,0.5)" font-family="monospace" font-size="10" x="${w-pad+4}" y="${yOptLow.toFixed(1)}">0.8</text>
-            <text fill="rgba(255,179,71,0.6)" font-family="monospace" font-size="10" x="${w-pad+4}" y="${yOptHigh.toFixed(1)}">1.3</text>
-            <text fill="rgba(255,106,77,0.7)" font-family="monospace" font-size="10" x="${w-pad+4}" y="${yRisk.toFixed(1)}">1.5</text>
-          </svg>
-          <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:8px;">
-            <span style="color:var(--accent)">●</span> 0.8–1.3 optimal &nbsp;
-            <span style="color:#ffb347">●</span> 1.3–1.5 caution &nbsp;
-            <span style="color:#ff6a4d">●</span> >1.5 overreach risk
-          </div>`;
-        })() : '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">need 28 days of data to compute</div>'}
-      </div>
-      <div class="panel">
-        <h2>Training Readiness <span class="range">${labelStart} → ${labelEnd}</span></h2>
-        ${readinessRows.length
-          ? sparkline(windowRows.map(r => r.training_readiness))
-          : '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no readiness data yet — will populate after next sync</div>'}
-      </div>
-    </div>
-
-    <div class="row2">
-      <div class="panel">
-        <h2>Pace vs HR Efficiency <span class="range">last ${paceHrData.length} runs</span></h2>
-        ${paceHrData.length >= 3
-          ? sparklineDual(
-              paceHrData.map(d => d.pace),
-              paceHrData.map(d => d.hr / 20), // scale HR down to same axis for comparison
-              {h:160, label1:'pace (min/km)', label2:'avg HR ÷20'}
-            )
-          : '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">need activity data — run the backfill workflow</div>'}
-        ${paceHrData.length >= 3 ? `
-          <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:6px;">
-            Fitness improving = pace line trending DOWN while HR line stays flat or drops.
-          </div>` : ''}
-      </div>
-      <div class="panel">
-        <h2>VO2 Max (running) <span class="range">all time</span></h2>
-        ${vo2Rows.length
-          ? sparkline(vo2Rows.map(r => r.vo2max_running))
-          : '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no VO2 max data yet — will populate after next sync</div>'}
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>Weekly Running Stats <span class="range">most recent ${weeklyRunningFull.length} weeks with runs</span></h2>
-      ${weeklyRunningFull.length ? `
-        <table>
-          <thead><tr><th>Week of</th><th>Runs</th><th>Total km</th><th>Longest</th><th>Elev ↑</th><th>Avg Pace</th><th>Max HR</th></tr></thead>
-          <tbody>
-            ${weeklyRunningFull.map(w => `
-              <tr>
-                <td>${w.label}</td>
-                <td>${w.count}</td>
-                <td>${w.distance.toFixed(1)}</td>
-                <td>${w.longestRun.toFixed(1)} km</td>
-                <td>${w.elevationGain ? Math.round(w.elevationGain) + 'm' : '—'}</td>
-                <td>${formatPace(w.avgPace)}</td>
-                <td>${w.maxHr ?? '—'}</td>
-              </tr>
-            `).join('')}
-          </tbody>
-        </table>
-      ` : '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no running activities found yet — run the backfill workflow to pull activity history</div>'}
     </div>
 
     <div class="panel">
       <h2>Recent Activities <span class="range">${activities.length} total stored</span></h2>
-      ${activities.length ? `
+      ${activities.length?`
         <table>
-          <thead><tr><th>Date</th><th>Type</th><th>Distance</th><th>Duration</th><th>Pace</th><th>Avg HR</th></tr></thead>
-          <tbody>
-            ${activities.slice(0, 12).map(a => `
-              <tr>
-                <td>${(a.start_local || '').split(' ')[0].split('T')[0] || '—'}</td>
-                <td><span class="tag">${(a.type || 'unknown').replace(/_/g,' ')}</span></td>
-                <td>${a.distance_km ? a.distance_km.toFixed(2) + ' km' : '—'}</td>
-                <td>${formatDuration(a.duration_seconds)}</td>
-                <td>${a.pace_min_per_km ? formatPace(a.pace_min_per_km) : '—'}</td>
-                <td>${a.avg_hr ?? '—'}</td>
-              </tr>
-            `).join('')}
+          <thead><tr><th>Date</th><th>Type</th><th>Dist</th><th>Duration</th><th>Pace</th><th>Avg HR</th><th>Max HR</th><th>Elev ↑</th></tr></thead>
+          <tbody>${activities.slice(0,15).map(a=>`
+            <tr>
+              <td>${(a.start_local||'').slice(0,10)}</td>
+              <td><span class="tag">${(a.type||'?').replace(/_/g,' ')}</span></td>
+              <td>${a.distance_km!=null?distFmt(a.distance_km):'—'}</td>
+              <td>${formatDur(a.duration_seconds)}</td>
+              <td>${a.pace_min_per_km?paceDisplay(a.pace_min_per_km):'—'}</td>
+              <td>${a.avg_hr??'—'}</td>
+              <td>${a.max_hr??'—'}</td>
+              <td>${a.elevation_gain_m?Math.round(a.elevation_gain_m)+'m':'—'}</td>
+            </tr>`).join('')}
           </tbody>
-        </table>
-      ` : '<div style="color:var(--ink-dim);font-family:var(--mono);font-size:12px;">no activities found yet — run the backfill workflow to pull activity history</div>'}
+        </table>`:'<div class="no-data">No activities yet — run the backfill workflow</div>'}
     </div>
-  `;
+  </div>
+
+  <div id="tab-training" class="tab-content">
+    <div class="panel">
+      <h2>Weekly Mileage (${distLabel()}) <span class="range">last ${wkMileage.length} weeks</span></h2>
+      ${wkMileage.length?barChart(wkMileage.map(w=>w.label),wkMileage.map(w=>distVal(w.total)),{h:220}):'<div class="no-data">no data yet</div>'}
+    </div>
+
+    <div class="row2e">
+      <div class="panel">
+        <h2>Acute:Chronic Load Ratio <span class="range">last 30 days</span></h2>
+        ${(()=>{
+          const ratios=acwrWin.map(d=>d.ratio);
+          const valid=ratios.filter(v=>v!==null);
+          if(!valid.length)return'<div class="no-data">need 28 days of data</div>';
+          const w=1000,h=200,pad=28;
+          const max=Math.max(...[2,...valid])*1.05,min=0;
+          const stepX=(w-pad*2)/Math.max(ratios.length-1,1);
+          const pts=ratios.map((v,i)=>v===null?null:[pad+i*stepX,h-pad-((v-min)/(max-min||1))*(h-pad*2),v]).filter(Boolean);
+          const pathD=pts.map((p,i)=>(i===0?'M':'L')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+          const yLo=h-pad-(0.8/max)*(h-pad*2),yHi=h-pad-(1.3/max)*(h-pad*2),yRi=h-pad-(1.5/max)*(h-pad*2);
+          const dots=pts.map(p=>`<circle fill="${p[2]>1.5?'var(--red)':p[2]>1.3?'#ffb347':'var(--accent)'}" r="4" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}"/>`).join('');
+          return`<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+            <line stroke="rgba(182,255,92,0.25)" stroke-dasharray="4 3" x1="${pad}" y1="${yLo.toFixed(1)}" x2="${w-pad}" y2="${yLo.toFixed(1)}"/>
+            <line stroke="rgba(255,179,71,0.35)" stroke-dasharray="4 3" x1="${pad}" y1="${yHi.toFixed(1)}" x2="${w-pad}" y2="${yHi.toFixed(1)}"/>
+            <line stroke="rgba(255,106,77,0.45)" stroke-dasharray="4 3" x1="${pad}" y1="${yRi.toFixed(1)}" x2="${w-pad}" y2="${yRi.toFixed(1)}"/>
+            <path fill="none" stroke="var(--accent)" stroke-width="2.5" d="${pathD}"/>${dots}
+            <text fill="rgba(182,255,92,0.6)" font-family="monospace" font-size="11" x="${w-pad+4}" y="${yLo.toFixed(1)}">0.8</text>
+            <text fill="rgba(255,179,71,0.7)" font-family="monospace" font-size="11" x="${w-pad+4}" y="${yHi.toFixed(1)}">1.3</text>
+            <text fill="rgba(255,106,77,0.8)" font-family="monospace" font-size="11" x="${w-pad+4}" y="${yRi.toFixed(1)}">1.5</text>
+          </svg>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:8px;">
+            <span style="color:var(--accent)">●</span> optimal (0.8–1.3) &nbsp;
+            <span style="color:#ffb347">●</span> caution &nbsp;
+            <span style="color:var(--red)">●</span> overreach risk
+          </div>`;
+        })()}
+      </div>
+      <div class="panel">
+        <h2>Pace vs HR Efficiency <span class="range">last ${phData.length} runs</span></h2>
+        ${phData.length>=3?sparklineDual(phData.map(d=>u==='mi'?d.pace*1.60934:d.pace),phData.map(d=>d.hr/20),{h:200,l1:`pace (min/${u})`,l2:'avg HR ÷20'}):'<div class="no-data">need activity data — run backfill workflow</div>'}
+        ${phData.length>=3?'<div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:6px;">Fitness improving = pace line trending DOWN while HR line stays flat.</div>':''}
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Weekly Running Stats <span class="range">most recent ${wkRunning.length} weeks</span></h2>
+      ${wkRunning.length?`
+        <table>
+          <thead><tr><th>Week of</th><th>Runs</th><th>Total</th><th>Longest</th><th>Elev ↑</th><th>Avg Pace</th><th>Max HR</th></tr></thead>
+          <tbody>${wkRunning.map(w=>`
+            <tr>
+              <td>${w.label}</td><td>${w.count}</td>
+              <td>${distFmt(w.dist)}</td>
+              <td>${distFmt(w.longest)}</td>
+              <td>${w.elev?Math.round(w.elev)+'m':'—'}</td>
+              <td>${paceDisplay(w.avgPace)}</td>
+              <td>${w.maxHr??'—'}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table>`:'<div class="no-data">no running activities found — run the backfill workflow</div>'}
+    </div>
+
+    <div class="panel">
+      <h2>Weekly HR Zones (running, mins) <span class="range">last ${zoneWeeks.length} weeks</span></h2>
+      ${zoneWeeks.length?stackedBarChart(zoneLabels,zoneSeries,zoneColors,{h:220}):'<div class="no-data">no activity data yet</div>'}
+      <div class="zone-legend">
+        ${['Z1 Recovery','Z2 Aerobic','Z3 Tempo','Z4 Threshold','Z5 Max'].map((n,i)=>`<span><span class="zone-dot" style="background:${zoneColors[i]}"></span>${n}</span>`).join('')}
+        <span style="margin-left:auto">Max HR: <b id="zoneMaxHrLabel">${maxHr}</b> bpm</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Monthly Summary</h2>
+      <table>
+        <thead><tr><th>Month</th><th>Days</th><th>Total Dist</th><th>Total Steps</th><th>Avg RHR</th></tr></thead>
+        <tbody>${monthly.slice(0,12).map(m=>`
+          <tr>
+            <td>${m.month}</td><td>${m.days}</td>
+            <td>${distFmt(m.dist,1)}</td>
+            <td>${m.steps.toLocaleString()}</td>
+            <td>${m.rhrCount?Math.round(m.rhrSum/m.rhrCount):'—'}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="tab-health" class="tab-content">
+    <div class="grid-3">
+      <div class="stat">
+        <div class="label">VO2 Max (running)</div>
+        <div class="value">${latestVo2?fmt(latestVo2.vo2max_running):'—'}</div>
+        ${latestVo2?`<div class="delta">as of ${latestVo2.date}</div>`:''}
+      </div>
+      <div class="stat">
+        <div class="label">Training Readiness</div>
+        <div class="value">${fmt(last.training_readiness)}</div>
+        ${fmtDelta(last.training_readiness,prev?.training_readiness)}
+      </div>
+      <div class="stat">
+        <div class="label">Avg Stress — today</div>
+        <div class="value">${fmt(last.avg_stress)}</div>
+        ${fmtDelta(last.avg_stress,prev?.avg_stress)}
+      </div>
+    </div>
+
+    <div class="row2e">
+      <div class="panel">
+        <h2>Resting HR + 7-day avg <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        ${sparklineDual(rhrValues,rhrRolling,{h:200,l1:'daily RHR',l2:'7-day avg'})}
+      </div>
+      <div class="panel">
+        <h2>Sleep (hrs) <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        ${sparkline(win30.map(r=>r.sleep_seconds?r.sleep_seconds/3600:null),{h:200})}
+      </div>
+    </div>
+
+    <div class="row2e">
+      <div class="panel">
+        <h2>Training Readiness <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        ${sparkline(win30.map(r=>r.training_readiness),{h:200})}
+      </div>
+      <div class="panel">
+        <h2>VO2 Max trend <span class="range">all time</span></h2>
+        ${vo2Rows.length?sparkline(vo2Rows.map(r=>r.vo2max_running),{h:200}):'<div class="no-data">will populate after next sync with updated script</div>'}
+      </div>
+    </div>
+
+    <div class="row2e">
+      <div class="panel">
+        <h2>Body Battery Charged <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        ${sparkline(win30.map(r=>r.body_battery_charged),{h:200})}
+      </div>
+      <div class="panel">
+        <h2>Avg Stress <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        ${sparkline(win30.map(r=>r.avg_stress),{h:200})}
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Injury Risk Assessment</h2>
+      <div style="display:flex;align-items:flex-start;gap:28px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-dim);margin-bottom:8px;">RISK SCORE</div>
+          <div style="font-family:var(--display);font-size:64px;line-height:1;color:${risk.level==='high'?'var(--red)':risk.level==='caution'?'#ffb347':'var(--accent)'}">
+            ${risk.score}<span style="font-size:24px;color:var(--ink-dim)">/100</span>
+          </div>
+          <div class="risk-badge ${risk.level}" style="margin-top:10px">${risk.label}</div>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-dim);margin-bottom:10px;">CONTRIBUTING FACTORS</div>
+          ${risk.reasons.length?risk.reasons.map(r=>`
+            <div style="font-family:var(--mono);font-size:12px;color:var(--ink);margin-bottom:6px;padding:8px 12px;background:rgba(255,255,255,0.03);border-left:2px solid ${risk.level==='high'?'var(--red)':risk.level==='caution'?'#ffb347':'var(--accent)'};border-radius:2px">
+              ${r}
+            </div>`).join(''):`<div style="font-family:var(--mono);font-size:12px;color:var(--accent)">✓ All indicators nominal — good to train</div>`}
+          <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:12px;">Based on ACWR, RHR deviation vs 14-day baseline, and body battery average.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-records" class="tab-content">
+    <div class="grid-3">
+      <div class="stat">
+        <div class="label">Longest Run</div>
+        <div class="value" style="font-size:28px">${prs.longest?distFmt(prs.longest.dist):'—'}</div>
+        ${prs.longest?`<div class="delta">${prs.longest.date||''} · ${prs.longest.name||''}</div>`:''}
+      </div>
+      <div class="stat">
+        <div class="label">Fastest 5K Pace</div>
+        <div class="value" style="font-size:28px">${prs.fastest5k?paceDisplay(prs.fastest5k.pace):'—'}</div>
+        ${prs.fastest5k?`<div class="delta">${prs.fastest5k.date} · ${formatDur(prs.fastest5k.dur)}</div>`:''}
+      </div>
+      <div class="stat">
+        <div class="label">Fastest 10K Pace</div>
+        <div class="value" style="font-size:28px">${prs.fastest10k?paceDisplay(prs.fastest10k.pace):'—'}</div>
+        ${prs.fastest10k?`<div class="delta">${prs.fastest10k.date} · ${formatDur(prs.fastest10k.dur)}</div>`:''}
+      </div>
+      <div class="stat">
+        <div class="label">Fastest Half Marathon</div>
+        <div class="value" style="font-size:28px">${prs.fastestHalf?paceDisplay(prs.fastestHalf.pace):'—'}</div>
+        ${prs.fastestHalf?`<div class="delta">${prs.fastestHalf.date} · ${formatDur(prs.fastestHalf.dur)}</div>`:''}
+      </div>
+      <div class="stat">
+        <div class="label">Fastest Marathon</div>
+        <div class="value" style="font-size:28px">${prs.fastestMarathon?paceDisplay(prs.fastestMarathon.pace):'—'}</div>
+        ${prs.fastestMarathon?`<div class="delta">${prs.fastestMarathon.date} · ${formatDur(prs.fastestMarathon.dur)}</div>`:''}
+      </div>
+      <div class="stat">
+        <div class="label">Activities Tracked</div>
+        <div class="value">${activities.length.toLocaleString()}</div>
+        <div class="delta">${rows.length.toLocaleString()} days of data</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>All-Time Monthly Distance (${distLabel()})</h2>
+      ${monthly.length?barChart(monthly.slice(0,24).reverse().map(m=>m.month.slice(5)),monthly.slice(0,24).reverse().map(m=>distVal(m.dist)),{h:240}):'<div class="no-data">no data yet</div>'}
+    </div>
+
+    <div class="panel">
+      <h2>Best Weeks by Distance <span class="range">all time</span></h2>
+      ${(()=>{
+        const sorted=[...weeklyMileageAgg(rows)].sort((a,b)=>b.total-a.total).slice(0,10);
+        return sorted.length?`<table>
+          <thead><tr><th>Week of</th><th>Distance</th></tr></thead>
+          <tbody>${sorted.map(w=>`<tr><td>${w.label}</td><td>${distFmt(w.total)}</td></tr>`).join('')}</tbody>
+        </table>`:'<div class="no-data">no data yet</div>';
+      })()}
+    </div>
+  </div>`;
+
+  // keep tab visible after re-render
+  const activeTab=document.querySelector('.tab.active');
+  if(activeTab){
+    const idx=[...document.querySelectorAll('.tab')].indexOf(activeTab);
+    const names=['overview','training','health','records'];
+    if(idx>=0)switchTab(names[idx]);
+  }
 }
 
+// ── boot ─────────────────────────────────────────────────────
+async function main(){
+  const statusEl=document.getElementById('statusLine');
+  let raw,actRaw;
+  try{
+    const[h,a]=await Promise.all([
+      fetch('./data/history.json',{cache:'no-store'}),
+      fetch('./data/activities.json',{cache:'no-store'}).catch(()=>null),
+    ]);
+    raw=await h.json();
+    actRaw=a?await a.json().catch(()=>({})):{};
+  }catch(e){
+    statusEl.innerHTML='<span class="dot" style="background:var(--red)"></span>failed to load data';
+    return;
+  }
+  const days=Object.keys(raw).sort();
+  if(!days.length){statusEl.innerHTML='<span class="dot"></span>no data yet';return;}
+  globalRows=days.map(d=>raw[d]);
+  globalActivities=Object.values(actRaw||{}).sort((a,b)=>(b.start_local||'').localeCompare(a.start_local||''));
+  statusEl.innerHTML=`<span class="dot"></span>last synced ${globalRows[globalRows.length-1].date}`;
+  render();
+}
 main();
 </script>
 </body>
