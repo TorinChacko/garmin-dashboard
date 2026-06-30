@@ -18241,22 +18241,22 @@
   },
   "2026-06-29": {
     "date": "2026-06-29",
-    "steps": 107,
-    "calories": 228.0,
-    "distance_km": 0.08,
+    "steps": 22306,
+    "calories": 3371.0,
+    "distance_km": 24.22,
     "resting_hr": 39,
-    "avg_stress": 15,
-    "sleep_seconds": null,
-    "body_battery_charged": 12
+    "avg_stress": 36,
+    "sleep_seconds": 30000,
+    "body_battery_charged": 67
   },
   "2026-06-30": {
     "date": "2026-06-30",
-    "steps": null,
-    "calories": null,
-    "distance_km": null,
-    "resting_hr": null,
-    "avg_stress": null,
+    "steps": 90,
+    "calories": 229.0,
+    "distance_km": 0.07,
+    "resting_hr": 45,
+    "avg_stress": 29,
     "sleep_seconds": null,
-    "body_battery_charged": null
+    "body_battery_charged": 7
   }
 }
