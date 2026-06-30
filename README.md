@@ -1,5 +1,5 @@
 # Garmin Field Log
-
+https://torinchacko.github.io/garmin-dashboard/
 Pulls your Garmin Connect stats daily via GitHub Actions and renders them on a
 free dashboard hosted with GitHub Pages. No server, no always-on machine —
 GitHub runs the fetch on a schedule and commits the new data; Pages serves
