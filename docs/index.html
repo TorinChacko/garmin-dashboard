@@ -116,13 +116,59 @@ tr:hover td{background:rgba(255,255,255,0.02);}
 .empty strong{color:var(--accent);display:block;font-family:var(--display);font-size:20px;margin-bottom:8px;letter-spacing:1px;}
 footer{font-family:var(--mono);font-size:10px;color:var(--ink-dim);text-align:center;margin-top:40px;letter-spacing:1px;}
 .tab-content{display:none;}.tab-content.active{display:block;}
+
+/* RUNLINE MOTION LAYER */
+body{
+  min-width:320px;
+  background-image:
+    radial-gradient(circle at var(--mx,78%) var(--my,8%),color-mix(in srgb,var(--accent) 10%,transparent),transparent 24rem),
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:auto,48px 48px,48px 48px;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.14;
+  background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,0,0,.14) 3px 4px);
+  mix-blend-mode:multiply;
+}
+header{position:relative;padding-top:10px;overflow:hidden;}
+header::before{
+  content:"";position:absolute;top:0;left:0;width:94px;height:3px;background:var(--red);
+  box-shadow:108px 0 0 var(--accent),216px 0 0 var(--line),324px 0 0 var(--line);
+  animation:startLine 1s cubic-bezier(.2,.7,.2,1) both;
+}
+.brand{font-style:italic;letter-spacing:-.02em;text-shadow:0 0 24px color-mix(in srgb,var(--accent) 22%,transparent);}
+.brand small{font-style:normal;letter-spacing:2.8px;}
+.stat,.panel{transition:transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease;}
+.stat:hover{transform:translateY(-4px);border-color:var(--accent-dim);box-shadow:0 12px 30px rgba(0,0,0,.22);}
+.panel:hover{border-color:color-mix(in srgb,var(--accent) 32%,var(--line));box-shadow:0 14px 34px rgba(0,0,0,.2);}
+.stat::after{
+  content:"";position:absolute;right:-34px;bottom:-50px;width:104px;height:104px;
+  border:1px solid color-mix(in srgb,var(--accent) 16%,var(--line));border-radius:50%;
+  transition:transform .25s ease,border-color .25s ease;
+}
+.stat:hover::after{transform:scale(1.16);border-color:var(--accent);}
+.series-line{stroke-dasharray:1600;animation:drawLine 1.15s ease-out both;filter:drop-shadow(0 0 5px color-mix(in srgb,var(--accent) 28%,transparent));}
+.bar{transform-box:fill-box;transform-origin:bottom;animation:growBar .65s cubic-bezier(.2,.7,.2,1) both;}
+.tab{position:relative;overflow:hidden;}
+.tab::after{content:"";position:absolute;inset:auto 50% 0;width:0;height:2px;background:var(--accent);transition:width .2s,left .2s;}
+.tab:hover::after,.tab.active::after{left:0;width:100%;}
+.btn:hover{transform:translateY(-1px);box-shadow:0 0 16px color-mix(in srgb,var(--accent) 18%,transparent);}
+.tab-content.active{animation:contentRise .42s cubic-bezier(.2,.7,.2,1) both;}
+@keyframes startLine{from{transform:translateX(-440px);opacity:0;}}
+@keyframes drawLine{from{stroke-dashoffset:1600;}to{stroke-dashoffset:0;}}
+@keyframes growBar{from{transform:scaleY(0);opacity:.25;}}
+@keyframes contentRise{from{opacity:0;transform:translateY(10px);}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <div class="brand">TORIN CHACKO<small>field log / garmin telemetry</small></div>
+  <div class="brand">TORIN / RUNLINE<small>running performance lab / garmin telemetry</small></div>
   <div class="header-right">
     <div class="status" id="statusLine"><span class="dot"></span>loading…</div>
     <div class="controls">
@@ -839,6 +885,12 @@ function render(){
     if(idx>=0)switchTab(names[idx]);
   }
 }
+
+// Subtle spotlight follows the runner's pointer across the telemetry grid.
+document.addEventListener('pointermove',event=>{
+  document.documentElement.style.setProperty('--mx',`${event.clientX}px`);
+  document.documentElement.style.setProperty('--my',`${event.clientY}px`);
+},{passive:true});
 
 // ── boot ─────────────────────────────────────────────────────
 async function main(){
