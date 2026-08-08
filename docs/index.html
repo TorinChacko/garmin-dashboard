@@ -131,6 +131,33 @@ body::before{
   background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,0,0,.14) 3px 4px);
   mix-blend-mode:multiply;
 }
+.shoe-rail{
+  position:fixed;top:118px;bottom:72px;width:92px;z-index:0;pointer-events:none;
+  display:flex;flex-direction:column;justify-content:space-around;align-items:center;
+  color:var(--accent);opacity:.34;
+}
+.shoe-rail::before{
+  content:"";position:absolute;top:0;bottom:0;left:50%;border-left:1px dashed currentColor;
+  opacity:.36;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);
+  mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);
+}
+.shoe-rail--left{left:max(8px,calc(50vw - 666px));}
+.shoe-rail--right{right:max(8px,calc(50vw - 666px));}
+.shoe-mark{
+  position:relative;width:76px;height:46px;overflow:visible;fill:none;stroke:currentColor;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
+  filter:drop-shadow(0 0 7px color-mix(in srgb,var(--accent) 35%,transparent));
+  animation:shoeStride 4.8s ease-in-out infinite;
+}
+.shoe-mark:nth-child(2){animation-delay:-2.4s;transform:scaleX(-1);}
+.shoe-rail--right .shoe-mark{transform:scaleX(-1);}
+.shoe-rail--right .shoe-mark:nth-child(2){transform:none;}
+.shoe-tread{stroke-dasharray:4 5;opacity:.72;}
+@keyframes shoeStride{
+  0%,100%{translate:0 0;rotate:-4deg;opacity:.68}
+  50%{translate:0 -9px;rotate:3deg;opacity:1}
+}
+@media(max-width:1320px){.shoe-rail{display:none;}}
 header{position:relative;padding-top:10px;overflow:hidden;}
 header::before{
   content:"";position:absolute;top:0;left:0;width:94px;height:3px;background:var(--red);
@@ -141,7 +168,14 @@ header::before{
 .brand small{font-style:normal;letter-spacing:2.8px;}
 .stat,.panel{transition:transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease;}
 .stat:hover{transform:translateY(-4px);border-color:var(--accent-dim);box-shadow:0 12px 30px rgba(0,0,0,.22);}
+.panel{position:relative;overflow:hidden;animation:panelRise .5s cubic-bezier(.2,.7,.2,1) both;}
+.panel::before{
+  content:"";position:absolute;inset:0 auto 0 0;width:2px;opacity:0;
+  background:linear-gradient(transparent,var(--accent),transparent);
+  transform:translateY(-45%);transition:opacity .22s ease;animation:paceSweep 3.4s ease-in-out infinite;
+}
 .panel:hover{border-color:color-mix(in srgb,var(--accent) 32%,var(--line));box-shadow:0 14px 34px rgba(0,0,0,.2);}
+.panel:hover::before{opacity:1;}
 .stat::after{
   content:"";position:absolute;right:-34px;bottom:-50px;width:104px;height:104px;
   border:1px solid color-mix(in srgb,var(--accent) 16%,var(--line));border-radius:50%;
@@ -149,22 +183,44 @@ header::before{
 }
 .stat:hover::after{transform:scale(1.16);border-color:var(--accent);}
 .series-line{stroke-dasharray:1600;animation:drawLine 1.15s ease-out both;filter:drop-shadow(0 0 5px color-mix(in srgb,var(--accent) 28%,transparent));}
+.pt{transform-box:fill-box;transform-origin:center;animation:pointBreath 2.2s ease-in-out infinite;}
+.pt:nth-of-type(3n){animation-delay:.25s;}.pt:nth-of-type(3n+1){animation-delay:.5s;}
 .bar{transform-box:fill-box;transform-origin:bottom;animation:growBar .65s cubic-bezier(.2,.7,.2,1) both;}
 .tab{position:relative;overflow:hidden;}
 .tab::after{content:"";position:absolute;inset:auto 50% 0;width:0;height:2px;background:var(--accent);transition:width .2s,left .2s;}
 .tab:hover::after,.tab.active::after{left:0;width:100%;}
 .btn:hover{transform:translateY(-1px);box-shadow:0 0 16px color-mix(in srgb,var(--accent) 18%,transparent);}
+.btn:active{transform:translateY(1px) scale(.98);}
+.btn:focus-visible,.tab:focus-visible,.maxhr-wrap input:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.status .dot{animation:syncPulse 1.9s ease-out infinite;}
+tbody tr{transition:background .18s ease,color .18s ease,transform .18s ease;}
+tbody tr:hover{color:var(--accent);transform:translateX(3px);}
+tbody tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent);}
+.risk-badge{animation:badgeSettle .45s cubic-bezier(.2,.8,.2,1) both;}
 .tab-content.active{animation:contentRise .42s cubic-bezier(.2,.7,.2,1) both;}
 @keyframes startLine{from{transform:translateX(-440px);opacity:0;}}
 @keyframes drawLine{from{stroke-dashoffset:1600;}to{stroke-dashoffset:0;}}
 @keyframes growBar{from{transform:scaleY(0);opacity:.25;}}
 @keyframes contentRise{from{opacity:0;transform:translateY(10px);}}
+@keyframes panelRise{from{opacity:0;transform:translateY(12px);}}
+@keyframes paceSweep{0%,28%{transform:translateY(-55%)}72%,100%{transform:translateY(55%)}}
+@keyframes pointBreath{0%,100%{transform:scale(.85);opacity:.72}50%{transform:scale(1.3);opacity:1}}
+@keyframes syncPulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 45%,transparent)}70%,100%{box-shadow:0 0 0 7px transparent}}
+@keyframes badgeSettle{from{opacity:0;transform:scale(.9)}70%{transform:scale(1.04)}}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
 }
 </style>
 </head>
 <body>
+<div class="shoe-rail shoe-rail--left" aria-hidden="true">
+  <svg class="shoe-mark" viewBox="0 0 120 70"><path d="M8 48c10-2 19-7 27-17l12-16 13 8c10 7 17 12 29 14l18 3c4 1 6 4 6 8v5H10c-5 0-6-4-2-5Z"/><path d="m38 29 17 7 16-7m-25-7 19 10m-51 21c26 5 72 5 99 0"/><path class="shoe-tread" d="M18 59h84"/></svg>
+  <svg class="shoe-mark" viewBox="0 0 120 70"><path d="M8 48c10-2 19-7 27-17l12-16 13 8c10 7 17 12 29 14l18 3c4 1 6 4 6 8v5H10c-5 0-6-4-2-5Z"/><path d="m38 29 17 7 16-7m-25-7 19 10m-51 21c26 5 72 5 99 0"/><path class="shoe-tread" d="M18 59h84"/></svg>
+</div>
+<div class="shoe-rail shoe-rail--right" aria-hidden="true">
+  <svg class="shoe-mark" viewBox="0 0 120 70"><path d="M8 48c10-2 19-7 27-17l12-16 13 8c10 7 17 12 29 14l18 3c4 1 6 4 6 8v5H10c-5 0-6-4-2-5Z"/><path d="m38 29 17 7 16-7m-25-7 19 10m-51 21c26 5 72 5 99 0"/><path class="shoe-tread" d="M18 59h84"/></svg>
+  <svg class="shoe-mark" viewBox="0 0 120 70"><path d="M8 48c10-2 19-7 27-17l12-16 13 8c10 7 17 12 29 14l18 3c4 1 6 4 6 8v5H10c-5 0-6-4-2-5Z"/><path d="m38 29 17 7 16-7m-25-7 19 10m-51 21c26 5 72 5 99 0"/><path class="shoe-tread" d="M18 59h84"/></svg>
+</div>
 <div class="wrap">
 
 <header>
