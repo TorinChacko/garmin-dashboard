@@ -245,7 +245,9 @@ def main():
     timezone = ZoneInfo(os.environ.get("GARMIN_TIMEZONE", "America/Los_Angeles"))
     today = datetime.now(timezone).date()
     total_days = int(years * 365.25)
-    all_dates = [(today - timedelta(days=i)).isoformat() for i in range(total_days)]
+    # Backfill owns completed historical days only. Today's partial summary is
+    # exclusively managed by the regular fetch workflow.
+    all_dates = [(today - timedelta(days=i + 1)).isoformat() for i in range(total_days)]
 
     # Skip anything we already have AND that already has real data
     # (not a null-filled placeholder from a day with no watch sync).

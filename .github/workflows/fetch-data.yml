@@ -30,6 +30,9 @@ jobs:
           GARMIN_TOKENS_B64: ${{ secrets.GARMIN_TOKENS_B64 }}
         run: python scripts/fetch_garmin_data.py
 
+      - name: Validate data changes
+        run: python scripts/validate_garmin_data.py
+
       - name: Commit updated data
         run: |
           git config user.name "garmin-bot"

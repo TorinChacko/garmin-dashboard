@@ -1,6 +1,6 @@
 name: Backfill Garmin History
 
-# Manual trigger only — you'll likely run this a few times in a row
+# Manual trigger only â€” you'll likely run this a few times in a row
 # if Garmin rate-limits partway through. It resumes automatically.
 on:
   workflow_dispatch:
@@ -44,6 +44,9 @@ jobs:
           MAX_ACTIVITIES_PER_RUN: ${{ github.event.inputs.max_activities_per_run }}
           REQUEST_DELAY_SEC: "1.5"
         run: python scripts/backfill_garmin_data.py
+
+      - name: Validate data changes
+        run: python scripts/validate_garmin_data.py
 
       - name: Commit progress
         run: |
