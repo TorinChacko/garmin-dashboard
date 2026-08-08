@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-One-time historical backfill — pulls years of past Garmin data.
+One-time historical backfill â€” pulls years of past Garmin data.
 
 This is SEPARATE from scripts/fetch_garmin_data.py (your daily job).
 Run this once (likely across a few re-runs, since Garmin rate-limits),
@@ -28,8 +28,9 @@ import os
 import sys
 import tarfile
 import time
-from datetime import date, timedelta
+from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from garminconnect import (
     Garmin,
@@ -43,6 +44,16 @@ DATA_FILE = Path("./data/history.json")
 DOCS_DATA_FILE = Path("./docs/data/history.json")
 ACTIVITIES_FILE = Path("./data/activities.json")
 DOCS_ACTIVITIES_FILE = Path("./docs/data/activities.json")
+DAILY_DATA_FIELDS = (
+    "steps", "calories", "distance_km", "resting_hr", "avg_stress",
+    "sleep_seconds", "body_battery_charged", "vo2max_running",
+    "vo2max_cycling", "training_readiness",
+)
+
+
+def has_daily_data(record):
+    """True when Garmin returned at least one real metric for the day."""
+    return any(record.get(field) is not None for field in DAILY_DATA_FIELDS)
 
 
 def restore_token_from_secret():
@@ -76,7 +87,7 @@ def safe_get(fn, *args, default=None):
     try:
         return fn(*args)
     except GarminConnectTooManyRequestsError:
-        raise  # bubble up — caller needs to stop the whole run
+        raise  # bubble up â€” caller needs to stop the whole run
     except Exception as e:
         print(f"    (skipped one field: {e})")
         return default
@@ -197,7 +208,7 @@ def backfill_activities(garmin, activities, delay, max_to_fetch):
         print(f"  +{new_in_this_page} new activities this page ({fetched_new} total this run)")
 
         if new_in_this_page == 0:
-            print("  Entire page already known — caught up with activity history.")
+            print("  Entire page already known â€” caught up with activity history.")
             break
 
         start += page_size
@@ -231,13 +242,14 @@ def main():
 
     history = load_history()
 
-    today = date.today()
+    timezone = ZoneInfo(os.environ.get("GARMIN_TIMEZONE", "America/Los_Angeles"))
+    today = datetime.now(timezone).date()
     total_days = int(years * 365.25)
     all_dates = [(today - timedelta(days=i)).isoformat() for i in range(total_days)]
 
     # Skip anything we already have AND that already has real data
     # (not a null-filled placeholder from a day with no watch sync).
-    todo = [d for d in all_dates if d not in history or history[d].get("steps") is None]
+    todo = [d for d in all_dates if d not in history or not has_daily_data(history[d])]
 
     print(f"Backfill target: {total_days} days ({all_dates[-1]} -> {all_dates[0]})")
     print(f"Already have: {total_days - len(todo)} days")
@@ -254,7 +266,14 @@ def main():
     try:
         for i, day_iso in enumerate(batch):
             print(f"[{i+1}/{len(batch)}] {day_iso} ...")
-            history[day_iso] = fetch_day(garmin, day_iso)
+            record = fetch_day(garmin, day_iso)
+            if has_daily_data(record):
+                history[day_iso] = record
+            else:
+                # Do not persist all-null placeholders for unsynced/future days.
+                if day_iso in history and not has_daily_data(history[day_iso]):
+                    del history[day_iso]
+                print("  No daily metrics returned; leaving this date empty.")
             fetched_count += 1
 
             # Save progress every 25 days, so a crash doesn't lose everything

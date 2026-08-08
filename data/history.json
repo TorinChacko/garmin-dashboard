@@ -18797,18 +18797,5 @@
     "vo2max_running": 62.0,
     "vo2max_cycling": null,
     "training_readiness": null
-  },
-  "2026-08-08": {
-    "date": "2026-08-08",
-    "steps": null,
-    "calories": null,
-    "distance_km": null,
-    "resting_hr": null,
-    "avg_stress": null,
-    "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
   }
 }

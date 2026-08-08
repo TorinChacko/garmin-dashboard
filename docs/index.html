@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Torin Chacko — Field Log</title>
+<title>Torin Chacko â€” Field Log</title>
 <style>
 :root{
   --bg:#0b0f0d;--panel:#111613;--line:#232b26;
@@ -191,7 +191,7 @@ tbody tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent);}
 <header>
   <div class="brand">TORIN / RUNLINE<small>running performance lab / garmin telemetry</small></div>
   <div class="header-right">
-    <div class="status" id="statusLine"><span class="dot"></span>loading…</div>
+    <div class="status" id="statusLine"><span class="dot"></span>loadingâ€¦</div>
     <div class="controls">
       <button class="btn active" id="btnKm" onclick="setUnit('km')">KM</button>
       <button class="btn" id="btnMi" onclick="setUnit('mi')">MI</button>
@@ -223,14 +223,16 @@ tbody tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent);}
 </div>
 
 <div id="content">
-  <div class="empty"><strong>LOADING</strong>Fetching your data…</div>
+  <div class="empty"><strong>LOADING</strong>Fetching your dataâ€¦</div>
 </div>
 
-<footer>TORIN CHACKO · FIELD LOG · REFRESHES DAILY VIA GITHUB ACTIONS</footer>
+<footer>TORIN CHACKO Â· FIELD LOG Â· REFRESHES DAILY VIA GITHUB ACTIONS</footer>
 </div>
 
 <script>
 let globalRows = [], globalActivities = [], globalUnit = 'km';
+const DAILY_DATA_FIELDS=['steps','calories','distance_km','resting_hr','avg_stress','sleep_seconds','body_battery_charged','vo2max_running','vo2max_cycling','training_readiness'];
+const hasDailyData=row=>DAILY_DATA_FIELDS.some(field=>row?.[field]!=null);
 
 function setUnit(u){
   globalUnit = u;
@@ -248,7 +250,7 @@ function switchTab(name){
   });
 }
 
-// ── theme customization ──────────────────────────────────────
+// â”€â”€ theme customization â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const THEME_KEY='fieldlog-theme-v1';
 const THEME_VARS=['--bg','--panel','--ink','--accent','--red'];
 const DEFAULT_THEME={'--bg':'#0b0f0d','--panel':'#111613','--ink':'#e9efe7','--accent':'#b6ff5c','--red':'#ff6a4d'};
@@ -309,15 +311,15 @@ document.addEventListener('keydown',e=>{
   }
 });
 
-// ── unit helpers ──────────────────────────────────────────────
+// â”€â”€ unit helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function distVal(km){ return globalUnit==='mi' ? km*0.621371 : km; }
 function distLabel(){ return globalUnit==='mi' ? 'mi' : 'km'; }
 function distFmt(km, dec=1){
-  if(km===null||km===undefined) return '—';
+  if(km===null||km===undefined) return 'â€”';
   return distVal(km).toFixed(dec)+' '+distLabel();
 }
 
-// ── chart helpers ─────────────────────────────────────────────
+// â”€â”€ chart helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const GRAD = `<defs><linearGradient id="fadeGrad" x1="0" y1="0" x2="0" y2="1">
   <stop offset="0%" stop-color="#b6ff5c" stop-opacity="0.35"/>
   <stop offset="100%" stop-color="#b6ff5c" stop-opacity="0"/>
@@ -359,7 +361,7 @@ function sparklineDual(v1,v2,opts={}){
     <path fill="none" stroke="var(--red)" stroke-width="1.5" stroke-dasharray="6 3" d="${path(p2)}"/>
     ${d1}${d2}</svg>
   <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:8px;">
-    <span style="color:var(--accent)">●</span> ${opts.l1||'A'} &nbsp;
+    <span style="color:var(--accent)">â—</span> ${opts.l1||'A'} &nbsp;
     <span style="color:var(--red)">- -</span> ${opts.l2||'B'}
   </div>`;
 }
@@ -407,7 +409,7 @@ function stackedBarChart(labels, series, colors, opts={}){
   return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">${grid}${bars}</svg>`;
 }
 
-// ── data helpers ──────────────────────────────────────────────
+// â”€â”€ data helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function isoWeekInfo(dateStr){
   const d=new Date(dateStr+'T00:00:00');
   const dayNr=(d.getDay()+6)%7;
@@ -501,9 +503,9 @@ function paceHrSeries(activities){
     .slice(0,60).reverse();
 }
 
-function formatPace(m){if(!m)return'—';const mn=Math.floor(m);return`${mn}:${String(Math.round((m-mn)*60)).padStart(2,'0')}/${distLabel()}`;}
-function formatDur(s){if(!s)return'—';const h=Math.floor(s/3600),m=Math.round((s%3600)/60);return h?`${h}h ${m}m`:`${m}m`;}
-function fmt(v,unit=''){return(v===null||v===undefined)?'—':`${Math.round(v).toLocaleString()}${unit?` <span>${unit}</span>`:''}`;}
+function formatPace(m){if(!m)return'â€”';const mn=Math.floor(m);return`${mn}:${String(Math.round((m-mn)*60)).padStart(2,'0')}/${distLabel()}`;}
+function formatDur(s){if(!s)return'â€”';const h=Math.floor(s/3600),m=Math.round((s%3600)/60);return h?`${h}h ${m}m`:`${m}m`;}
+function fmt(v,unit=''){return(v===null||v===undefined)?'â€”':`${Math.round(v).toLocaleString()}${unit?` <span>${unit}</span>`:''}`;}
 function fmtDelta(a,b){
   if(a==null||b==null)return'';
   const d=a-b;if(!d)return'';
@@ -549,7 +551,7 @@ function injuryRisk(acwrData,rows){
   if(acwr!==null){
     if(acwr>1.5){score+=40;reasons.push(`High training load (ACWR ${acwr})`)}
     else if(acwr>1.3){score+=20;reasons.push(`Elevated training load (ACWR ${acwr})`)}
-    else if(acwr<0.6){score+=10;reasons.push('Significant deload — watch for re-injury on ramp-up')}
+    else if(acwr<0.6){score+=10;reasons.push('Significant deload â€” watch for re-injury on ramp-up')}
   }
   if(rhrDev>4){score+=30;reasons.push(`RHR elevated +${rhrDev.toFixed(1)} bpm vs 14-day avg`)}
   else if(rhrDev>2){score+=15;reasons.push(`RHR slightly elevated +${rhrDev.toFixed(1)} bpm`)}
@@ -561,9 +563,12 @@ function injuryRisk(acwrData,rows){
   return{score:Math.min(score,100),level,label,reasons};
 }
 
-// ── main render ───────────────────────────────────────────────
+// â”€â”€ main render â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function render(){
-  const rows=globalRows;
+  // Keep historical gaps intact, but never let trailing all-null placeholders
+  // become "today" or enter the latest load/risk calculations.
+  const rows=[...globalRows];
+  while(rows.length&&!hasDailyData(rows[rows.length-1]))rows.pop();
   const activities=globalActivities;
   const maxHr=parseInt(document.getElementById('maxHrInput').value)||201;
   const u=globalUnit;
@@ -578,7 +583,7 @@ function render(){
   const acwrData=computeACWR(rows);
   const latestACWR=acwrData.length?acwrData[acwrData.length-1].ratio:null;
   const acwrWin=acwrData.slice(-30);
-  const acwrStatus=latestACWR===null?'—':latestACWR>1.5?'⚠ HIGH RISK':latestACWR>1.3?'△ CAUTION':latestACWR>=0.8?'✓ OPTIMAL':'↓ UNDERLOAD';
+  const acwrStatus=latestACWR===null?'â€”':latestACWR>1.5?'âš  HIGH RISK':latestACWR>1.3?'â–³ CAUTION':latestACWR>=0.8?'âœ“ OPTIMAL':'â†“ UNDERLOAD';
   const acwrColor=latestACWR===null?'var(--ink-dim)':latestACWR>1.5?'var(--red)':latestACWR>1.3?'#ffb347':'var(--accent)';
 
   const rhrValues=win30.map(r=>r.resting_hr);
@@ -592,7 +597,7 @@ function render(){
   const prs=computePRs(activities);
   const risk=injuryRisk(acwrData,rows);
 
-  // zone stacked bar — last 8 weeks
+  // zone stacked bar â€” last 8 weeks
   const zoneWeeks=wkRunning.slice(0,8).reverse();
   const zoneLabels=zoneWeeks.map(w=>w.label);
   const zoneSeries=[
@@ -606,7 +611,7 @@ function render(){
 
   // pace adjusted for unit
   function paceDisplay(minPerKm){
-    if(!minPerKm)return'—';
+    if(!minPerKm)return'â€”';
     const v=u==='mi'?minPerKm*1.60934:minPerKm;
     const mn=Math.floor(v);return`${mn}:${String(Math.round((v-mn)*60)).padStart(2,'0')}/${u==='mi'?'mi':'km'}`;
   }
@@ -615,13 +620,13 @@ function render(){
   <div id="tab-overview" class="tab-content active">
     <div class="grid">
       <div class="stat">
-        <div class="label">Steps — today</div>
+        <div class="label">Steps â€” today</div>
         <div class="value">${fmt(last.steps)}</div>
         ${fmtDelta(last.steps,prev?.steps)}
       </div>
       <div class="stat">
-        <div class="label">Distance — today</div>
-        <div class="value" style="font-size:28px">${last.distance_km!=null?distFmt(last.distance_km):'—'}</div>
+        <div class="label">Distance â€” today</div>
+        <div class="value" style="font-size:28px">${last.distance_km!=null?distFmt(last.distance_km):'â€”'}</div>
         ${prev?.distance_km!=null?fmtDelta(distVal(last.distance_km),distVal(prev.distance_km)):''}
       </div>
       <div class="stat">
@@ -631,7 +636,7 @@ function render(){
       </div>
       <div class="stat">
         <div class="label">Sleep</div>
-        <div class="value">${last.sleep_seconds?(last.sleep_seconds/3600).toFixed(1):'—'}<span>hrs</span></div>
+        <div class="value">${last.sleep_seconds?(last.sleep_seconds/3600).toFixed(1):'â€”'}<span>hrs</span></div>
         ${prev?.sleep_seconds?fmtDelta(last.sleep_seconds/3600,prev.sleep_seconds/3600):''}
       </div>
       <div class="stat">
@@ -651,14 +656,14 @@ function render(){
       </div>
       <div class="stat">
         <div class="label">ACWR</div>
-        <div class="value" style="color:${acwrColor}">${latestACWR??'—'}</div>
+        <div class="value" style="color:${acwrColor}">${latestACWR??'â€”'}</div>
         <div class="delta" style="color:${acwrColor}">${acwrStatus}</div>
       </div>
     </div>
 
     <div class="row2">
       <div class="panel">
-        <h2>Daily Steps <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        <h2>Daily Steps <span class="range">${labelStart} â†’ ${labelEnd}</span></h2>
         ${sparkline(win30.map(r=>r.steps))}
       </div>
       <div class="panel">
@@ -667,10 +672,10 @@ function render(){
           <thead><tr><th>Date</th><th>Steps</th><th>Dist</th><th>RHR</th><th>Sleep</th></tr></thead>
           <tbody>${rows.slice(-10).reverse().map(r=>`
             <tr>
-              <td>${r.date}</td><td>${r.steps?.toLocaleString()??'—'}</td>
-              <td>${r.distance_km!=null?distFmt(r.distance_km):'—'}</td>
-              <td>${r.resting_hr??'—'}</td>
-              <td>${r.sleep_seconds?(r.sleep_seconds/3600).toFixed(1)+'h':'—'}</td>
+              <td>${r.date}</td><td>${r.steps?.toLocaleString()??'â€”'}</td>
+              <td>${r.distance_km!=null?distFmt(r.distance_km):'â€”'}</td>
+              <td>${r.resting_hr??'â€”'}</td>
+              <td>${r.sleep_seconds?(r.sleep_seconds/3600).toFixed(1)+'h':'â€”'}</td>
             </tr>`).join('')}
           </tbody>
         </table>
@@ -681,20 +686,20 @@ function render(){
       <h2>Recent Activities <span class="range">${activities.length} total stored</span></h2>
       ${activities.length?`
         <table>
-          <thead><tr><th>Date</th><th>Type</th><th>Dist</th><th>Duration</th><th>Pace</th><th>Avg HR</th><th>Max HR</th><th>Elev ↑</th></tr></thead>
+          <thead><tr><th>Date</th><th>Type</th><th>Dist</th><th>Duration</th><th>Pace</th><th>Avg HR</th><th>Max HR</th><th>Elev â†‘</th></tr></thead>
           <tbody>${activities.slice(0,15).map(a=>`
             <tr>
               <td>${(a.start_local||'').slice(0,10)}</td>
               <td><span class="tag">${(a.type||'?').replace(/_/g,' ')}</span></td>
-              <td>${a.distance_km!=null?distFmt(a.distance_km):'—'}</td>
+              <td>${a.distance_km!=null?distFmt(a.distance_km):'â€”'}</td>
               <td>${formatDur(a.duration_seconds)}</td>
-              <td>${a.pace_min_per_km?paceDisplay(a.pace_min_per_km):'—'}</td>
-              <td>${a.avg_hr??'—'}</td>
-              <td>${a.max_hr??'—'}</td>
-              <td>${a.elevation_gain_m?Math.round(a.elevation_gain_m)+'m':'—'}</td>
+              <td>${a.pace_min_per_km?paceDisplay(a.pace_min_per_km):'â€”'}</td>
+              <td>${a.avg_hr??'â€”'}</td>
+              <td>${a.max_hr??'â€”'}</td>
+              <td>${a.elevation_gain_m?Math.round(a.elevation_gain_m)+'m':'â€”'}</td>
             </tr>`).join('')}
           </tbody>
-        </table>`:'<div class="no-data">No activities yet — run the backfill workflow</div>'}
+        </table>`:'<div class="no-data">No activities yet â€” run the backfill workflow</div>'}
     </div>
   </div>
 
@@ -728,15 +733,15 @@ function render(){
             <text fill="rgba(255,106,77,0.8)" font-family="monospace" font-size="11" x="${w-pad+4}" y="${yRi.toFixed(1)}">1.5</text>
           </svg>
           <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:8px;">
-            <span style="color:var(--accent)">●</span> optimal (0.8–1.3) &nbsp;
-            <span style="color:#ffb347">●</span> caution &nbsp;
-            <span style="color:var(--red)">●</span> overreach risk
+            <span style="color:var(--accent)">â—</span> optimal (0.8â€“1.3) &nbsp;
+            <span style="color:#ffb347">â—</span> caution &nbsp;
+            <span style="color:var(--red)">â—</span> overreach risk
           </div>`;
         })()}
       </div>
       <div class="panel">
         <h2>Pace vs HR Efficiency <span class="range">last ${phData.length} runs</span></h2>
-        ${phData.length>=3?sparklineDual(phData.map(d=>u==='mi'?d.pace*1.60934:d.pace),phData.map(d=>d.hr/20),{h:200,l1:`pace (min/${u})`,l2:'avg HR ÷20'}):'<div class="no-data">need activity data — run backfill workflow</div>'}
+        ${phData.length>=3?sparklineDual(phData.map(d=>u==='mi'?d.pace*1.60934:d.pace),phData.map(d=>d.hr/20),{h:200,l1:`pace (min/${u})`,l2:'avg HR Ã·20'}):'<div class="no-data">need activity data â€” run backfill workflow</div>'}
         ${phData.length>=3?'<div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:6px;">Fitness improving = pace line trending DOWN while HR line stays flat.</div>':''}
       </div>
     </div>
@@ -745,18 +750,18 @@ function render(){
       <h2>Weekly Running Stats <span class="range">most recent ${wkRunning.length} weeks</span></h2>
       ${wkRunning.length?`
         <table>
-          <thead><tr><th>Week of</th><th>Runs</th><th>Total</th><th>Longest</th><th>Elev ↑</th><th>Avg Pace</th><th>Max HR</th></tr></thead>
+          <thead><tr><th>Week of</th><th>Runs</th><th>Total</th><th>Longest</th><th>Elev â†‘</th><th>Avg Pace</th><th>Max HR</th></tr></thead>
           <tbody>${wkRunning.map(w=>`
             <tr>
               <td>${w.label}</td><td>${w.count}</td>
               <td>${distFmt(w.dist)}</td>
               <td>${distFmt(w.longest)}</td>
-              <td>${w.elev?Math.round(w.elev)+'m':'—'}</td>
+              <td>${w.elev?Math.round(w.elev)+'m':'â€”'}</td>
               <td>${paceDisplay(w.avgPace)}</td>
-              <td>${w.maxHr??'—'}</td>
+              <td>${w.maxHr??'â€”'}</td>
             </tr>`).join('')}
           </tbody>
-        </table>`:'<div class="no-data">no running activities found — run the backfill workflow</div>'}
+        </table>`:'<div class="no-data">no running activities found â€” run the backfill workflow</div>'}
     </div>
 
     <div class="panel">
@@ -777,7 +782,7 @@ function render(){
             <td>${m.month}</td><td>${m.days}</td>
             <td>${distFmt(m.dist,1)}</td>
             <td>${m.steps.toLocaleString()}</td>
-            <td>${m.rhrCount?Math.round(m.rhrSum/m.rhrCount):'—'}</td>
+            <td>${m.rhrCount?Math.round(m.rhrSum/m.rhrCount):'â€”'}</td>
           </tr>`).join('')}
         </tbody>
       </table>
@@ -788,7 +793,7 @@ function render(){
     <div class="grid-3">
       <div class="stat">
         <div class="label">VO2 Max (running)</div>
-        <div class="value">${latestVo2?fmt(latestVo2.vo2max_running):'—'}</div>
+        <div class="value">${latestVo2?fmt(latestVo2.vo2max_running):'â€”'}</div>
         ${latestVo2?`<div class="delta">as of ${latestVo2.date}</div>`:''}
       </div>
       <div class="stat">
@@ -797,7 +802,7 @@ function render(){
         ${fmtDelta(last.training_readiness,prev?.training_readiness)}
       </div>
       <div class="stat">
-        <div class="label">Avg Stress — today</div>
+        <div class="label">Avg Stress â€” today</div>
         <div class="value">${fmt(last.avg_stress)}</div>
         ${fmtDelta(last.avg_stress,prev?.avg_stress)}
       </div>
@@ -805,18 +810,18 @@ function render(){
 
     <div class="row2e">
       <div class="panel">
-        <h2>Resting HR + 7-day avg <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        <h2>Resting HR + 7-day avg <span class="range">${labelStart} â†’ ${labelEnd}</span></h2>
         ${sparklineDual(rhrValues,rhrRolling,{h:200,l1:'daily RHR',l2:'7-day avg'})}
       </div>
       <div class="panel">
-        <h2>Sleep (hrs) <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        <h2>Sleep (hrs) <span class="range">${labelStart} â†’ ${labelEnd}</span></h2>
         ${sparkline(win30.map(r=>r.sleep_seconds?r.sleep_seconds/3600:null),{h:200})}
       </div>
     </div>
 
     <div class="row2e">
       <div class="panel">
-        <h2>Training Readiness <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        <h2>Training Readiness <span class="range">${labelStart} â†’ ${labelEnd}</span></h2>
         ${sparkline(win30.map(r=>r.training_readiness),{h:200})}
       </div>
       <div class="panel">
@@ -827,11 +832,11 @@ function render(){
 
     <div class="row2e">
       <div class="panel">
-        <h2>Body Battery Charged <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        <h2>Body Battery Charged <span class="range">${labelStart} â†’ ${labelEnd}</span></h2>
         ${sparkline(win30.map(r=>r.body_battery_charged),{h:200})}
       </div>
       <div class="panel">
-        <h2>Avg Stress <span class="range">${labelStart} → ${labelEnd}</span></h2>
+        <h2>Avg Stress <span class="range">${labelStart} â†’ ${labelEnd}</span></h2>
         ${sparkline(win30.map(r=>r.avg_stress),{h:200})}
       </div>
     </div>
@@ -851,7 +856,7 @@ function render(){
           ${risk.reasons.length?risk.reasons.map(r=>`
             <div style="font-family:var(--mono);font-size:12px;color:var(--ink);margin-bottom:6px;padding:8px 12px;background:rgba(255,255,255,0.03);border-left:2px solid ${risk.level==='high'?'var(--red)':risk.level==='caution'?'#ffb347':'var(--accent)'};border-radius:2px">
               ${r}
-            </div>`).join(''):`<div style="font-family:var(--mono);font-size:12px;color:var(--accent)">✓ All indicators nominal — good to train</div>`}
+            </div>`).join(''):`<div style="font-family:var(--mono);font-size:12px;color:var(--accent)">âœ“ All indicators nominal â€” good to train</div>`}
           <div style="font-family:var(--mono);font-size:10px;color:var(--ink-dim);margin-top:12px;">Based on ACWR, RHR deviation vs 14-day baseline, and body battery average.</div>
         </div>
       </div>
@@ -862,28 +867,28 @@ function render(){
     <div class="grid-3">
       <div class="stat">
         <div class="label">Longest Run</div>
-        <div class="value" style="font-size:28px">${prs.longest?distFmt(prs.longest.dist):'—'}</div>
-        ${prs.longest?`<div class="delta">${prs.longest.date||''} · ${prs.longest.name||''}</div>`:''}
+        <div class="value" style="font-size:28px">${prs.longest?distFmt(prs.longest.dist):'â€”'}</div>
+        ${prs.longest?`<div class="delta">${prs.longest.date||''} Â· ${prs.longest.name||''}</div>`:''}
       </div>
       <div class="stat">
         <div class="label">Fastest 5K Pace</div>
-        <div class="value" style="font-size:28px">${prs.fastest5k?paceDisplay(prs.fastest5k.pace):'—'}</div>
-        ${prs.fastest5k?`<div class="delta">${prs.fastest5k.date} · ${formatDur(prs.fastest5k.dur)}</div>`:''}
+        <div class="value" style="font-size:28px">${prs.fastest5k?paceDisplay(prs.fastest5k.pace):'â€”'}</div>
+        ${prs.fastest5k?`<div class="delta">${prs.fastest5k.date} Â· ${formatDur(prs.fastest5k.dur)}</div>`:''}
       </div>
       <div class="stat">
         <div class="label">Fastest 10K Pace</div>
-        <div class="value" style="font-size:28px">${prs.fastest10k?paceDisplay(prs.fastest10k.pace):'—'}</div>
-        ${prs.fastest10k?`<div class="delta">${prs.fastest10k.date} · ${formatDur(prs.fastest10k.dur)}</div>`:''}
+        <div class="value" style="font-size:28px">${prs.fastest10k?paceDisplay(prs.fastest10k.pace):'â€”'}</div>
+        ${prs.fastest10k?`<div class="delta">${prs.fastest10k.date} Â· ${formatDur(prs.fastest10k.dur)}</div>`:''}
       </div>
       <div class="stat">
         <div class="label">Fastest Half Marathon</div>
-        <div class="value" style="font-size:28px">${prs.fastestHalf?paceDisplay(prs.fastestHalf.pace):'—'}</div>
-        ${prs.fastestHalf?`<div class="delta">${prs.fastestHalf.date} · ${formatDur(prs.fastestHalf.dur)}</div>`:''}
+        <div class="value" style="font-size:28px">${prs.fastestHalf?paceDisplay(prs.fastestHalf.pace):'â€”'}</div>
+        ${prs.fastestHalf?`<div class="delta">${prs.fastestHalf.date} Â· ${formatDur(prs.fastestHalf.dur)}</div>`:''}
       </div>
       <div class="stat">
         <div class="label">Fastest Marathon</div>
-        <div class="value" style="font-size:28px">${prs.fastestMarathon?paceDisplay(prs.fastestMarathon.pace):'—'}</div>
-        ${prs.fastestMarathon?`<div class="delta">${prs.fastestMarathon.date} · ${formatDur(prs.fastestMarathon.dur)}</div>`:''}
+        <div class="value" style="font-size:28px">${prs.fastestMarathon?paceDisplay(prs.fastestMarathon.pace):'â€”'}</div>
+        ${prs.fastestMarathon?`<div class="delta">${prs.fastestMarathon.date} Â· ${formatDur(prs.fastestMarathon.dur)}</div>`:''}
       </div>
       <div class="stat">
         <div class="label">Activities Tracked</div>
@@ -924,7 +929,7 @@ document.addEventListener('pointermove',event=>{
   document.documentElement.style.setProperty('--my',`${event.clientY}px`);
 },{passive:true});
 
-// ── boot ─────────────────────────────────────────────────────
+// â”€â”€ boot â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function main(){
   loadTheme();
   const statusEl=document.getElementById('statusLine');
@@ -944,7 +949,10 @@ async function main(){
   if(!days.length){statusEl.innerHTML='<span class="dot"></span>no data yet';return;}
   globalRows=days.map(d=>raw[d]);
   globalActivities=Object.values(actRaw||{}).sort((a,b)=>(b.start_local||'').localeCompare(a.start_local||''));
-  statusEl.innerHTML=`<span class="dot"></span>last synced ${globalRows[globalRows.length-1].date}`;
+  const latestUsable=[...globalRows].reverse().find(hasDailyData);
+  statusEl.innerHTML=latestUsable
+    ?`<span class="dot"></span>last synced ${latestUsable.date}`
+    :'<span class="dot"></span>no populated daily data yet';
   render();
 }
 main();

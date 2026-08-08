@@ -2,8 +2,9 @@ name: Fetch Garmin Data
 
 on:
   schedule:
-    # Runs daily at 07:00 UTC. Adjust as you like: https://crontab.guru
-    - cron: "0 7 * * *"
+    # Run after the morning Garmin sync (07:00/08:00 Pacific, depending on DST).
+    # The old midnight-Pacific run frequently received an all-null daily summary.
+    - cron: "0 15 * * *"
   workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
 
 permissions:
