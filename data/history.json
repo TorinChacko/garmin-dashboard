@@ -447,10 +447,7 @@
     "resting_hr": null,
     "avg_stress": null,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2021-08-15": {
     "date": "2021-08-15",
@@ -460,10 +457,7 @@
     "resting_hr": null,
     "avg_stress": null,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2021-08-16": {
     "date": "2021-08-16",
@@ -813,10 +807,7 @@
     "resting_hr": null,
     "avg_stress": null,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2021-09-20": {
     "date": "2021-09-20",
@@ -886,10 +877,7 @@
     "resting_hr": null,
     "avg_stress": null,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2021-09-27": {
     "date": "2021-09-27",
@@ -1439,10 +1427,7 @@
     "resting_hr": null,
     "avg_stress": null,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2021-11-21": {
     "date": "2021-11-21",
@@ -1752,10 +1737,7 @@
     "resting_hr": null,
     "avg_stress": null,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2021-12-22": {
     "date": "2021-12-22",
@@ -1765,10 +1747,7 @@
     "resting_hr": null,
     "avg_stress": null,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2021-12-23": {
     "date": "2021-12-23",
@@ -8028,10 +8007,7 @@
     "resting_hr": 44,
     "avg_stress": 6,
     "sleep_seconds": null,
-    "body_battery_charged": 9,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 9
   },
   "2023-09-10": {
     "date": "2023-09-10",
@@ -8521,10 +8497,7 @@
     "resting_hr": 57,
     "avg_stress": 50,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2023-10-29": {
     "date": "2023-10-29",
@@ -8534,10 +8507,7 @@
     "resting_hr": 45,
     "avg_stress": 19,
     "sleep_seconds": null,
-    "body_battery_charged": 10,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 10
   },
   "2023-10-30": {
     "date": "2023-10-30",
@@ -8667,10 +8637,7 @@
     "resting_hr": null,
     "avg_stress": -2,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2023-11-12": {
     "date": "2023-11-12",
@@ -8680,10 +8647,7 @@
     "resting_hr": 44,
     "avg_stress": 11,
     "sleep_seconds": null,
-    "body_battery_charged": 20,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 20
   },
   "2023-11-13": {
     "date": "2023-11-13",
@@ -8803,10 +8767,7 @@
     "resting_hr": 65,
     "avg_stress": 53,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2023-11-25": {
     "date": "2023-11-25",
@@ -8816,10 +8777,7 @@
     "resting_hr": 64,
     "avg_stress": 56,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2023-11-26": {
     "date": "2023-11-26",
@@ -8889,10 +8847,7 @@
     "resting_hr": 56,
     "avg_stress": 34,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2023-12-03": {
     "date": "2023-12-03",
@@ -9042,10 +8997,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2023-12-18": {
     "date": "2023-12-18",
@@ -9095,10 +9047,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2023-12-23": {
     "date": "2023-12-23",
@@ -9108,10 +9057,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2023-12-24": {
     "date": "2023-12-24",
@@ -9131,10 +9077,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2023-12-26": {
     "date": "2023-12-26",
@@ -9144,10 +9087,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2023-12-27": {
     "date": "2023-12-27",
@@ -9157,10 +9097,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2023-12-28": {
     "date": "2023-12-28",
@@ -9170,10 +9107,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2023-12-29": {
     "date": "2023-12-29",
@@ -9283,10 +9217,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-01-09": {
     "date": "2024-01-09",
@@ -9416,10 +9347,7 @@
     "resting_hr": 46,
     "avg_stress": 9,
     "sleep_seconds": null,
-    "body_battery_charged": 21,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 21
   },
   "2024-01-22": {
     "date": "2024-01-22",
@@ -9619,10 +9547,7 @@
     "resting_hr": 61,
     "avg_stress": 36,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-02-11": {
     "date": "2024-02-11",
@@ -9702,10 +9627,7 @@
     "resting_hr": 61,
     "avg_stress": 48,
     "sleep_seconds": null,
-    "body_battery_charged": 6,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 6
   },
   "2024-02-19": {
     "date": "2024-02-19",
@@ -9765,10 +9687,7 @@
     "resting_hr": 45,
     "avg_stress": 11,
     "sleep_seconds": null,
-    "body_battery_charged": 11,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 11
   },
   "2024-02-25": {
     "date": "2024-02-25",
@@ -9908,10 +9827,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-03-10": {
     "date": "2024-03-10",
@@ -10261,10 +10177,7 @@
     "resting_hr": 56,
     "avg_stress": 39,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-04-14": {
     "date": "2024-04-14",
@@ -10414,10 +10327,7 @@
     "resting_hr": 47,
     "avg_stress": 55,
     "sleep_seconds": null,
-    "body_battery_charged": 1,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 1
   },
   "2024-04-29": {
     "date": "2024-04-29",
@@ -10467,10 +10377,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-05-04": {
     "date": "2024-05-04",
@@ -10620,10 +10527,7 @@
     "resting_hr": 60,
     "avg_stress": 37,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-05-19": {
     "date": "2024-05-19",
@@ -10643,10 +10547,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-05-21": {
     "date": "2024-05-21",
@@ -10706,10 +10607,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-05-27": {
     "date": "2024-05-27",
@@ -10719,10 +10617,7 @@
     "resting_hr": 47,
     "avg_stress": 48,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-05-28": {
     "date": "2024-05-28",
@@ -10812,10 +10707,7 @@
     "resting_hr": 65,
     "avg_stress": 60,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-06-06": {
     "date": "2024-06-06",
@@ -10885,10 +10777,7 @@
     "resting_hr": 48,
     "avg_stress": 43,
     "sleep_seconds": null,
-    "body_battery_charged": 2,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 2
   },
   "2024-06-13": {
     "date": "2024-06-13",
@@ -10918,10 +10807,7 @@
     "resting_hr": 60,
     "avg_stress": 56,
     "sleep_seconds": null,
-    "body_battery_charged": 13,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 13
   },
   "2024-06-16": {
     "date": "2024-06-16",
@@ -10961,10 +10847,7 @@
     "resting_hr": 60,
     "avg_stress": 54,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-06-20": {
     "date": "2024-06-20",
@@ -10994,10 +10877,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-06-23": {
     "date": "2024-06-23",
@@ -11007,10 +10887,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-06-24": {
     "date": "2024-06-24",
@@ -11020,10 +10897,7 @@
     "resting_hr": 47,
     "avg_stress": 67,
     "sleep_seconds": null,
-    "body_battery_charged": 6,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 6
   },
   "2024-06-25": {
     "date": "2024-06-25",
@@ -11083,10 +10957,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-01": {
     "date": "2024-07-01",
@@ -11096,10 +10967,7 @@
     "resting_hr": 54,
     "avg_stress": 40,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-07-02": {
     "date": "2024-07-02",
@@ -11109,10 +10977,7 @@
     "resting_hr": 65,
     "avg_stress": 56,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-07-03": {
     "date": "2024-07-03",
@@ -11122,10 +10987,7 @@
     "resting_hr": 60,
     "avg_stress": 47,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-07-04": {
     "date": "2024-07-04",
@@ -11135,10 +10997,7 @@
     "resting_hr": 56,
     "avg_stress": 57,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-07-05": {
     "date": "2024-07-05",
@@ -11158,10 +11017,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-07": {
     "date": "2024-07-07",
@@ -11171,10 +11027,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-08": {
     "date": "2024-07-08",
@@ -11184,10 +11037,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-09": {
     "date": "2024-07-09",
@@ -11217,10 +11067,7 @@
     "resting_hr": 61,
     "avg_stress": 45,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-07-12": {
     "date": "2024-07-12",
@@ -11240,10 +11087,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-14": {
     "date": "2024-07-14",
@@ -11263,10 +11107,7 @@
     "resting_hr": 56,
     "avg_stress": 43,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-07-16": {
     "date": "2024-07-16",
@@ -11286,10 +11127,7 @@
     "resting_hr": 61,
     "avg_stress": 54,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-07-18": {
     "date": "2024-07-18",
@@ -11309,10 +11147,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-20": {
     "date": "2024-07-20",
@@ -11322,10 +11157,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-21": {
     "date": "2024-07-21",
@@ -11335,10 +11167,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-22": {
     "date": "2024-07-22",
@@ -11348,10 +11177,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-23": {
     "date": "2024-07-23",
@@ -11361,10 +11187,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-24": {
     "date": "2024-07-24",
@@ -11394,10 +11217,7 @@
     "resting_hr": 68,
     "avg_stress": 41,
     "sleep_seconds": null,
-    "body_battery_charged": 7,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 7
   },
   "2024-07-27": {
     "date": "2024-07-27",
@@ -11407,10 +11227,7 @@
     "resting_hr": 62,
     "avg_stress": 50,
     "sleep_seconds": null,
-    "body_battery_charged": 1,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 1
   },
   "2024-07-28": {
     "date": "2024-07-28",
@@ -11430,10 +11247,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-07-30": {
     "date": "2024-07-30",
@@ -11463,10 +11277,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-08-02": {
     "date": "2024-08-02",
@@ -11526,10 +11337,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-08-08": {
     "date": "2024-08-08",
@@ -11549,10 +11357,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-08-10": {
     "date": "2024-08-10",
@@ -11562,10 +11367,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-08-11": {
     "date": "2024-08-11",
@@ -11595,10 +11397,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-08-14": {
     "date": "2024-08-14",
@@ -11618,10 +11417,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-08-16": {
     "date": "2024-08-16",
@@ -11631,10 +11427,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-08-17": {
     "date": "2024-08-17",
@@ -11644,10 +11437,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-08-18": {
     "date": "2024-08-18",
@@ -11727,10 +11517,7 @@
     "resting_hr": 68,
     "avg_stress": 64,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-08-26": {
     "date": "2024-08-26",
@@ -11810,10 +11597,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-03": {
     "date": "2024-09-03",
@@ -11833,10 +11617,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-05": {
     "date": "2024-09-05",
@@ -11856,10 +11637,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-07": {
     "date": "2024-09-07",
@@ -11869,10 +11647,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-08": {
     "date": "2024-09-08",
@@ -11882,10 +11657,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-09": {
     "date": "2024-09-09",
@@ -11895,10 +11667,7 @@
     "resting_hr": 54,
     "avg_stress": 39,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-09-10": {
     "date": "2024-09-10",
@@ -11908,10 +11677,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-11": {
     "date": "2024-09-11",
@@ -11921,10 +11687,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-12": {
     "date": "2024-09-12",
@@ -11934,10 +11697,7 @@
     "resting_hr": 54,
     "avg_stress": 28,
     "sleep_seconds": null,
-    "body_battery_charged": 0,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 0
   },
   "2024-09-13": {
     "date": "2024-09-13",
@@ -11947,10 +11707,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-14": {
     "date": "2024-09-14",
@@ -11960,10 +11717,7 @@
     "resting_hr": null,
     "avg_stress": -2,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-09-15": {
     "date": "2024-09-15",
@@ -11983,10 +11737,7 @@
     "resting_hr": 62,
     "avg_stress": 47,
     "sleep_seconds": null,
-    "body_battery_charged": 16,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 16
   },
   "2024-09-17": {
     "date": "2024-09-17",
@@ -12886,10 +12637,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2024-12-16": {
     "date": "2024-12-16",
@@ -12959,10 +12707,7 @@
     "resting_hr": 62,
     "avg_stress": 50,
     "sleep_seconds": null,
-    "body_battery_charged": 19,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 19
   },
   "2024-12-23": {
     "date": "2024-12-23",
@@ -13162,10 +12907,7 @@
     "resting_hr": null,
     "avg_stress": -1,
     "sleep_seconds": null,
-    "body_battery_charged": null,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": null
   },
   "2025-01-12": {
     "date": "2025-01-12",
@@ -13195,10 +12937,7 @@
     "resting_hr": 54,
     "avg_stress": 39,
     "sleep_seconds": null,
-    "body_battery_charged": 2,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
+    "body_battery_charged": 2
   },
   "2025-01-15": {
     "date": "2025-01-15",
@@ -19055,19 +18794,6 @@
     "avg_stress": 19,
     "sleep_seconds": 26182,
     "body_battery_charged": 87,
-    "vo2max_running": null,
-    "vo2max_cycling": null,
-    "training_readiness": null
-  },
-  "2026-08-08": {
-    "date": "2026-08-08",
-    "steps": null,
-    "calories": null,
-    "distance_km": null,
-    "resting_hr": null,
-    "avg_stress": null,
-    "sleep_seconds": null,
-    "body_battery_charged": null,
     "vo2max_running": null,
     "vo2max_cycling": null,
     "training_readiness": null
