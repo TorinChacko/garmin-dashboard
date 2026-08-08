@@ -131,34 +131,7 @@ body::before{
   background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,0,0,.14) 3px 4px);
   mix-blend-mode:multiply;
 }
-.shoe-rail{
-  position:fixed;top:118px;bottom:72px;width:92px;z-index:0;pointer-events:none;
-  display:flex;flex-direction:column;justify-content:space-around;align-items:center;
-  color:var(--accent);opacity:.34;
-}
-.shoe-rail::before{
-  content:"";position:absolute;top:0;bottom:0;left:50%;border-left:1px dashed currentColor;
-  opacity:.36;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);
-  mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);
-}
-.shoe-rail--left{left:max(8px,calc(50vw - 666px));}
-.shoe-rail--right{right:max(8px,calc(50vw - 666px));}
-.shoe-mark{
-  position:relative;width:76px;height:46px;overflow:visible;fill:none;stroke:currentColor;
-  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
-  filter:drop-shadow(0 0 7px color-mix(in srgb,var(--accent) 35%,transparent));
-  animation:shoeStride 4.8s ease-in-out infinite;
-}
-.shoe-mark:nth-child(2){animation-delay:-2.4s;transform:scaleX(-1);}
-.shoe-rail--right .shoe-mark{transform:scaleX(-1);}
-.shoe-rail--right .shoe-mark:nth-child(2){transform:none;}
-.shoe-tread{stroke-dasharray:4 5;opacity:.72;}
-@keyframes shoeStride{
-  0%,100%{translate:0 0;rotate:-4deg;opacity:.68}
-  50%{translate:0 -9px;rotate:3deg;opacity:1}
-}
-@media(max-width:1320px){.shoe-rail{display:none;}}
-header{position:relative;padding-top:10px;overflow:hidden;}
+header{position:relative;z-index:10;padding-top:10px;overflow:visible;}
 header::before{
   content:"";position:absolute;top:0;left:0;width:94px;height:3px;background:var(--red);
   box-shadow:108px 0 0 var(--accent),216px 0 0 var(--line),324px 0 0 var(--line);
@@ -213,14 +186,6 @@ tbody tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent);}
 </style>
 </head>
 <body>
-<div class="shoe-rail shoe-rail--left" aria-hidden="true">
-  <svg class="shoe-mark" viewBox="0 0 120 70"><path d="M8 48c10-2 19-7 27-17l12-16 13 8c10 7 17 12 29 14l18 3c4 1 6 4 6 8v5H10c-5 0-6-4-2-5Z"/><path d="m38 29 17 7 16-7m-25-7 19 10m-51 21c26 5 72 5 99 0"/><path class="shoe-tread" d="M18 59h84"/></svg>
-  <svg class="shoe-mark" viewBox="0 0 120 70"><path d="M8 48c10-2 19-7 27-17l12-16 13 8c10 7 17 12 29 14l18 3c4 1 6 4 6 8v5H10c-5 0-6-4-2-5Z"/><path d="m38 29 17 7 16-7m-25-7 19 10m-51 21c26 5 72 5 99 0"/><path class="shoe-tread" d="M18 59h84"/></svg>
-</div>
-<div class="shoe-rail shoe-rail--right" aria-hidden="true">
-  <svg class="shoe-mark" viewBox="0 0 120 70"><path d="M8 48c10-2 19-7 27-17l12-16 13 8c10 7 17 12 29 14l18 3c4 1 6 4 6 8v5H10c-5 0-6-4-2-5Z"/><path d="m38 29 17 7 16-7m-25-7 19 10m-51 21c26 5 72 5 99 0"/><path class="shoe-tread" d="M18 59h84"/></svg>
-  <svg class="shoe-mark" viewBox="0 0 120 70"><path d="M8 48c10-2 19-7 27-17l12-16 13 8c10 7 17 12 29 14l18 3c4 1 6 4 6 8v5H10c-5 0-6-4-2-5Z"/><path d="m38 29 17 7 16-7m-25-7 19 10m-51 21c26 5 72 5 99 0"/><path class="shoe-tread" d="M18 59h84"/></svg>
-</div>
 <div class="wrap">
 
 <header>
@@ -233,9 +198,9 @@ tbody tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent);}
       <div class="maxhr-wrap">
         MAX HR <input type="number" id="maxHrInput" value="201" min="150" max="220" onchange="render()"/> bpm
       </div>
-      <button class="btn" id="btnTheme" onclick="toggleThemePanel()">THEME</button>
+      <button class="btn" id="btnTheme" aria-controls="themePanel" aria-expanded="false" onclick="toggleThemePanel()">THEME</button>
     </div>
-    <div class="theme-panel" id="themePanel">
+    <div class="theme-panel" id="themePanel" role="dialog" aria-label="Theme colors">
       <h3>Color Scheme</h3>
       <div class="theme-row"><label for="theme_bg">Background</label><input type="color" id="theme_bg" oninput="onThemeInputChange()"/></div>
       <div class="theme-row"><label for="theme_panel">Panel</label><input type="color" id="theme_panel" oninput="onThemeInputChange()"/></div>
@@ -321,15 +286,26 @@ function resetTheme(){
   applyTheme(DEFAULT_THEME);
 }
 
-function toggleThemePanel(){
-  document.getElementById('themePanel').classList.toggle('open');
+function toggleThemePanel(force){
+  const panel=document.getElementById('themePanel');
+  const btn=document.getElementById('btnTheme');
+  const shouldOpen=typeof force==='boolean'?force:!panel.classList.contains('open');
+  panel.classList.toggle('open',shouldOpen);
+  btn.setAttribute('aria-expanded',String(shouldOpen));
+  if(shouldOpen)requestAnimationFrame(()=>panel.querySelector('input')?.focus());
 }
 
 document.addEventListener('click', (e)=>{
   const panel = document.getElementById('themePanel');
   const btn = document.getElementById('btnTheme');
   if(panel.classList.contains('open') && !panel.contains(e.target) && e.target!==btn){
-    panel.classList.remove('open');
+    toggleThemePanel(false);
+  }
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&document.getElementById('themePanel').classList.contains('open')){
+    toggleThemePanel(false);
+    document.getElementById('btnTheme').focus();
   }
 });
 
