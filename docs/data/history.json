@@ -18787,14 +18787,27 @@
   },
   "2026-08-07": {
     "date": "2026-08-07",
-    "steps": 14256,
-    "calories": 2563.0,
-    "distance_km": 14.85,
+    "steps": 14383,
+    "calories": 2742.0,
+    "distance_km": 14.95,
     "resting_hr": 45,
-    "avg_stress": 28,
+    "avg_stress": 32,
     "sleep_seconds": 26182,
     "body_battery_charged": 87,
     "vo2max_running": 62.0,
+    "vo2max_cycling": null,
+    "training_readiness": null
+  },
+  "2026-08-08": {
+    "date": "2026-08-08",
+    "steps": 231,
+    "calories": 995.0,
+    "distance_km": 0.18,
+    "resting_hr": 42,
+    "avg_stress": 18,
+    "sleep_seconds": 27180,
+    "body_battery_charged": 88,
+    "vo2max_running": null,
     "vo2max_cycling": null,
     "training_readiness": null
   }
