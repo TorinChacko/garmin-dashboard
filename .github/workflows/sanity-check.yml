@@ -1,0 +1,25 @@
+name: Site Sanity Check
+
+# Runs on every push, independent of the data-fetch workflows, so a bad
+# commit (encoding corruption, malformed data) is flagged in CI before it
+# sits live on GitHub Pages.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check for encoding corruption
+        run: python scripts/check_encoding.py

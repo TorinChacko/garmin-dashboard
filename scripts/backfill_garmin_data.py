@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-One-time historical backfill â€” pulls years of past Garmin data.
+One-time historical backfill — pulls years of past Garmin data.
 
 This is SEPARATE from scripts/fetch_garmin_data.py (your daily job).
 Run this once (likely across a few re-runs, since Garmin rate-limits),
@@ -87,7 +87,7 @@ def safe_get(fn, *args, default=None):
     try:
         return fn(*args)
     except GarminConnectTooManyRequestsError:
-        raise  # bubble up â€” caller needs to stop the whole run
+        raise  # bubble up — caller needs to stop the whole run
     except Exception as e:
         print(f"    (skipped one field: {e})")
         return default
@@ -208,7 +208,7 @@ def backfill_activities(garmin, activities, delay, max_to_fetch):
         print(f"  +{new_in_this_page} new activities this page ({fetched_new} total this run)")
 
         if new_in_this_page == 0:
-            print("  Entire page already known â€” caught up with activity history.")
+            print("  Entire page already known — caught up with activity history.")
             break
 
         start += page_size

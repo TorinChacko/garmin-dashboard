@@ -3,14 +3,14 @@
 Runs in GitHub Actions on a schedule.
 
 1. Restores the Garmin token from the GARMIN_TOKENS_B64 secret (no password
-   needed â€” that's the whole point of doing login_once.py locally first).
+   needed — that's the whole point of doing login_once.py locally first).
 2. Pulls a handful of daily stats.
 3. Appends/updates a row in data/history.json (one row per day).
 4. Re-saves the (possibly refreshed) token back out, so the next run still
    works even after Garmin rotates the access token.
 
 If the refresh token itself has expired (this can happen every few months),
-this script will fail with an auth error â€” see README "Token expired" section
+this script will fail with an auth error — see README "Token expired" section
 for how to redo login_once.py.
 """
 
@@ -85,16 +85,16 @@ def login():
         return garmin
     except (GarminConnectAuthenticationError, GarminConnectConnectionError) as e:
         print(f"ERROR: could not log in with saved token: {e}")
-        write_step_summary("âŒ Garmin token expired", [
-            "Your saved Garmin login token has stopped working â€” this happens",
+        write_step_summary("❌ Garmin token expired", [
+            "Your saved Garmin login token has stopped working — this happens",
             "every few months and is expected, not a bug.",
             "",
             "**To fix it (5 minutes), on your own computer:**",
             "1. `python login_once.py`",
             "2. `python pack_token.py`",
             "3. Copy the contents of `garmin_tokens_b64.txt`",
-            "4. GitHub repo â†’ Settings â†’ Secrets and variables â†’ Actions",
-            "   â†’ edit `GARMIN_TOKENS_B64` â†’ paste the new value â†’ Save",
+            "4. GitHub repo → Settings → Secrets and variables → Actions",
+            "   → edit `GARMIN_TOKENS_B64` → paste the new value → Save",
             "5. Re-run this workflow from the Actions tab to confirm it works",
             "",
             f"_Raw error: {e}_",
@@ -102,8 +102,8 @@ def login():
         sys.exit(1)
     except GarminConnectTooManyRequestsError as e:
         print(f"Rate limited by Garmin: {e}")
-        write_step_summary("â³ Rate limited by Garmin", [
-            "No action needed â€” Garmin temporarily rate-limited this run.",
+        write_step_summary("⏳ Rate limited by Garmin", [
+            "No action needed — Garmin temporarily rate-limited this run.",
             "It will self-heal on the next scheduled run.",
             "",
             f"_Raw error: {e}_",
@@ -261,7 +261,7 @@ def main():
     save_history(history)
     print(f"Saved {len(history)} total days to {DATA_FILE}")
 
-    # Activities (runs, rides, etc.) â€” pulls the most recent N; upserts by
+    # Activities (runs, rides, etc.) — pulls the most recent N; upserts by
     # activity ID so re-runs don't duplicate, and old activities outside
     # this window stay untouched.
     activity_fetch_limit = int(os.environ.get("ACTIVITY_FETCH_LIMIT", "50"))
@@ -272,7 +272,7 @@ def main():
     save_activities(activities)
     print(f"Saved {len(activities)} total activities to {ACTIVITIES_FILE}")
 
-    write_step_summary("âœ… Garmin sync OK", [
+    write_step_summary("✅ Garmin sync OK", [
         f"Fetched the last {backfill_days} days. {len(history)} total days now stored.",
         f"Fetched last {activity_fetch_limit} activities. {len(activities)} total activities now stored.",
         f"Most recent date pulled: {today.isoformat()}",
