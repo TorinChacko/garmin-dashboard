@@ -1,105 +1,152 @@
 # Garmin Field Log
-https://torinchacko.github.io/garmin-dashboard/
-Pulls your Garmin Connect stats daily via GitHub Actions and renders them on a
-free dashboard hosted with GitHub Pages. No server, no always-on machine —
-GitHub runs the fetch on a schedule and commits the new data; Pages serves
-the static page that reads it.
-(New added Backfill feature for past years' activities)
 
-## How it fits together
+[![Live dashboard](https://img.shields.io/badge/live-dashboard-18c58f)](https://torinchacko.github.io/garmin-dashboard/)
+[![Site Sanity Check](https://github.com/TorinChacko/garmin-dashboard/actions/workflows/sanity-check.yml/badge.svg)](https://github.com/TorinChacko/garmin-dashboard/actions/workflows/sanity-check.yml)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-3776ab)](https://www.python.org/)
 
+An automated fitness analytics pipeline that turns Garmin Connect data into a
+fast, serverless dashboard. Python fetches and validates the data, GitHub Actions
+runs the pipeline on a schedule, and GitHub Pages serves the visualization—no
+dedicated server required.
+
+**[Open the live dashboard →](https://torinchacko.github.io/garmin-dashboard/)**
+
+The current dataset contains more than 1,800 daily summaries across five years
+and over 90 detailed activities.
+
+## Why I built it
+
+Garmin presents useful daily metrics, but it is difficult to explore several
+years of health and training history together. I built Garmin Field Log to own
+the complete data path: authenticated ingestion, resumable historical backfill,
+normalization, data-quality checks, automated deployment, and interactive
+time-series visualization.
+
+## Engineering highlights
+
+- Scheduled, incremental ingestion with a five-day self-healing window
+- Resumable multi-year backfills that preserve progress when rate limited
+- Idempotent activity upserts keyed by Garmin activity ID
+- Defensive normalization of partial and inconsistent API responses
+- Validation gates that reject malformed, future, empty, or destructive updates
+- MFA-compatible local login and one-command GitHub secret renewal
+- Mirrored source and GitHub Pages datasets with deterministic JSON ordering
+- Unit tests, linting, encoding checks, and CI on every push and pull request
+
+## Architecture
+
+```mermaid
+flowchart LR
+    G[Garmin Connect] -->|authenticated requests| P[Python ingestion package]
+    S[GitHub encrypted secret] -->|restores OAuth tokens| P
+    P --> N[Normalize and merge]
+    N --> V[Data validation]
+    V --> J[Versioned JSON datasets]
+    J --> D[GitHub Pages dashboard]
+    A[Scheduled GitHub Actions] --> P
+    B[Manual backfill workflow] --> P
 ```
-login_once.py        →  run locally once, logs into Garmin, saves a token
-pack_token.py         →  packs that token into one string for a GitHub Secret
-scripts/fetch_garmin_data.py
-                      →  runs in GitHub Actions daily, restores the token,
-                         pulls stats, writes data/history.json + docs/data/history.json
-docs/index.html       →  static dashboard, served by GitHub Pages from /docs,
-                         reads docs/data/history.json at page load
+
+The daily workflow requests recent summaries and activities, merges them into
+stable JSON objects, validates the proposed changes, and publishes the updated
+data. The separate backfill workflow pages through older history and can be
+safely rerun after interruption or rate limiting.
+
+## Technology
+
+- **Python 3.12:** ingestion, transformation, validation, and token tooling
+- **garminconnect / curl-cffi:** Garmin Connect client and HTTP transport
+- **pytest / Ruff:** automated testing and static analysis
+- **GitHub Actions:** scheduled ingestion, backfills, and CI
+- **GitHub Pages:** serverless static hosting
+- **Vanilla JavaScript, HTML, and CSS:** responsive interactive dashboard
+
+## Repository layout
+
+```text
+src/garmin_dashboard/       reusable auth, transformation, and storage modules
+scripts/                    daily ingestion, backfill, validation, encoding checks
+tests/                      unit tests for token safety and data normalization
+data/                       canonical daily and activity JSON
+docs/                       GitHub Pages dashboard and mirrored data
+.github/workflows/          CI, scheduled ingestion, and manual backfill jobs
+login_once.py               interactive local Garmin login
+pack_token.py               GitHub Secret encoder
+renew_token.cmd             one-command Windows token renewal
 ```
 
-## Setup (Windows)
+## Local development
 
-### 1. Local environment
+Requirements: Python 3.12 or newer.
 
 ```powershell
+git clone https://github.com/TorinChacko/garmin-dashboard.git
+cd garmin-dashboard
 python -m venv .venv
 .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -e ".[dev]"
+pytest
+ruff check .
 ```
 
-### 2. Log in once, locally
+To preview the dashboard locally:
+
+```powershell
+python -m http.server 8000 --directory docs
+```
+
+Then open `http://localhost:8000`.
+
+## Garmin authentication setup
+
+Garmin authentication is performed locally so the account password is never
+stored in the repository or GitHub Actions.
 
 ```powershell
 python login_once.py
-```
-
-Enter your Garmin email/password (and MFA code if prompted). This creates a
-`garmin_tokens/` folder — **do not commit this folder**, it's already in
-`.gitignore`.
-
-### 3. Pack the token for GitHub
-
-```powershell
 python pack_token.py
 ```
 
-This writes `garmin_tokens_b64.txt`. Open it and copy the whole contents.
+Create a GitHub Actions repository secret named `GARMIN_TOKENS_B64` using the
+contents of `garmin_tokens_b64.txt`. Both the token directory and encoded file
+are ignored by Git. Delete the encoded file after confirming the workflow works.
 
-### 4. Create the GitHub repo + secret
-
-1. Push this folder to a new GitHub repo (private is fine).
-2. In the repo: **Settings → Secrets and variables → Actions → New repository secret**
-3. Name: `GARMIN_TOKENS_B64`
-4. Value: paste the contents of `garmin_tokens_b64.txt`
-5. Delete `garmin_tokens_b64.txt` from your computer afterward — it contains a
-   live session token.
-
-### 5. Enable GitHub Pages
-
-**Settings → Pages → Source: Deploy from a branch → Branch: `main` /
-folder: `/docs`** → Save.
-
-GitHub will give you a URL like `https://<you>.github.io/<repo>/` — that's
-your dashboard.
-
-### 6. Run it
-
-Go to the **Actions** tab → "Fetch Garmin Data" → **Run workflow** to trigger
-it manually the first time. After that it runs automatically every day at
-07:00 UTC (edit the `cron` line in `.github/workflows/fetch-data.yml` to
-change the time).
-
-
-## When the token expires
-
-Garmin's refresh token is long-lived but not infinite. If the Action starts
-failing with an authentication error, renew it from PowerShell with one command:
+On Windows, expired tokens can be renewed and printed for manual pasting with:
 
 ```powershell
 .\renew_token.cmd
 ```
 
-The script prompts for the Garmin login and MFA code, creates
-`garmin_tokens_b64.txt`, and prints its contents between clear markers. Copy the
-value into the existing `GARMIN_TOKENS_B64` repository secret using the link the
-script prints.
-
-If [GitHub CLI](https://cli.github.com/) is installed and authenticated, the
-entire GitHub update can be done without printing the token:
+If GitHub CLI is installed and authenticated, update the secret automatically
+without printing its value:
 
 ```powershell
 .\renew_token.cmd -Upload
 ```
 
-After confirming the next workflow run succeeds, delete
-`garmin_tokens_b64.txt` because it contains a live session token.
+## Data-quality safeguards
 
-## Notes on safety
+Before an automated update is committed, the validator confirms that:
 
-- Your Garmin password is never stored anywhere — only the OAuth token is,
-  and only as an encrypted GitHub Secret (never visible in logs or to repo
-  collaborators without secret access).
-- If you fork or make this repo public, the workflow file and code are fine
-  to share; never share the contents of `garmin_tokens_b64.txt` or paste it
-  anywhere other than the GitHub Secret field.
+- source and deployed datasets are identical;
+- dates and metric ranges are valid;
+- populated records are not replaced with empty responses;
+- historical days and activities are not silently removed; and
+- Garmin has not returned a future-dated record.
+
+These checks protect the dashboard from transient API responses and accidental
+destructive updates.
+
+## Privacy and security
+
+This deployment intentionally visualizes personal fitness data. Anyone adapting
+the project should decide which metrics are appropriate to publish. OAuth token
+files, encoded secrets, passwords, and MFA codes must never be committed.
+
+Garmin Field Log is a personal project and is not affiliated with or endorsed by
+Garmin.
+
+## License
+
+The source code is available under the [MIT License](LICENSE). Personal data in
+the repository is not granted for reuse.

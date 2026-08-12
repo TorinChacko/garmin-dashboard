@@ -24,8 +24,11 @@ from pathlib import Path
 CHECKED_GLOBS = [
     "docs/*.html",
     "scripts/*.py",
+    "src/**/*.py",
+    "tests/*.py",
     ".github/workflows/*.yml",
     "*.md",
+    "*.toml",
 ]
 
 # Byte sequences that only show up when UTF-8 text gets misread as

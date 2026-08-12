@@ -9,17 +9,12 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from garmin_dashboard.data import has_daily_data
 
 HISTORY_PATH = Path("data/history.json")
 DOCS_HISTORY_PATH = Path("docs/data/history.json")
 ACTIVITIES_PATH = Path("data/activities.json")
 DOCS_ACTIVITIES_PATH = Path("docs/data/activities.json")
-
-DAILY_DATA_FIELDS = (
-    "steps", "calories", "distance_km", "resting_hr", "avg_stress",
-    "sleep_seconds", "body_battery_charged", "vo2max_running",
-    "vo2max_cycling", "training_readiness",
-)
 
 RANGES = {
     "steps": (0, 200_000),
@@ -59,12 +54,6 @@ def load_previous(path):
         raise ValueError(f"Previous {path} is not valid JSON: {exc}") from exc
 
 
-def has_daily_data(record):
-    return isinstance(record, dict) and any(
-        record.get(field) is not None for field in DAILY_DATA_FIELDS
-    )
-
-
 def validate_changed_record(day, record, errors):
     if not isinstance(record, dict):
         errors.append(f"{day}: daily record is not an object")
@@ -78,9 +67,7 @@ def validate_changed_record(day, record, errors):
         if isinstance(value, bool) or not isinstance(value, (int, float)):
             errors.append(f"{day}: {field} is not numeric ({value!r})")
         elif not minimum <= value <= maximum:
-            errors.append(
-                f"{day}: {field}={value!r} is outside {minimum}..{maximum}"
-            )
+            errors.append(f"{day}: {field}={value!r} is outside {minimum}..{maximum}")
 
 
 def validate():
@@ -123,15 +110,12 @@ def validate():
     )
     if destructive_removals:
         errors.append(
-            "Refusing to remove populated history dates: "
-            + ", ".join(destructive_removals[:10])
+            "Refusing to remove populated history dates: " + ", ".join(destructive_removals[:10])
         )
 
     removed_activities = set(previous_activities) - set(activities)
     if removed_activities:
-        errors.append(
-            f"Refusing to remove {len(removed_activities)} existing activities"
-        )
+        errors.append(f"Refusing to remove {len(removed_activities)} existing activities")
 
     if errors:
         print("Garmin data validation FAILED:", file=sys.stderr)
@@ -139,9 +123,7 @@ def validate():
             print(f"  - {error}", file=sys.stderr)
         return 1
 
-    changed_days = sum(
-        previous_history.get(day) != record for day, record in history.items()
-    )
+    changed_days = sum(previous_history.get(day) != record for day, record in history.items())
     print(
         "Garmin data validation passed: "
         f"{len(history)} days ({changed_days} changed), "

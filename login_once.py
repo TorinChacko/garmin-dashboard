@@ -11,12 +11,13 @@ Usage (Windows):
     python login_once.py
 """
 
-from pathlib import Path
 from getpass import getpass
+from pathlib import Path
 
 from garminconnect import Garmin
 
 TOKEN_DIR = Path("./garmin_tokens")
+
 
 def main():
     email = input("Garmin email: ").strip()
@@ -31,6 +32,7 @@ def main():
 
     print(f"\nSuccess. Tokens saved to: {TOKEN_DIR.resolve()}")
     print("Next: run 'python pack_token.py' to prepare it for GitHub Secrets.")
+
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,9 @@
 .venv/
 __pycache__/
 *.pyc
+.pytest_cache/
+*.egg-info/
+.ruff_cache/
 
 # NEVER commit these — local-only auth artifacts
 garmin_tokens/
