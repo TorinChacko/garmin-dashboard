@@ -77,7 +77,7 @@ Garmin's refresh token is long-lived but not infinite. If the Action starts
 failing with an authentication error, renew it from PowerShell with one command:
 
 ```powershell
-.\renew_token.ps1
+.\renew_token.cmd
 ```
 
 The script prompts for the Garmin login and MFA code, creates
@@ -89,7 +89,7 @@ If [GitHub CLI](https://cli.github.com/) is installed and authenticated, the
 entire GitHub update can be done without printing the token:
 
 ```powershell
-.\renew_token.ps1 -Upload
+.\renew_token.cmd -Upload
 ```
 
 After confirming the next workflow run succeeds, delete
