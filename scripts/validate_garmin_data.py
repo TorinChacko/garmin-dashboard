@@ -10,26 +10,12 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from garmin_dashboard.data import has_daily_data
+from garmin_dashboard.validation import validate_changed_record
 
 HISTORY_PATH = Path("data/history.json")
 DOCS_HISTORY_PATH = Path("docs/data/history.json")
 ACTIVITIES_PATH = Path("data/activities.json")
 DOCS_ACTIVITIES_PATH = Path("docs/data/activities.json")
-
-RANGES = {
-    "steps": (0, 200_000),
-    "calories": (0, 30_000),
-    "distance_km": (0, 1_000),
-    "resting_hr": (20, 250),
-    # Garmin uses -1/-2 sentinels on some historical stress summaries.
-    "avg_stress": (-2, 100),
-    "sleep_seconds": (0, 172_800),
-    "body_battery_charged": (0, 100),
-    "vo2max_running": (0, 100),
-    "vo2max_cycling": (0, 100),
-    "training_readiness": (0, 100),
-}
-
 
 def load_json(path):
     try:
@@ -52,22 +38,6 @@ def load_previous(path):
         return json.loads(result.stdout)
     except json.JSONDecodeError as exc:
         raise ValueError(f"Previous {path} is not valid JSON: {exc}") from exc
-
-
-def validate_changed_record(day, record, errors):
-    if not isinstance(record, dict):
-        errors.append(f"{day}: daily record is not an object")
-        return
-    if record.get("date") != day:
-        errors.append(f"{day}: embedded date is {record.get('date')!r}")
-    for field, (minimum, maximum) in RANGES.items():
-        value = record.get(field)
-        if value is None:
-            continue
-        if isinstance(value, bool) or not isinstance(value, (int, float)):
-            errors.append(f"{day}: {field} is not numeric ({value!r})")
-        elif not minimum <= value <= maximum:
-            errors.append(f"{day}: {field}={value!r} is outside {minimum}..{maximum}")
 
 
 def validate():

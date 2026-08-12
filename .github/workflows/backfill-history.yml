@@ -18,6 +18,10 @@ on:
         required: false
         default: "500"
 
+concurrency:
+  group: garmin-data-writer
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -54,4 +58,12 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/history.json docs/data/history.json data/activities.json docs/data/activities.json
           git diff --cached --quiet || git commit -m "Backfill Garmin history $(date -u +%F)"
-          git push
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying against the latest main branch."
+          done
+          exit 1

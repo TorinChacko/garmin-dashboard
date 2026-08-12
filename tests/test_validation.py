@@ -1,4 +1,4 @@
-from scripts.validate_garmin_data import validate_changed_record
+from garmin_dashboard.validation import validate_changed_record
 
 
 def test_validation_accepts_a_well_formed_record():
