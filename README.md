@@ -74,8 +74,26 @@ change the time).
 ## When the token expires
 
 Garmin's refresh token is long-lived but not infinite. If the Action starts
-failing with an authentication error, redo steps 2–4 (`login_once.py` →
-`pack_token.py` → update the `GARMIN_TOKENS_B64` secret).
+failing with an authentication error, renew it from PowerShell with one command:
+
+```powershell
+.\renew_token.ps1
+```
+
+The script prompts for the Garmin login and MFA code, creates
+`garmin_tokens_b64.txt`, and prints its contents between clear markers. Copy the
+value into the existing `GARMIN_TOKENS_B64` repository secret using the link the
+script prints.
+
+If [GitHub CLI](https://cli.github.com/) is installed and authenticated, the
+entire GitHub update can be done without printing the token:
+
+```powershell
+.\renew_token.ps1 -Upload
+```
+
+After confirming the next workflow run succeeds, delete
+`garmin_tokens_b64.txt` because it contains a live session token.
 
 ## Notes on safety
 
