@@ -1,4 +1,30 @@
 {
+  "23956811777": {
+    "activity_id": 23956811777,
+    "name": "Marin County Running",
+    "type": "running",
+    "start_local": "2026-08-12 18:57:37",
+    "duration_seconds": 1560.6629638671875,
+    "distance_km": 4.9,
+    "calories": 294.0,
+    "avg_hr": 140.0,
+    "max_hr": 164.0,
+    "pace_min_per_km": 5.31,
+    "elevation_gain_m": 68.0
+  },
+  "23956670513": {
+    "activity_id": 23956670513,
+    "name": "San Rafael Running",
+    "type": "running",
+    "start_local": "2026-08-12 18:19:57",
+    "duration_seconds": 1527.9720458984375,
+    "distance_km": 4.74,
+    "calories": 277.0,
+    "avg_hr": 138.0,
+    "max_hr": 156.0,
+    "pace_min_per_km": 5.37,
+    "elevation_gain_m": 21.0
+  },
   "23944014573": {
     "activity_id": 23944014573,
     "name": "San Rafael Running",
