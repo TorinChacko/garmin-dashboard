@@ -1,4 +1,17 @@
 {
+  "23969336347": {
+    "activity_id": 23969336347,
+    "name": "San Rafael - 3x5k",
+    "type": "running",
+    "start_local": "2026-08-13 17:57:10",
+    "duration_seconds": 5846.62109375,
+    "distance_km": 22.82,
+    "calories": 1308.0,
+    "avg_hr": 166.0,
+    "max_hr": 191.0,
+    "pace_min_per_km": 4.27,
+    "elevation_gain_m": 102.0
+  },
   "23956811777": {
     "activity_id": 23956811777,
     "name": "Marin County Running",
