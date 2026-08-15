@@ -1,4 +1,30 @@
 {
+  "23980913529": {
+    "activity_id": 23980913529,
+    "name": "San Rafael Running",
+    "type": "running",
+    "start_local": "2026-08-14 19:43:36",
+    "duration_seconds": 1578.35400390625,
+    "distance_km": 4.88,
+    "calories": 279.0,
+    "avg_hr": 133.0,
+    "max_hr": 157.0,
+    "pace_min_per_km": 5.39,
+    "elevation_gain_m": 57.0
+  },
+  "23980780507": {
+    "activity_id": 23980780507,
+    "name": "Treadmill Running",
+    "type": "treadmill_running",
+    "start_local": "2026-08-14 19:16:01",
+    "duration_seconds": 1335.14501953125,
+    "distance_km": 4.24,
+    "calories": 173.0,
+    "avg_hr": 121.0,
+    "max_hr": 133.0,
+    "pace_min_per_km": 5.24,
+    "elevation_gain_m": null
+  },
   "23969336347": {
     "activity_id": 23969336347,
     "name": "San Rafael - 3x5k",
