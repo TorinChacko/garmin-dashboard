@@ -1,4 +1,17 @@
 {
+  "24030671148": {
+    "activity_id": 24030671148,
+    "name": "San Rafael Running",
+    "type": "running",
+    "start_local": "2026-08-18 18:19:13",
+    "duration_seconds": 3661.803955078125,
+    "distance_km": 11.67,
+    "calories": 715.0,
+    "avg_hr": 149.0,
+    "max_hr": 170.0,
+    "pace_min_per_km": 5.23,
+    "elevation_gain_m": 89.0
+  },
   "24017440330": {
     "activity_id": 24017440330,
     "name": "San Rafael Running",
