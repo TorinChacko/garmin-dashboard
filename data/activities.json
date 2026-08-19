@@ -1,4 +1,43 @@
 {
+  "24017440330": {
+    "activity_id": 24017440330,
+    "name": "San Rafael Running",
+    "type": "running",
+    "start_local": "2026-08-17 19:24:29",
+    "duration_seconds": 3346.176025390625,
+    "distance_km": 11.53,
+    "calories": 698.0,
+    "avg_hr": 154.0,
+    "max_hr": 182.0,
+    "pace_min_per_km": 4.84,
+    "elevation_gain_m": 57.0
+  },
+  "24005129952": {
+    "activity_id": 24005129952,
+    "name": "San Rafael Running",
+    "type": "running",
+    "start_local": "2026-08-16 18:13:33",
+    "duration_seconds": 6488.3408203125,
+    "distance_km": 20.25,
+    "calories": 1267.0,
+    "avg_hr": 157.0,
+    "max_hr": 175.0,
+    "pace_min_per_km": 5.34,
+    "elevation_gain_m": 97.0
+  },
+  "23992936103": {
+    "activity_id": 23992936103,
+    "name": "San Rafael Running",
+    "type": "running",
+    "start_local": "2026-08-15 18:34:56",
+    "duration_seconds": 4226.0361328125,
+    "distance_km": 13.22,
+    "calories": 788.0,
+    "avg_hr": 143.0,
+    "max_hr": 166.0,
+    "pace_min_per_km": 5.33,
+    "elevation_gain_m": 103.0
+  },
   "23980913529": {
     "activity_id": 23980913529,
     "name": "San Rafael Running",
